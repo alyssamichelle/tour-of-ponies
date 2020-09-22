@@ -14,7 +14,6 @@ export class ListViewComponent implements OnInit {
   avatarLink: string;
   public ponies: any[] = ponies;
 
-
   constructor(private heroService: HeroService) { }
 
   ngOnInit() {
@@ -27,8 +26,6 @@ export class ListViewComponent implements OnInit {
         this.heroes = heroes;
       });
   }
-
-  
 
   getAvatarLink(heroId): string {
     let avatarLink = '../assets/mlp-avatars/pony-' + heroId + '.png';

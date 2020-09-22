@@ -17,7 +17,55 @@
     border-bottom-color: lightgrey;
 }
 
-/* hmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm */
+/* ListView Styles */
+
+.k-listview {
+  width: 50%;
+  margin-bottom: 50px;
+}
+
+.pony {
+  padding: 10px;
+  border-bottom: solid 2px lightgrey;
+}
+
+.pony-name {
+  font-size: 14px;
+  line-height: 16px;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.pony-alias, .item-position {
+  font-size: 12px;
+  font-style: italic;
+}
+
+.item-position {
+  font-weight: 600;
+}
+
+// ListView Header & Footer Styles
+
+.header, .footer {
+    display: flex;
+    padding: 12px;
+}
+
+.title {
+    flex-grow: 1;
+    font-size: 22px;
+    color: lightgrey;
+}
+
+.footer .title {
+  text-align: center;
+  font-size: 12px;
+  font-style: italic;
+}
+
+
+/* OG Pony List Styles */
 
 $pony-pink: #f03c97;
 

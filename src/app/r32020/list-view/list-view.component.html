@@ -1,5 +1,4 @@
-<!-- 
-<ul class="heroes">
+<!-- <ul class="heroes">
   <li *ngFor="let hero of heroes">
     <a routerLink="/detail/{{hero.id}}">
       <img class="avatar" [src]="getAvatarLink(hero.id)" title="pony avatar img">
@@ -9,17 +8,58 @@
   </li>
 </ul> -->
 
+<!-- Have a plain-Jane ListView -->
+
 <kendo-listview [data]="ponies" [containerClass]="'k-d-flex k-flex-col k-flex-nowrap'">
-  <ng-template kendoListViewItemTemplate let-dataItem="dataItem" let-index="index" let-isFirst="isFirst"
-    let-isLast="isLast">
-    <div class="product" [class.border-bottom]="!isLast">
-      <strong>[{{ index }}]:</strong>
-      <span class="product-name">{{ dataItem.name }}</span>
-      <span class="item-postion">({{ isFirst ? 'first' : isLast ? 'last' : 'mid' }})</span>
+  <ng-template kendoListViewItemTemplate let-dataItem="dataItem">
+    <div class="pony">
+      <span class="pony-name">{{ dataItem.name }}</span>
+      <span class="pony-alias" *ngIf="dataItem.alias">: i.e. "{{ dataItem.alias }}"</span>
     </div>
   </ng-template>
 </kendo-listview>
 
-<!-- Have a plain-Jane ListView -->
 <!-- Add on more info to ListView -->
-<!-- Add on search to ListView -->
+
+<kendo-listview [data]="ponies" [containerClass]="'k-d-flex k-flex-col k-flex-nowrap'">
+  <ng-template kendoListViewItemTemplate let-dataItem="dataItem" let-index="index" let-isFirst="isFirst" let-isLast="isLast">
+    <div class="pony">
+      <strong>[{{ index }}]:</strong>
+      <span class="pony-name">{{ dataItem.name }}</span>
+      <span class="pony-alias" *ngIf="dataItem.alias">: i.e. "{{ dataItem.alias }}"</span><span class="item-position">({{ isFirst ? 'first' : isLast ? 'last' : 'mid' }})</span>
+    </div>
+  </ng-template>
+</kendo-listview>
+
+<!-- Add Header & Footer -->
+
+<kendo-listview [data]="ponies" [containerClass]="'k-d-flex k-flex-col k-flex-nowrap'">
+
+  <ng-template kendoListViewHeaderTemplate>
+    <div class="header">
+      <div class="title">
+        MLP Characters
+      </div>
+    </div>
+  </ng-template>
+
+  <ng-template kendoListViewItemTemplate let-dataItem="dataItem" let-index="index" let-isFirst="isFirst" let-isLast="isLast">
+    <div class="pony">
+      <strong>[{{ index }}]:</strong>
+      <span class="pony-name">{{ dataItem.name }}</span>
+      <span class="pony-alias" *ngIf="dataItem.alias">: i.e. "{{ dataItem.alias }}"</span><span
+        class="item-position">({{ isFirst ? 'first' : isLast ? 'last' : 'mid' }})</span>
+    </div>
+  </ng-template>
+
+  <ng-template kendoListViewFooterTemplate>
+    <div class="footer">
+      <div class="title">
+        My Little Pony: Friendship Is Magic
+      </div>
+    </div>
+  </ng-template>
+</kendo-listview>
+
+<!-- Add a Search to ListView -->
+

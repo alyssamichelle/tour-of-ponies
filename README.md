@@ -10,3 +10,41 @@ This is the Angular Tour of Heroes app with Kendo UI for Angular added in. I rep
 - clone app
 - npm install
 - npm start
+
+# The Latest In Kendo UI For Angular
+
+- New component: ListView 💥
+  - https://www.telerik.com/kendo-angular-ui-develop/components/listview/
+- New component: Loader 👈
+  - https://www.telerik.com/kendo-angular-ui-develop/components/indicators/loader/
+- New component: AppBar 👈
+  - https://www.telerik.com/kendo-angular-ui-develop/components/navigation/appbar/
+- New component: TextBox 👈
+  - https://www.telerik.com/kendo-angular-ui-develop/components/inputs/textbox/
+- New component: BreadCrumb 👈
+  - https://www.telerik.com/kendo-angular-ui-develop/components/navigation/breadcrumb/
+- New component: RangeSlider 👈
+  - https://www.telerik.com/kendo-angular-ui-develop/components/inputs/rangeslider/
+- New component: Badge 👈
+  - https://www.telerik.com/kendo-angular-ui-develop/components/indicators/badge/
+- New component: Icon & SVGIcon 👈
+  - https://www.telerik.com/kendo-angular-ui-develop/components/icons/
+
+---
+
+- Grid 👈
+  - Cell Selection
+    - https://www.telerik.com/kendo-angular-ui-develop/components/grid/selection/
+- Charts 👈
+  - Plot Band Labels
+    - https://www.telerik.com/kendo-angular-ui-develop/components/charts/elements/plot-bands/#toc-labels
+  - Legend Titles
+    - https://www.telerik.com/kendo-angular-ui-develop/components/charts/elements/legend/#toc-setting-a-title
+
+---
+
+- Form Updates EVERYWHERE to comply with GUIDELINES 👈
+  - https://www.telerik.com/kendo-angular-ui-develop/components/forms/forms-guideline/
+- Reduced Bundle Size for Many Packages 👈
+  - https://slides.com/alyssanicoll/kui-for-angular/live?context=editing
+  - https://slides.com/alyssanicoll/kui-for-angular/live#/bundle-size-down/2
