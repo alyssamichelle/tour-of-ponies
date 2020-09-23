@@ -9,7 +9,7 @@
 </ul> -->
 
 <!-- Have a plain-Jane ListView -->
-
+<!-- 
 <kendo-listview [data]="ponies" [containerClass]="'k-d-flex k-flex-col k-flex-nowrap'">
   <ng-template kendoListViewItemTemplate let-dataItem="dataItem">
     <div class="pony">
@@ -17,11 +17,11 @@
       <span class="pony-alias" *ngIf="dataItem.alias">: i.e. "{{ dataItem.alias }}"</span>
     </div>
   </ng-template>
-</kendo-listview>
+</kendo-listview> -->
 
 <!-- Add on more info to ListView -->
 
-<kendo-listview [data]="ponies" [containerClass]="'k-d-flex k-flex-col k-flex-nowrap'">
+<!-- <kendo-listview [data]="ponies" [containerClass]="'k-d-flex k-flex-col k-flex-nowrap'">
   <ng-template kendoListViewItemTemplate let-dataItem="dataItem" let-index="index" let-isFirst="isFirst" let-isLast="isLast">
     <div class="pony">
       <strong>[{{ index }}]:</strong>
@@ -29,11 +29,11 @@
       <span class="pony-alias" *ngIf="dataItem.alias">: i.e. "{{ dataItem.alias }}"</span><span class="item-position">({{ isFirst ? 'first' : isLast ? 'last' : 'mid' }})</span>
     </div>
   </ng-template>
-</kendo-listview>
+</kendo-listview> -->
 
 <!-- Add Header & Footer -->
 
-<kendo-listview [data]="ponies" [containerClass]="'k-d-flex k-flex-col k-flex-nowrap'">
+<!-- <kendo-listview [data]="ponies" [containerClass]="'k-d-flex k-flex-col k-flex-nowrap'">
 
   <ng-template kendoListViewHeaderTemplate>
     <div class="header">
@@ -59,7 +59,40 @@
       </div>
     </div>
   </ng-template>
-</kendo-listview>
+</kendo-listview> -->
 
 <!-- Add a Search to ListView -->
 
+<kendo-listview [data]="ponies" [containerClass]="'k-d-flex k-flex-col k-flex-nowrap'">
+
+  <ng-template kendoListViewHeaderTemplate>
+    <div class="header">
+      <div class="title">
+        MLP Characters
+      </div>
+      <kendo-textbox placeholder="Search"></kendo-textbox>
+    </div>
+  </ng-template>
+
+  <ng-template kendoListViewItemTemplate let-dataItem="dataItem" let-index="index" let-isFirst="isFirst"
+    let-isLast="isLast">
+    <div class="pony">
+      <strong>[{{ index }}]:</strong>
+      <span class="pony-name">{{ dataItem.name }}</span>
+      <span class="pony-alias" *ngIf="dataItem.alias">: i.e. "{{ dataItem.alias }}"</span><span
+        class="item-position">({{ isFirst ? 'first' : isLast ? 'last' : 'mid' }})</span>
+    </div>
+  </ng-template>
+
+  <ng-template kendoListViewFooterTemplate>
+    <div class="footer">
+      <div class="title">
+        My Little Pony: Friendship Is Magic
+      </div>
+    </div>
+  </ng-template>
+</kendo-listview>
+
+<!-- TODO: Get above example filtering before moving on -->
+
+<!-- Show off textbox: add prefixes, icons, fancier features vvv -->
