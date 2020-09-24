@@ -85,16 +85,20 @@
   </ng-template>
 </kendo-listview> -->
 
-<!-- Add a Search to ListView -->
+<!-- Add a simple Search to ListView -->
 
-<kendo-listview [data]="ponies" [containerClass]="'k-d-flex k-flex-col k-flex-nowrap'">
+<!-- <kendo-listview [data]="ponies" [containerClass]="'k-d-flex k-flex-col k-flex-nowrap'">
 
   <ng-template kendoListViewHeaderTemplate>
     <div class="header">
       <div class="title">
         MLP Characters
       </div>
-      <kendo-textbox placeholder="Search"></kendo-textbox>
+      <kendo-textbox 
+        placeholder="Filter Ponies..." 
+        ngModel 
+        (ngModelChange)="handleFilterChange($event)" 
+        [showSuccessIcon]="false"></kendo-textbox>
     </div>
   </ng-template>
 
@@ -104,6 +108,48 @@
       <strong>[{{ index }}]:</strong>
       <span class="pony-name">{{ dataItem.name }}</span>
       <span class="pony-alias" *ngIf="dataItem.alias">: i.e. "{{ dataItem.alias }}"</span><span
+        class="item-position">({{ isFirst ? 'first' : isLast ? 'last' : 'mid' }})</span>
+    </div>
+  </ng-template>
+
+  <ng-template kendoListViewFooterTemplate>
+    <div class="footer">
+      <div class="title">
+        My Little Pony: Friendship Is Magic
+      </div>
+    </div>
+  </ng-template>
+</kendo-listview> -->
+
+<!-- Adnorments for fancy a TextBox -->
+
+<kendo-listview [(data)]="ponies" [containerClass]="'k-d-flex k-flex-col k-flex-nowrap'">
+
+  <ng-template kendoListViewHeaderTemplate>
+    <div class="header">
+
+      <div class="title">
+        MLP Characters
+      </div>
+    
+      <kendo-textbox 
+        placeholder="Filter Ponies..." 
+        ngModel 
+        (ngModelChange)="handleFilterChange($event)">
+        <ng-template kendoTextBoxSuffixTemplate>
+          <span class="k-icon k-i-search"></span>
+        </ng-template>
+      </kendo-textbox>
+
+    </div>
+  </ng-template>
+
+  <ng-template kendoListViewItemTemplate let-pony="dataItem" let-index="index" let-isFirst="isFirst"
+    let-isLast="isLast">
+    <div class="pony">
+      <strong>[{{ index }}]:</strong>
+      <span class="pony-name">{{ pony.name }}</span>
+      <span class="pony-alias" *ngIf="pony.alias">: i.e. "{{ pony.alias }}"</span><span
         class="item-position">({{ isFirst ? 'first' : isLast ? 'last' : 'mid' }})</span>
     </div>
   </ng-template>

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ListViewComponent } from './list-view/list-view.component'; import { ListViewModule } from '@progress/kendo-angular-listview';
 import { RouterModule } from '@angular/router';
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
+import { FormsModule } from '@angular/forms';
 import { InputsModule } from '@progress/kendo-angular-inputs';
 
 @NgModule({
@@ -11,6 +12,7 @@ import { InputsModule } from '@progress/kendo-angular-inputs';
     CommonModule,
     RouterModule,
     ButtonsModule,
+    FormsModule,
     InputsModule,
     ListViewModule
   ],

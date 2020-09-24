@@ -52,4 +52,15 @@ export class ListViewComponent implements OnInit {
       type: this.type,
     };
   }
+
+  // filtering with search TextBox on ListView
+  public handleFilterChange(query: string): void {
+    const normalizedQuery = query.toLowerCase();
+    const filterExpession = item =>
+      item.name.toLowerCase().indexOf(normalizedQuery) !== -1 || 
+      (item.alias != null && 
+      item.alias?.toLowerCase().indexOf(normalizedQuery) !== -1);
+
+    this.ponies = ponies.filter(filterExpession);
+  }
 }
