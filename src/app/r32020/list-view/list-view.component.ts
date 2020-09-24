@@ -4,6 +4,8 @@ import { ponies } from './ponies';
 import { Hero } from '../../hero';
 import { HeroService } from '../../hero.service';
 
+import { PagerSettings, PagerPosition, PagerType } from '@progress/kendo-angular-listview';
+
 @Component({
   selector: 'app-list-view',
   templateUrl: './list-view.component.html',
@@ -35,5 +37,19 @@ export class ListViewComponent implements OnInit {
     }
 
     return avatarLink;
+  }
+
+  // paging options for ListView
+  public pageSize = 5;
+  public position: PagerPosition = 'bottom';
+  public prevNext = true;
+  public type: PagerType = 'input'; // 'numeric'
+
+  public get pagerSettings(): PagerSettings {
+    return {
+      position: this.position,
+      previousNext: this.prevNext,
+      type: this.type,
+    };
   }
 }
