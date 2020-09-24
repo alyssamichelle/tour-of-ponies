@@ -98,6 +98,7 @@ button, button.k-button, nav a {
   display: none;
 }
 
+// TODO: MOVE INTO A SEPARATE PONY CARD COMPONENT
 $pony-pink: #f03c97;
 
 .heroes {
@@ -138,6 +139,7 @@ $pony-pink: #f03c97;
 .heroes .hero-name {
   font-size: 2rem;
   line-height: 3.2rem;
+  margin-left: 10px;
 
   color: #8c2167;
   font-family: pony, cursive;
@@ -156,7 +158,6 @@ $pony-pink: #f03c97;
 
 .heroes .avatar {
   display: inline-block;
-  margin-right: 10px;
   color: white;
   padding: 0.5em;
   background-color: $pony-pink;

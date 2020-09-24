@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { FormsModule } from '@angular/forms';
 import { InputsModule } from '@progress/kendo-angular-inputs';
+import { IndicatorsModule } from '@progress/kendo-angular-indicators';
 
 @NgModule({
   declarations: [ListViewComponent],
@@ -14,6 +15,7 @@ import { InputsModule } from '@progress/kendo-angular-inputs';
     ButtonsModule,
     FormsModule,
     InputsModule,
+    IndicatorsModule,
     ListViewModule
   ],
   exports: [

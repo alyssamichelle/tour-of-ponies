@@ -122,6 +122,7 @@
 </kendo-listview> -->
 
 <!-- Adnorments for fancy a TextBox -->
+<!-- https://www.telerik.com/kendo-angular-ui-develop/components/inputs/textbox/adornments/ -->
 
 <kendo-listview [(data)]="ponies" [containerClass]="'k-d-flex k-flex-col k-flex-nowrap'">
 
@@ -135,7 +136,8 @@
       <kendo-textbox 
         placeholder="Filter Ponies..." 
         ngModel 
-        (ngModelChange)="handleFilterChange($event)">
+        (ngModelChange)="handleFilterChange($event)"
+        [showSuccessIcon]="false">
         <ng-template kendoTextBoxSuffixTemplate>
           <span class="k-icon k-i-search"></span>
         </ng-template>
@@ -163,9 +165,9 @@
   </ng-template>
 </kendo-listview>
 
-<!-- Different Things -->
+<!-- But what about our other ponnies list? Can we put these inside the Kendo ListView?? -->
 
-<kendo-listview [data]="heroes" [containerClass]="'heroes'">
+<!-- <kendo-listview [data]="heroes" [containerClass]="'heroes'">
   <ng-template kendoListViewItemTemplate let-hero="dataItem">
     <a routerLink="/detail/{{hero.id}}">
       <img class="avatar" [src]="getAvatarLink(hero.id)" title="pony avatar img">
@@ -173,8 +175,29 @@
     </a>
     <button kendoButton [icon]="'close'" class="delete" title="delete hero" (click)="delete(hero)"></button>
   </ng-template>
+</kendo-listview> -->
+
+<!-- B B B BADGES! Queue Indicators FTW -->
+<!-- https://www.telerik.com/kendo-angular-ui-develop/components/indicators/badge/appearance/ -->
+
+<kendo-listview [data]="heroes" [containerClass]="'heroes'">
+  <ng-template kendoListViewItemTemplate let-hero="dataItem">
+    <a routerLink="/detail/{{hero.id}}">
+      <kendo-badge-container>
+        <img class="avatar" [src]="getAvatarLink(hero.id)" title="pony avatar img">
+        <kendo-badge 
+          shape="dot"
+          shape="circle"
+          shape="pill"
+          shape="rectangle"
+          shape="rounded"
+          themeColor="dark"
+          size="small"
+          cutoutBorder="true"
+          >{{hero.id}}</kendo-badge>
+      </kendo-badge-container>
+      <div class="hero-name">{{hero.name}}</div>
+    </a>
+    <button kendoButton [icon]="'close'" class="delete" title="delete hero" (click)="delete(hero)"></button>
+  </ng-template>
 </kendo-listview>
-
-<!-- TODO: Get above example filtering before moving on -->
-
-<!-- Show off textbox: add prefixes, icons, fancier features vvv -->
