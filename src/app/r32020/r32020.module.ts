@@ -6,6 +6,7 @@ import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { FormsModule } from '@angular/forms';
 import { InputsModule } from '@progress/kendo-angular-inputs';
 import { IndicatorsModule } from '@progress/kendo-angular-indicators';
+import { IconsModule } from '@progress/kendo-angular-icons';
 
 @NgModule({
   declarations: [ListViewComponent],
@@ -16,6 +17,7 @@ import { IndicatorsModule } from '@progress/kendo-angular-indicators';
     FormsModule,
     InputsModule,
     IndicatorsModule,
+    IconsModule,
     ListViewModule
   ],
   exports: [

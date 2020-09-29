@@ -180,7 +180,7 @@
 <!-- B B B BADGES! Queue Indicators FTW -->
 <!-- https://www.telerik.com/kendo-angular-ui-develop/components/indicators/badge/appearance/ -->
 
-<kendo-listview [data]="heroes" [containerClass]="'heroes'">
+<!-- <kendo-listview [data]="heroes" [containerClass]="'heroes'">
   <ng-template kendoListViewItemTemplate let-hero="dataItem">
     <a routerLink="/detail/{{hero.id}}">
       <kendo-badge-container>
@@ -195,6 +195,50 @@
           size="small"
           cutoutBorder="true"
           >{{hero.id}}</kendo-badge>
+      </kendo-badge-container>
+      <div class="hero-name">{{hero.name}}</div>
+    </a>
+    <button kendoButton [icon]="'close'" class="delete" title="delete hero" (click)="delete(hero)"></button>
+  </ng-template>
+</kendo-listview> -->
+
+<!-- add a loader for slower data ;) -->
+
+<!-- <kendo-listview [data]="heroes" [containerClass]="'heroes with-loader'">
+    <ng-template kendoListViewHeaderTemplate *ngIf="loader">
+      <div class="header">
+        <p class="title">Loading more Pony data ...</p>
+        <kendo-loader [type]="'infinite-spinner'" [size]="'small'"></kendo-loader>
+      </div>
+    </ng-template>
+  <ng-template kendoListViewItemTemplate let-hero="dataItem">
+    <a routerLink="/detail/{{hero.id}}">
+      <kendo-badge-container>
+        <img class="avatar" [src]="getAvatarLink(hero.id)" title="pony avatar img">
+        <kendo-badge shape="circle" themeColor="dark"
+          size="small" cutoutBorder="true">{{hero.id}}</kendo-badge>
+      </kendo-badge-container>
+      <div class="hero-name">{{hero.name}}</div>
+    </a>
+    <button kendoButton [icon]="'close'" class="delete" title="delete hero" (click)="delete(hero)"></button>
+  </ng-template>
+</kendo-listview> -->
+
+<!-- Icons Icons Everywhere -->
+<kendo-listview [data]="heroes" [containerClass]="'heroes with-loader'">
+  <ng-template kendoListViewHeaderTemplate *ngIf="loader">
+    <div class="header">
+      <p class="title">Loading more Pony data ...
+        <kendo-icon [name]="'search'" [size]="'large'"></kendo-icon>
+      </p>
+      <kendo-loader [type]="'infinite-spinner'" [size]="'small'"></kendo-loader>
+    </div>
+  </ng-template>
+  <ng-template kendoListViewItemTemplate let-hero="dataItem">
+    <a routerLink="/detail/{{hero.id}}">
+      <kendo-badge-container>
+        <img class="avatar" [src]="getAvatarLink(hero.id)" title="pony avatar img">
+        <kendo-badge shape="circle" themeColor="dark" size="small" cutoutBorder="true">{{hero.id}}</kendo-badge>
       </kendo-badge-container>
       <div class="hero-name">{{hero.name}}</div>
     </a>

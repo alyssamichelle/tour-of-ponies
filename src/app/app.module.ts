@@ -36,7 +36,7 @@ import { R32020Module }            from './r32020/r32020.module';
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
     HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
+      InMemoryDataService, { dataEncapsulation: false, delay: 6000 }
     ),
     InputsModule,
     BrowserAnimationsModule,
@@ -44,7 +44,7 @@ import { R32020Module }            from './r32020/r32020.module';
     ButtonsModule,
     LayoutModule,
     DropDownsModule,
-    R32020Module
+    R32020Module,
   ],
   declarations: [
     AppComponent,

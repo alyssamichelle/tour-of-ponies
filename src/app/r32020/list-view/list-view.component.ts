@@ -5,6 +5,8 @@ import { Hero } from '../../hero';
 import { HeroService } from '../../hero.service';
 
 import { PagerSettings, PagerPosition, PagerType } from '@progress/kendo-angular-listview';
+import { CompileTemplateMetadata } from '@angular/compiler';
+import { LoaderComponent } from '@progress/kendo-angular-indicators';
 
 @Component({
   selector: 'app-list-view',
@@ -15,6 +17,7 @@ export class ListViewComponent implements OnInit {
   heroes: Hero[];
   avatarLink: string;
   public ponies: any[] = ponies;
+  loader:boolean = true;
 
   constructor(private heroService: HeroService) { }
 
@@ -23,9 +26,18 @@ export class ListViewComponent implements OnInit {
   }
 
   getHeroes(): void {
+    var self = this;
+    console.log(this);
     this.heroService.getHeroes()
-      .subscribe(heroes => {
-        this.heroes = heroes;
+      .subscribe({
+        next(heroes) {
+          self.heroes = heroes;
+          
+        },
+        complete() {
+          console.log('DONE!');
+          self.loader = false;
+        }
       });
   }
 
