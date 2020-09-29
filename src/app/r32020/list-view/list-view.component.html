@@ -1,129 +1,20 @@
-<!-- Have a plain-Jane ListView -->
+<!-- Have a plain-Jane ListView  plain-listview-->
 
-<!-- <kendo-listview [data]="ponies" [containerClass]="'k-d-flex k-flex-col k-flex-nowrap'">
-  <ng-template kendoListViewItemTemplate let-dataItem="dataItem">
-    <div class="pony">
-      <span class="pony-name">{{ dataItem.name }}</span>
-      <span class="pony-alias" *ngIf="dataItem.alias">: i.e. "{{ dataItem.alias }}"</span>
-    </div>
-  </ng-template>
-</kendo-listview> -->
 
-<!-- Add on more info to ListView -->
+<!-- Add on more info to ListView fancy-listview-->
 
-<!-- <kendo-listview [data]="ponies" [containerClass]="'k-d-flex k-flex-col k-flex-nowrap'">
-  <ng-template kendoListViewItemTemplate let-dataItem="dataItem" let-index="index" let-isFirst="isFirst" let-isLast="isLast">
-    <div class="pony">
-      <strong>[{{ index }}]:</strong>
-      <span class="pony-name">{{ dataItem.name }}</span>
-      <span class="pony-alias" *ngIf="dataItem.alias">: i.e. "{{ dataItem.alias }}"</span><span class="item-position">({{ isFirst ? 'first' : isLast ? 'last' : 'mid' }})</span>
-    </div>
-  </ng-template>
-</kendo-listview> -->
 
-<!-- Add Header & Footer -->
+<!-- Add Header & Footer header-footer-listview-->
 
-<!-- <kendo-listview [data]="ponies" [containerClass]="'k-d-flex k-flex-col k-flex-nowrap'">
 
-  <ng-template kendoListViewHeaderTemplate>
-    <div class="header">
-      <div class="title">
-        MLP Characters
-      </div>
-    </div>
-  </ng-template>
+<!-- Pageable, you say? pageable-listview-->
 
-  <ng-template kendoListViewItemTemplate let-dataItem="dataItem" let-index="index" let-isFirst="isFirst" let-isLast="isLast">
-    <div class="pony">
-      <strong>[{{ index }}]:</strong>
-      <span class="pony-name">{{ dataItem.name }}</span>
-      <span class="pony-alias" *ngIf="dataItem.alias">: i.e. "{{ dataItem.alias }}"</span><span
-        class="item-position">({{ isFirst ? 'first' : isLast ? 'last' : 'mid' }})</span>
-    </div>
-  </ng-template>
 
-  <ng-template kendoListViewFooterTemplate>
-    <div class="footer">
-      <div class="title">
-        My Little Pony: Friendship Is Magic
-      </div>
-    </div>
-  </ng-template>
-</kendo-listview> -->
+<!-- Add a simple Search to ListView simple-search-listview-->
 
-<!-- Pageable, you say? -->
-<!-- <kendo-listview 
-  [containerClass]="'k-d-flex k-flex-col k-flex-nowrap'"
-  [kendoListViewBinding]="ponies" 
-  [pageable]="pagerSettings"
-  [pageSize]="pageSize">
 
-  <ng-template kendoListViewHeaderTemplate>
-    <div class="header">
-      <div class="title">
-        MLP Characters
-      </div>
-    </div>
-  </ng-template>
-
-  <ng-template kendoListViewItemTemplate let-dataItem="dataItem" let-index="index" let-isFirst="isFirst"
-    let-isLast="isLast">
-    <div class="pony">
-      <strong>[{{ index }}]:</strong>
-      <span class="pony-name">{{ dataItem.name }}</span>
-      <span class="pony-alias" *ngIf="dataItem.alias">: i.e. "{{ dataItem.alias }}"</span><span
-        class="item-position">({{ isFirst ? 'first' : isLast ? 'last' : 'mid' }})</span>
-    </div>
-  </ng-template>
-
-  <ng-template kendoListViewFooterTemplate>
-    <div class="footer">
-      <div class="title">
-        My Little Pony: Friendship Is Magic
-      </div>
-    </div>
-  </ng-template>
-</kendo-listview> -->
-
-<!-- Add a simple Search to ListView -->
-
-<!-- <kendo-listview [data]="ponies" [containerClass]="'k-d-flex k-flex-col k-flex-nowrap'">
-
-  <ng-template kendoListViewHeaderTemplate>
-    <div class="header">
-      <div class="title">
-        MLP Characters
-      </div>
-      <kendo-textbox 
-        placeholder="Filter Ponies..." 
-        ngModel 
-        (ngModelChange)="handleFilterChange($event)" 
-        [showSuccessIcon]="false"></kendo-textbox>
-    </div>
-  </ng-template>
-
-  <ng-template kendoListViewItemTemplate let-dataItem="dataItem" let-index="index" let-isFirst="isFirst"
-    let-isLast="isLast">
-    <div class="pony">
-      <strong>[{{ index }}]:</strong>
-      <span class="pony-name">{{ dataItem.name }}</span>
-      <span class="pony-alias" *ngIf="dataItem.alias">: i.e. "{{ dataItem.alias }}"</span><span
-        class="item-position">({{ isFirst ? 'first' : isLast ? 'last' : 'mid' }})</span>
-    </div>
-  </ng-template>
-
-  <ng-template kendoListViewFooterTemplate>
-    <div class="footer">
-      <div class="title">
-        My Little Pony: Friendship Is Magic
-      </div>
-    </div>
-  </ng-template>
-</kendo-listview> -->
-
-<!-- Adnorments for fancy a TextBox -->
+<!-- *** Adnorments for fancy a TextBox adnornments-search.. -->
 <!-- https://www.telerik.com/kendo-angular-ui-develop/components/inputs/textbox/adornments/ -->
-
 <kendo-listview [(data)]="ponies" [containerClass]="'k-d-flex k-flex-col k-flex-nowrap'">
 
   <ng-template kendoListViewHeaderTemplate>
@@ -165,71 +56,25 @@
   </ng-template>
 </kendo-listview>
 
-<!-- But what about our other ponnies list? Can we put these inside the Kendo ListView?? -->
 
-<!-- <kendo-listview [data]="heroes" [containerClass]="'heroes'">
-  <ng-template kendoListViewItemTemplate let-hero="dataItem">
-    <a routerLink="/detail/{{hero.id}}">
-      <img class="avatar" [src]="getAvatarLink(hero.id)" title="pony avatar img">
-      <div class="hero-name">{{hero.name}}</div>
-    </a>
-    <button kendoButton [icon]="'close'" class="delete" title="delete hero" (click)="delete(hero)"></button>
-  </ng-template>
-</kendo-listview> -->
+<!-- But what about our other ponnies list? Can we put these inside the Kendo ListView?? custom-listview-->
 
-<!-- B B B BADGES! Queue Indicators FTW -->
+
+<!-- B B B BADGES! Queue Indicators FTW  -->
+<!-- replace img with badge-container -->
 <!-- https://www.telerik.com/kendo-angular-ui-develop/components/indicators/badge/appearance/ -->
 
-<!-- <kendo-listview [data]="heroes" [containerClass]="'heroes'">
-  <ng-template kendoListViewItemTemplate let-hero="dataItem">
-    <a routerLink="/detail/{{hero.id}}">
-      <kendo-badge-container>
-        <img class="avatar" [src]="getAvatarLink(hero.id)" title="pony avatar img">
-        <kendo-badge 
-          shape="dot"
-          shape="circle"
-          shape="pill"
-          shape="rectangle"
-          shape="rounded"
-          themeColor="dark"
-          size="small"
-          cutoutBorder="true"
-          >{{hero.id}}</kendo-badge>
-      </kendo-badge-container>
-      <div class="hero-name">{{hero.name}}</div>
-    </a>
-    <button kendoButton [icon]="'close'" class="delete" title="delete hero" (click)="delete(hero)"></button>
-  </ng-template>
-</kendo-listview> -->
 
 <!-- add a loader for slower data ;) -->
 
-<!-- <kendo-listview [data]="heroes" [containerClass]="'heroes with-loader'">
-    <ng-template kendoListViewHeaderTemplate *ngIf="loader">
-      <div class="header">
-        <p class="title">Loading more Pony data ...</p>
-        <kendo-loader [type]="'infinite-spinner'" [size]="'small'"></kendo-loader>
-      </div>
-    </ng-template>
-  <ng-template kendoListViewItemTemplate let-hero="dataItem">
-    <a routerLink="/detail/{{hero.id}}">
-      <kendo-badge-container>
-        <img class="avatar" [src]="getAvatarLink(hero.id)" title="pony avatar img">
-        <kendo-badge shape="circle" themeColor="dark"
-          size="small" cutoutBorder="true">{{hero.id}}</kendo-badge>
-      </kendo-badge-container>
-      <div class="hero-name">{{hero.name}}</div>
-    </a>
-    <button kendoButton [icon]="'close'" class="delete" title="delete hero" (click)="delete(hero)"></button>
-  </ng-template>
-</kendo-listview> -->
 
-<!-- Icons Icons Everywhere -->
+<!-- *** Icons Icons Everywhere -->
 <kendo-listview [data]="heroes" [containerClass]="'heroes with-loader'">
   <ng-template kendoListViewHeaderTemplate *ngIf="loader">
     <div class="header">
-      <p class="title">Loading more Pony data ...
-        <kendo-icon [name]="'search'" [size]="'large'"></kendo-icon>
+      <p class="title">
+        LOADING MORE PONIES
+        <kendo-icon [name]="'validation-data'" [size]="'medium'"></kendo-icon>
       </p>
       <kendo-loader [type]="'infinite-spinner'" [size]="'small'"></kendo-loader>
     </div>
