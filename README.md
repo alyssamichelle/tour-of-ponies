@@ -48,3 +48,8 @@ This is the Angular Tour of Heroes app with Kendo UI for Angular added in. I rep
 - Reduced Bundle Size for Many Packages 👈
   - https://slides.com/alyssanicoll/kui-for-angular/live?context=editing
   - https://slides.com/alyssanicoll/kui-for-angular/live#/bundle-size-down/2
+
+
+
+
+Pro Tip: [Snippet Generators]('https://snippet-generator.app/') FTW

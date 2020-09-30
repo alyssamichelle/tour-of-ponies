@@ -1,3 +1,6 @@
+// Data found in this API
+// https://ponyweb.ml/#character
+
 export interface Pony {
   id: number;
   name: string;
