@@ -1,3 +1,5 @@
+@import './src/assets/colors.scss';
+
 :host {
   margin-bottom: 50px;
   display: grid;
@@ -9,16 +11,20 @@
     font-family: sans-serif;
     height: 340px;
 }
+
 .product {
     padding: 8px;
     width: 100%;
 }
+
 .product-name {
     margin: 0 4px;
 }
+
 .item-postion {
     font-style: italic;
 }
+
 .product.border-bottom {
     border-bottom-width: 1px;
     border-bottom-color: lightgrey;
@@ -26,16 +32,17 @@
 
 /* ListView Styles */
 
-.pony {
-  padding: 10px;
-  border-bottom: solid 2px lightgrey;
-}
-
 .pony-name {
   font-size: 14px;
   line-height: 16px;
   display: inline-block;
   font-weight: 600;
+}
+
+.pony-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
 }
 
 .pony-alias, .item-position {
@@ -50,19 +57,17 @@
 // ListView Header & Footer Styles
 
 .header, .footer {
-    display: flex;
-    padding: 12px;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+
+  padding: 12px;
+  font-size: 1rem;
+  color: lightgrey;
 }
 
-.title {
-    flex-grow: 1;
-    font-size: 22px;
-    color: lightgrey;
-}
-
-.footer .title {
-  text-align: center;
-  font-size: 12px;
+.footer {
+  font-size: 0.5rem;
   font-style: italic;
 }

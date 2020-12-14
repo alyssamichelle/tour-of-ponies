@@ -21,7 +21,7 @@ import { ButtonsModule }           from '@progress/kendo-angular-buttons';
 import { LayoutModule }            from '@progress/kendo-angular-layout';
 import { DropDownsModule }         from '@progress/kendo-angular-dropdowns';
 
-import { R32020Module }            from './r32020/r32020.module';
+import { LVM }            from './list-view/list-view.module';
 
 
 
@@ -36,7 +36,7 @@ import { R32020Module }            from './r32020/r32020.module';
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
     HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false, delay: 6000 }
+      InMemoryDataService, { dataEncapsulation: false, delay: 3000 }
     ),
     InputsModule,
     BrowserAnimationsModule,
@@ -44,7 +44,7 @@ import { R32020Module }            from './r32020/r32020.module';
     ButtonsModule,
     LayoutModule,
     DropDownsModule,
-    R32020Module,
+    LVM,
   ],
   declarations: [
     AppComponent,

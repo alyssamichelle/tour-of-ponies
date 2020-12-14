@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ponies } from './ponies';
 
-import { Hero } from '../../hero';
-import { HeroService } from '../../hero.service';
+import { Hero } from '../hero';
+import { HeroService } from '../hero.service';
 
 import { PagerSettings, PagerPosition, PagerType } from '@progress/kendo-angular-listview';
 import { CompileTemplateMetadata } from '@angular/compiler';
@@ -32,7 +32,6 @@ export class ListViewComponent implements OnInit {
       .subscribe({
         next(heroes) {
           self.heroes = heroes;
-          
         },
         complete() {
           console.log('DONE!');
@@ -52,10 +51,10 @@ export class ListViewComponent implements OnInit {
   }
 
   // paging options for ListView
-  public pageSize = 5;
+  public pageSize = 2;
   public position: PagerPosition = 'bottom';
-  public prevNext = true;
   public type: PagerType = 'input'; // 'numeric'
+  public prevNext = false;
 
   public get pagerSettings(): PagerSettings {
     return {
