@@ -51,10 +51,10 @@ export class ListViewComponent implements OnInit {
   }
 
   // paging options for ListView
-  public pageSize = 2;
+  public pageSize = 5;
   public position: PagerPosition = 'bottom';
-  public type: PagerType = 'input'; // 'numeric'
-  public prevNext = false;
+  public type: PagerType = 'numeric'; // 'numeric'
+  public prevNext = true;
 
   public get pagerSettings(): PagerSettings {
     return {
