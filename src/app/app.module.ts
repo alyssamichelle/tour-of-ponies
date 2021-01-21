@@ -18,10 +18,11 @@ import { InputsModule }            from '@progress/kendo-angular-inputs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LabelModule }             from '@progress/kendo-angular-label';
 import { ButtonsModule }           from '@progress/kendo-angular-buttons';
-import { LayoutModule }            from '@progress/kendo-angular-layout';
+import { CardModule, TileLayoutModule } from '@progress/kendo-angular-layout';
 import { DropDownsModule }         from '@progress/kendo-angular-dropdowns';
 
 import { LVM }            from './list-view/list-view.module';
+import { TileLayoutComponent } from './tile-layout/tile-layout.component';
 
 
 
@@ -36,13 +37,15 @@ import { LVM }            from './list-view/list-view.module';
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
     HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false, delay: 3000 }
+      InMemoryDataService, { dataEncapsulation: false, delay: 1000 }
     ),
     InputsModule,
     BrowserAnimationsModule,
     LabelModule,
     ButtonsModule,
-    LayoutModule,
+    // LayoutModule,
+    CardModule,
+    TileLayoutModule,
     DropDownsModule,
     LVM,
   ],
@@ -52,7 +55,8 @@ import { LVM }            from './list-view/list-view.module';
     HeroesComponent,
     HeroDetailComponent,
     MessagesComponent,
-    HeroSearchComponent
+    HeroSearchComponent,
+    TileLayoutComponent
   ],
   bootstrap: [ AppComponent ]
 })

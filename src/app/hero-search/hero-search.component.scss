@@ -1,8 +1,8 @@
 .search-component {
   display: flex;
+  align-items: center;
 
-  h3 {
-    display: inline-block;
+  label {
     margin-right: 20px;
   }
 }
