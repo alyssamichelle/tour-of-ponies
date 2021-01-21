@@ -1,9 +1,9 @@
 <!-- Have a plain-Jane ListView  plain-listview-->
-<kendo-listview [data]="ponies">
+<!-- <kendo-listview [data]="ponies">
   <ng-template kendoListViewItemTemplate let-pony="dataItem">
     <div class="pony-info">{{ pony.name }}</div>
   </ng-template>
-</kendo-listview>
+</kendo-listview> -->
 
 <!-- Add on more info to ListView fancy-listview-->
 <kendo-listview [data]="ponies">
@@ -16,7 +16,7 @@
 </kendo-listview>
 
 <!-- Add Header & Footer header-footer-listview-->
-<kendo-listview [data]="ponies">
+<!-- <kendo-listview [data]="ponies">
   <ng-template kendoListViewHeaderTemplate>
     <div class="header">
       <div class="title">MLP Characters</div>
@@ -34,7 +34,7 @@
   <ng-template kendoListViewFooterTemplate>
     <div class="title footer">My Little Pony: Friendship Is Magic</div>
   </ng-template>
-</kendo-listview>
+</kendo-listview> -->
 
 <!-- Pageable, you say? pageable-listview-->
 <kendo-listview 
@@ -93,7 +93,7 @@
 <!-- https://www.telerik.com/kendo-angular-ui-develop/components/inputs/textbox/adornments/ -->
 
 <!-- But what about our other ponnies list? Can we put these inside the Kendo ListView?? custom-listview-->
-
+<!-- 
 <kendo-listview [data]="heroes" containerClass="heroes">
   <ng-template kendoListViewItemTemplate let-hero="dataItem">
     <a routerLink="/detail/{{hero.id}}">
@@ -111,7 +111,7 @@
     </a>
     <button kendoButton icon="close" class="delete" title="delete hero" (click)="delete(hero)"></button>
   </ng-template>
-</kendo-listview>
+</kendo-listview> -->
 <!-- B B B BADGES! Queue Indicators FTW  -->
 <!-- replace img with badge-container -->
 <!-- https://www.telerik.com/kendo-angular-ui-develop/components/indicators/badge/appearance/ -->
