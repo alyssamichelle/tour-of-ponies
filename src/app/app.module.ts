@@ -18,11 +18,11 @@ import { InputsModule }            from '@progress/kendo-angular-inputs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LabelModule }             from '@progress/kendo-angular-label';
 import { ButtonsModule }           from '@progress/kendo-angular-buttons';
-import { CardModule, TileLayoutModule } from '@progress/kendo-angular-layout';
 import { DropDownsModule }         from '@progress/kendo-angular-dropdowns';
 
-import { LVM }            from './list-view/list-view.module';
-import { TileLayoutComponent } from './tile-layout/tile-layout.component';
+import { CardModule, TileLayoutModule } from '@progress/kendo-angular-layout';
+import { LVM }                          from './list-view/list-view.module';
+import { TileLayoutComponent }          from './tile-layout/tile-layout.component';
 
 
 
