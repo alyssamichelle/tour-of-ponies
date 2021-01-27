@@ -1,0 +1,25 @@
+.k-card {
+  overflow: hidden;
+}
+
+kendo-card {
+  width: 100%;
+  margin-bottom: 20px;
+  height: 285px;
+  transition: background-color 0.4s ease;
+}
+
+kendo-card img {
+  max-width: 100%;
+  position: absolute;
+  top: 110px;
+  transition: top 0.4s ease;
+}
+
+kendo-card img:hover {
+  top: 90px;
+}
+
+kendo-card:hover {
+  background-color: #f9f9f9;
+}

@@ -4,36 +4,37 @@ a {
   text-decoration: none;
 }
 
-.pony-card-group {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  margin: 40px 0 0;
-}
+// .k-expander-header {
+//   display: flex;
+//   justify-content: space-between;
+// }
 
-/* CREATE STYLESHEET JUST FOR KENDO CARDS */
+// FOR EXPANSION PANEL DEMO
+// .mouth-closed:before {
+//   content: "👁️👄👁️";
+//   font-size: 14px;
+// }
 
-.k-card {
-  overflow: hidden;
-}
+// .mouth-open:before {
+//   content: "👁️👅👁️";
+//   font-size: 14px;
+// }
 
-kendo-card {
-  margin-bottom: 20px;
-  height: 285px;
-  transition: background-color 0.4s ease;
-}
+// .k-expander-header:hover {
+//   background-color: rgba(138, 180, 248, 0.05);
+//   // outline: 1px solid rgba(138, 180, 248, 0.25);
+//   transition: background-color 0.3s ease-in;
+// }
 
-kendo-card img {
-  max-width: 300px;
-  position: absolute;
-  top: 110px;
-  transition: top 0.4s ease;
-}
+// kendo-expansionpanel:focus {
+//   outline: none;
+// }
 
-kendo-card img:hover {
-  top: 90px;
-}
-
-kendo-card:hover {
-  background-color: #f9f9f9;
-}
+// No idea why those .k-expander-header styles aren't applying. Angular.
+// The end goal here was to make the expander title look like a fancy h2.
+// Need to give the expansionpanel sections a seperator of some kind.
+// Need to give them a container so we can space them apart from the search.
+// Need to put messages into its own panel, collapsed by dewfault.
+// Can we use the MultiColumnComboBox inside of the search dropdown? Want.
+// Or maybe swap out the search with the FloatingActionButton? Might be too many ponies.
+// Why does reordering the tiles throw an error?

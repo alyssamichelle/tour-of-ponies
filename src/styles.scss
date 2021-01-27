@@ -93,6 +93,13 @@ button, button.k-button, nav a {
   font-size: 20px;
 }
 
+.cards-wrapper {
+  max-width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
 // override KUI styles
 
 .k-label-empty {

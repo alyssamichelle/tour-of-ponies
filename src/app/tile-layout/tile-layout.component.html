@@ -1,40 +1,104 @@
-<div class="wrapper">
-  <kendo-tilelayout [columns]="3" [reorderable]="true" [resizable]="true" (reorder)="onReorder($event)"
-    (resize)="onResize($event)">
-    <kendo-tilelayout-item title="Title 1" [col]="1">
-      <kendo-tilelayout-item-body>
-        Content 1
-      </kendo-tilelayout-item-body>
-    </kendo-tilelayout-item>
+<!-- most simple tilelayout -->
+<kendo-tilelayout [columns]="3" [reorderable]="true" [resizable]="true">
+  <kendo-tilelayout-item title="Title 1" [col]="1">
+    <kendo-tilelayout-item-body>
+      Content 1
+    </kendo-tilelayout-item-body>
+  </kendo-tilelayout-item>
 
-    <kendo-tilelayout-item title="Title 2" [col]="2">
-      <kendo-tilelayout-item-body>
-        Content 2
-      </kendo-tilelayout-item-body>
-    </kendo-tilelayout-item>
+  <kendo-tilelayout-item title="Title 2" [col]="2">
+    <kendo-tilelayout-item-body>
+      Content 2
+    </kendo-tilelayout-item-body>
+  </kendo-tilelayout-item>
 
-    <kendo-tilelayout-item title="Title 3" [col]="3">
-      <kendo-tilelayout-item-body>
-        Content 3
-      </kendo-tilelayout-item-body>
-    </kendo-tilelayout-item>
+  <kendo-tilelayout-item title="Title 3" [col]="3">
+    <kendo-tilelayout-item-body>
+      Content 3
+    </kendo-tilelayout-item-body>
+  </kendo-tilelayout-item>
+</kendo-tilelayout>
 
-    <kendo-tilelayout-item title="Title 4" [col]="1">
-      <kendo-tilelayout-item-body>
-        Content 4
-      </kendo-tilelayout-item-body>
-    </kendo-tilelayout-item>
+<!-- a little bit more featured tilelayout -->
+<kendo-tilelayout [columns]="3" [reorderable]="true" [resizable]="true">
+  <kendo-tilelayout-item title="Title 1" [col]="1">
+    <kendo-tilelayout-item-body>
+      Content 1
+    </kendo-tilelayout-item-body>
+  </kendo-tilelayout-item>
+</kendo-tilelayout>
 
-    <kendo-tilelayout-item title="Title 5" [col]="2">
+<!-- looping to generate content dynamically -->
+<kendo-tilelayout [columns]="3" [reorderable]="true">
+  <kendo-tilelayout-item *ngFor="let item of items" [col]="item.col" [title]="'hi'">
       <kendo-tilelayout-item-body>
-        Content 5
-      </kendo-tilelayout-item-body>
-    </kendo-tilelayout-item>
+      <img style="max-width: 300px;" src="{{ item.imageSrc }}" alt="{{ item.title }}">
+    </kendo-tilelayout-item-body>
+  </kendo-tilelayout-item>
+</kendo-tilelayout>
 
-    <kendo-tilelayout-item title="Title 6" [col]="3">
-      <kendo-tilelayout-item-body>
-        Content 6
-      </kendo-tilelayout-item-body>
-    </kendo-tilelayout-item>
-  </kendo-tilelayout>
-</div>
+<!-- populating the tilelayout with pony cards -->
+<kendo-tilelayout [columns]="3" [reorderable]="true">
+  <kendo-tilelayout-item *ngFor="let hero of heroes" [col]="hero.col" [title]="hero.name">
+    <kendo-tilelayout-item-body>
+      <!-- <hero-card [hero]="hero"></hero-card> -->
+    </kendo-tilelayout-item-body>
+  </kendo-tilelayout-item>
+</kendo-tilelayout>
+
+<!-- 
+<kendo-tilelayout [columns]="3" [reorderable]="true">
+  <kendo-tilelayout-item [title]="hero.name" [col]="i % 3 + 1" *ngFor="let hero of heroes; index as i">
+    <kendo-tilelayout-item-body>
+      <hero-card [hero]="hero"></hero-card>
+    </kendo-tilelayout-item-body>
+  </kendo-tilelayout-item>
+</kendo-tilelayout> -->
+
+<!-- <kendo-tilelayout [columns]="3" [reorderable]="true">
+  <kendo-tilelayout-item [title]="hero.name" [col]="i % 3 + 1" *ngFor="let hero of heroes; index as i">
+    <kendo-tilelayout-item-body>
+      <img src="../assets/images/retro-mlp/{{hero.avatar}}" [alt]="hero.name" />
+    </kendo-tilelayout-item-body>
+  </kendo-tilelayout-item>
+</kendo-tilelayout> -->
+
+<hr>
+
+<!-- <kendo-tilelayout [columns]="3" [reorderable]="true" [resizable]="true">
+  <kendo-tilelayout-item title="Title 1" [col]="1">
+    <kendo-tilelayout-item-body>
+      Content 1
+    </kendo-tilelayout-item-body>
+  </kendo-tilelayout-item>
+
+  <kendo-tilelayout-item title="Title 2" [col]="2">
+    <kendo-tilelayout-item-body>
+      Content 2
+    </kendo-tilelayout-item-body>
+  </kendo-tilelayout-item>
+
+  <kendo-tilelayout-item title="Title 3" [col]="3">
+    <kendo-tilelayout-item-body>
+      Content 3
+    </kendo-tilelayout-item-body>
+  </kendo-tilelayout-item>
+
+  <kendo-tilelayout-item title="Title 4" [col]="1">
+    <kendo-tilelayout-item-body>
+      Content 4
+    </kendo-tilelayout-item-body>
+  </kendo-tilelayout-item>
+
+  <kendo-tilelayout-item title="Title 5" [col]="2">
+    <kendo-tilelayout-item-body>
+      Content 5
+    </kendo-tilelayout-item-body>
+  </kendo-tilelayout-item>
+
+  <kendo-tilelayout-item title="Title 6" [col]="3">
+    <kendo-tilelayout-item-body>
+      Content 6
+    </kendo-tilelayout-item-body>
+  </kendo-tilelayout-item>
+</kendo-tilelayout> -->

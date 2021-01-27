@@ -1,0 +1,11 @@
+<kendo-card>
+  <a routerLink="/detail/{{hero.id}}">
+    <kendo-card-header class="k-hbox">
+      <div>
+        <h3 kendoCardTitle>{{ hero.name }}</h3>
+        <p kendoCardSubtitle>{{ hero.alias }} from {{ hero.residence | ellipsis:30 }}</p>
+      </div>
+    </kendo-card-header>
+    <img src="../assets/images/retro-mlp/{{hero.avatar}}" [alt]="hero.name" />
+  </a>
+</kendo-card>

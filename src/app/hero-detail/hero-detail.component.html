@@ -2,6 +2,7 @@
   <h2 [attr.data-text]="hero.name + ' Details'">{{hero.name}} Details</h2>
 
   <div><span>id: </span>{{hero.id}}</div>
+  <div><span>info: </span>{{hero | json}}</div>
   <div>
     <label>name:
       <input [(ngModel)]="hero.name" placeholder="name"/>
