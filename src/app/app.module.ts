@@ -20,9 +20,12 @@ import { LabelModule }             from '@progress/kendo-angular-label';
 import { ButtonsModule }           from '@progress/kendo-angular-buttons';
 import { DropDownsModule }         from '@progress/kendo-angular-dropdowns';
 
-import { CardModule, TileLayoutModule } from '@progress/kendo-angular-layout';
+// import { CardModule, TileLayoutModule, ExpansionPanelModule } from '@progress/kendo-angular-layout';
+import { LayoutModule } from '@progress/kendo-angular-layout';
 import { LVM }                          from './list-view/list-view.module';
 import { TileLayoutComponent }          from './tile-layout/tile-layout.component';
+import { HeroCardComponent } from './hero-card/hero-card.component';
+import { EllipsisPipe } from './ellipsis.pipe';
 
 
 
@@ -43,9 +46,10 @@ import { TileLayoutComponent }          from './tile-layout/tile-layout.componen
     BrowserAnimationsModule,
     LabelModule,
     ButtonsModule,
-    // LayoutModule,
-    CardModule,
-    TileLayoutModule,
+    LayoutModule,
+    // CardModule,
+    // TileLayoutModule,
+    // ExpansionPanelModule,
     DropDownsModule,
     LVM,
   ],
@@ -56,7 +60,10 @@ import { TileLayoutComponent }          from './tile-layout/tile-layout.componen
     HeroDetailComponent,
     MessagesComponent,
     HeroSearchComponent,
-    TileLayoutComponent
+    HeroCardComponent,
+    TileLayoutComponent,
+    HeroCardComponent,
+    EllipsisPipe
   ],
   bootstrap: [ AppComponent ]
 })
