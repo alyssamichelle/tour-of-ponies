@@ -1,12 +1,10 @@
-<div *ngIf="messageService.messages.length" class="messages-wrapper">
-
+<div *ngIf="messageService.messages.length">
   <div class="messages-header-wrapper">
-    <h2 data-text="Messages">Messages</h2>
-    <button kendoButton class="clear" (click)="messageService.clear()">clear all</button>
+    <h2 data-text="Event Logs">Event Logs</h2>
+    <button kendoButton class="clear" (click)="messageService.clear()">Clear All</button>
   </div>
   
   <ul class="messages">
     <li *ngFor='let message of messageService.messages'>{{message}}</li>
   </ul>
-
 </div>
