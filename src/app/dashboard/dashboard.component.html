@@ -1,23 +1,33 @@
 <app-hero-search></app-hero-search>
 
+<!-- PRE FANCY EXPANSION PANELLLLL -->
+<h2 data-text="Top Heroes">Top Heroes</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 20px;">
+  <kendo-card [width]="'260px'" *ngFor="let hero of heroes">
+    <a routerLink="/detail/{{hero.id}}">
+      <kendo-card-header class="k-hbox">
+        <div>
+          <h3 kendoCardTitle>{{ hero.name }}</h3>
+          <p kendoCardSubtitle>{{ hero.id }}</p>
+        </div>
+      </kendo-card-header>
+      <img src="../assets/images/retro-mlp/{{hero.avatar}}" [alt]="hero.name" />
+    </a>
+  </kendo-card>
+</div>
+
 <!-- expansion panel with tile layout with kendo cards inside -->
-<kendo-expansionpanel [expanded]="true">
+<!-- <kendo-expansionpanel title="The Mane Six" subtitle="Organize your favorites!" [expanded]="true">
+  <tile-layout></tile-layout>
+</kendo-expansionpanel> -->
+
+<!-- expansion panel with custom title 💥 -->
+<!-- <kendo-expansionpanel [expanded]="true">
   <ng-template kendoExpansionPanelTitleDirective>
     <h2 data-text="The Mane Six">The Mane Six</h2>
     <p>Organize your favorites!</p>
   </ng-template>
 
   <tile-layout></tile-layout>
-</kendo-expansionpanel>
+</kendo-expansionpanel> -->
 
-<!-- expansion panel with custom title 💥 -->
-<!-- <kendo-expansionpanel [expanded]="true">
-  <ng-template kendoExpansionPanelTitleDirective>
-    <h2 data-text="Top Heroes">Top Heroes</h2>
-  </ng-template>
-
-  <div class="cards-wrapper">
-    <hero-card *ngFor="let hero of heroes" [hero]="hero"></hero-card>
-  </div>
-</kendo-expansionpanel>
- -->
