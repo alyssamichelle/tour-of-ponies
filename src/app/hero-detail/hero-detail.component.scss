@@ -28,3 +28,36 @@ button:disabled {
   color: #ccc;
   cursor: auto;
 }
+
+.k-expander {
+  max-width: 80vw;
+}
+
+.pony-avatar {
+  max-width: 200px;
+}
+
+.pony-images {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+
+  li {
+    list-style-type: none;
+  }
+
+  li img {
+    max-width: 200px
+  }
+}
+
+// FOR EXPANSION PANEL DEMO
+.mouth-closed:before {
+  content: "👁️👄👁️";
+  font-size: 14px;
+}
+
+.mouth-open:before {
+  content: "👁️👅👁️";
+  font-size: 14px;
+}

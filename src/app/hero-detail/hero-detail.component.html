@@ -1,13 +1,46 @@
 <div *ngIf="hero">
+
+<div *ngIf="hero">
   <h2 [attr.data-text]="hero.name + ' Details'">{{hero.name}} Details</h2>
+
+  <!-- super simple expansion panel -->
+  <!-- <kendo-expansionpanel [title]="hero.name" [subtitle]="hero.kind" [expanded]="true">
+    <p>content..</p>
+  </kendo-expansionpanel> -->
+
+  <!-- adding in our pony details to our expansion panel -->
+<!-- 
+  <kendo-expansionpanel [title]="hero.name" [subtitle]="hero.kind" [expanded]="true">
+    <p>Residence: {{hero.residence}}</p>
+    <p>Alias: {{hero.alias}}</p>
+    <p>Sex: {{hero.sex}}</p>
+    <img *ngIf="hero.avatar" class="pony-avatar" src="assets/images/retro-mlp/{{hero.avatar}}" alt="{{hero.name}}">
+    <p>Occupation: {{hero.occupation | json}}</p>
+    <p>{{hero | json}}</p>
+    <ul class="pony-images">
+      <li *ngFor="let img of hero.image">
+        <img src="{{img}}" alt="hero.name">
+      </li>
+    </ul>
+  </kendo-expansionpanel> -->
+
+  <!-- expansion panel with custom icons -->
+  <!-- expandIcon="mouth-closed" collapseIcon="mouth-open" -->
+
+  <hr>
 
   <div><span>id: </span>{{hero.id}}</div>
   <div><span>info: </span>{{hero | json}}</div>
+  
   <div>
-    <label>name:
-      <input [(ngModel)]="hero.name" placeholder="name"/>
+    <h3>Edit the hero</h3>
+    <label>Hero Name:
+      <input [(ngModel)]="hero.name" placeholder="name" />
     </label>
   </div>
-  <button (click)="goBack()">go back</button>
-  <button (click)="save()">save</button>
+  <button (click)="goBack()">Go Back</button>
+  <button (click)="save()">Save</button>
 </div>
+
+</div>
+

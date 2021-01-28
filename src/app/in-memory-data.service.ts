@@ -10,7 +10,6 @@ export class InMemoryDataService implements InMemoryDbService {
     const heroes = [
       {
         "id": 1,
-        "col": 1,
         "name": "Twilight Sparkle",
         "avatar": 'twilight-sparkle.png',
         "alias": "Princess Twilight Sparkle",
@@ -34,7 +33,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 2,
-        "col": 2,
         "name": "Applejack",
         "avatar": 'applejack.png',
         "url": "https:\/\/mlp.fandom.com\/wiki\/Applejack",
@@ -54,7 +52,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 3,
-        "col": 3,
         "name": "Fluttershy",
         "avatar": 'fluttershy.png',
         "url": "https:\/\/mlp.fandom.com\/wiki\/Fluttershy",
@@ -72,7 +69,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 4,
-        "col": 1,
         "name": "Rarity",
         "avatar": 'rarity.png',
         "url": "https:\/\/mlp.fandom.com\/wiki\/Rarity",
@@ -90,7 +86,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 5,
-        "col": 2,
         "name": "Pinkie Pie",
         "avatar": 'pinkie-pie.png',
         "alias": "Pinkamena Diane Pie",
@@ -111,7 +106,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 6,
-        "col": 3,
         "name": "Rainbow Dash",
         "avatar": 'rainbow-dash.png',
         "url": "https:\/\/mlp.fandom.com\/wiki\/Rainbow_Dash",
@@ -130,7 +124,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 7,
-        "col": 1,
         "name": "Spike",
         "alias": "Spike the Dragon",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Spike",
@@ -152,7 +145,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 8,
-        "col": 2,
         "name": "Apple Bloom",
         "alias": "Apple Blossom",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Apple_Bloom",
@@ -170,7 +162,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 9,
-        "col": 3,
         "name": "Scootaloo",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Scootaloo",
         "sex": "Female",
@@ -186,7 +177,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 10,
-        "col": 1,
         "name": "Sweetie Belle",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Sweetie_Belle",
         "sex": "Female",
@@ -203,7 +193,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 11,
-        "col": 2,
         "name": "Babs Seed",
         "alias": "Sweetie Babs",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Babs_Seed",
@@ -222,7 +211,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 12,
-        "col": 3,
         "name": "Gabby",
         "alias": "Gabriella",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Gabby",
@@ -238,7 +226,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 13,
-        "col": 1,
         "name": "Princess Celestia",
         "alias": "Queen Celestia",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Princess_Celestia",
@@ -255,7 +242,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 14,
-        "col": 1,
         "name": "Princess Luna",
         "alias": "Nightmare Moon",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Princess_Luna",
@@ -273,7 +259,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 15,
-        "col": 1,
         "name": "Prince Blueblood",
         "alias": "Vlad\u00edmir",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Prince_Blueblood",
@@ -289,7 +274,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 16,
-        "col": 1,
         "name": "Shining Armor",
         "alias": "Prince Shining Armor",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Shining_Armor",
@@ -312,7 +296,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 17,
-        "col": 1,
         "name": "Princess Cadance",
         "alias": "Princess Mi Amore Cadenza",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Princess_Cadance",
@@ -333,7 +316,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 18,
-        "col": 1,
         "name": "Prince Rutherford",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Prince_Rutherford",
         "sex": "Male",
@@ -347,7 +329,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 19,
-        "col": 1,
         "name": "Flurry Heart",
         "alias": "Baby Flurry Heart",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Flurry_Heart",
@@ -363,7 +344,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 20,
-        "col": 1,
         "name": "Ember",
         "alias": "Princess Ember",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Ember",
@@ -379,7 +359,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 21,
-        "col": 1,
         "name": "Thorax",
         "alias": "King Thorax",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Thorax",
@@ -400,7 +379,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 22,
-        "col": 1,
         "name": "Princess Skystar",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Princess_Skystar",
         "sex": "Female",
@@ -417,7 +395,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 23,
-        "col": 1,
         "name": "Queen Novo",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Queen_Novo",
         "sex": "Female",
@@ -434,7 +411,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 24,
-        "col": 1,
         "name": "Princess Amore",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Princess_Amore",
         "sex": "Female",
@@ -451,7 +427,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 25,
-        "col": 1,
         "name": "Granny Smith",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Granny_Smith",
         "sex": "Female",
@@ -467,7 +442,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 26,
-        "col": 1,
         "name": "Big McIntosh",
         "alias": "Big Mac",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Big_McIntosh",
@@ -485,7 +459,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 27,
-        "col": 1,
         "name": "Braeburn",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Braeburn",
         "sex": "Male",
@@ -501,7 +474,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 28,
-        "col": 1,
         "name": "Aunt Orange",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Aunt_and_Uncle_Orange",
         "sex": "Female",
@@ -515,7 +487,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 29,
-        "col": 1,
         "name": "Uncle Orange",
         "alias": "Mosely Orange",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Aunt_and_Uncle_Orange",
@@ -530,7 +501,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 30,
-        "col": 1,
         "name": "Hayseed Turnip Truck",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Hayseed_Turnip_Truck",
         "sex": "Male",
@@ -544,7 +514,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 31,
-        "col": 1,
         "name": "Apple Strudel",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Apple_Strudel",
         "sex": "Male",
@@ -558,7 +527,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 32,
-        "col": 1,
         "name": "Auntie Applesauce",
         "alias": "Aunt Applesauce",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Auntie_Applesauce",
@@ -573,7 +541,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 33,
-        "col": 1,
         "name": "Apple Rose",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Apple_Rose",
         "sex": "Female",
@@ -588,7 +555,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 34,
-        "col": 1,
         "name": "Goldie Delicious",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Goldie_Delicious",
         "sex": "Female",
@@ -606,7 +572,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 35,
-        "col": 1,
         "name": "Bright Mac",
         "alias": "Bright Macintosh",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Bright_Mac_and_Pear_Butter",
@@ -622,7 +587,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 36,
-        "col": 1,
         "name": "Pear Butter",
         "alias": "Buttercup",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Bright_Mac_and_Pear_Butter",
@@ -639,7 +603,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 37,
-        "col": 1,
         "name": "Limestone Pie",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Limestone_Pie_and_Marble_Pie",
         "sex": "Female",
@@ -654,7 +617,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 38,
-        "col": 1,
         "name": "Marble Pie",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Limestone_Pie_and_Marble_Pie",
         "sex": "Female",
@@ -669,7 +631,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 39,
-        "col": 1,
         "name": "Igneous Rock Pie",
         "alias": "Igneous Rock",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Igneous_Rock_Pie_and_Cloudy_Quartz",
@@ -685,7 +646,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 40,
-        "col": 1,
         "name": "Cloudy Quartz",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Igneous_Rock_Pie_and_Cloudy_Quartz",
         "sex": "Female",
@@ -700,7 +660,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 41,
-        "col": 1,
         "name": "Maud Pie",
         "alias": "Maudileena Daisy Pie",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Maud_Pie",
@@ -718,7 +677,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 42,
-        "col": 1,
         "name": "Mr. Shy",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Mr._and_Mrs._Shy",
         "sex": "Male",
@@ -733,7 +691,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 43,
-        "col": 1,
         "name": "Mrs. Shy",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Mr._and_Mrs._Shy",
         "sex": "Female",
@@ -747,7 +704,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 44,
-        "col": 1,
         "name": "Zephyr Breeze",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Zephyr_Breeze",
         "sex": "Male",
@@ -762,7 +718,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 45,
-        "col": 1,
         "name": "Mr. Carrot Cake",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Mr._and_Mrs._Cake",
         "sex": "Male",
@@ -780,7 +735,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 46,
-        "col": 1,
         "name": "Mrs. Cup Cake",
         "alias": "Chiffon Swirl",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Mr._and_Mrs._Cake",
@@ -800,7 +754,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 47,
-        "col": 1,
         "name": "Pound Cake",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Pound_Cake_and_Pumpkin_Cake",
         "sex": "Male",
@@ -815,7 +768,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 48,
-        "col": 1,
         "name": "Pumpkin Cake",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Pound_Cake_and_Pumpkin_Cake",
         "sex": "Female",
@@ -831,7 +783,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 49,
-        "col": 1,
         "name": "Gallus",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Gallus",
         "sex": "Male",
@@ -847,7 +798,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "id": 50,
-        "col": 1,
         "name": "Silverstream",
         "alias": "Silver Stream",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Silverstream",
