@@ -11,14 +11,7 @@ export class TileLayoutComponent implements OnInit {
   public heroes: Hero[];
 
   constructor(private heroService: HeroService) { }
-  public items: any = [
-    { title: 'Barcelona', col: 1, imageSrc: 'https://demos.telerik.com/kendo-ui/content/web/cards/barcelona.jpg' },
-    { title: 'Sofia', col: 2, imageSrc: 'https://demos.telerik.com/kendo-ui/content/web/cards/sofia.jpg' },
-    { title: 'South Africa', col: 1, imageSrc: 'https://demos.telerik.com/kendo-ui/content/web/cards/south-africa.jpg' },
-    { title: 'Rome', col: 2, imageSrc: 'https://demos.telerik.com/kendo-ui/content/web/cards/rome.jpg' },
-    { title: 'San Francisco', col: 1, imageSrc: 'https://demos.telerik.com/kendo-ui/content/web/cards/sanfran.jpg' },
-    { title: 'Sea View Apartments', col: 2, imageSrc: 'https://demos.telerik.com/kendo-ui/content/web/cards/seaview-appartments.png' }
-  ];
+
   ngOnInit(): void {
     this.getHeroes();
   }
