@@ -4,25 +4,25 @@
   <h2 [attr.data-text]="hero.name + ' Details'">{{hero.name}} Details</h2>
 
   <!-- super simple expansion panel -->
-  <!-- <kendo-expansionpanel [title]="hero.name" [subtitle]="hero.kind" [expanded]="true">
+  <kendo-expansionpanel [title]="hero.name" [subtitle]="hero.kind" [expanded]="true">
     <p>content..</p>
-  </kendo-expansionpanel> -->
+  </kendo-expansionpanel>
 
   <!-- adding in our pony details to our expansion panel -->
-<!-- 
-  <kendo-expansionpanel [title]="hero.name" [subtitle]="hero.kind" [expanded]="true">
+
+  <kendo-expansionpanel [title]="hero.name" [subtitle]="hero.kind" expandIcon="mouth-closed" collapseIcon="mouth-open">
     <p>Residence: {{hero.residence}}</p>
     <p>Alias: {{hero.alias}}</p>
     <p>Sex: {{hero.sex}}</p>
     <img *ngIf="hero.avatar" class="pony-avatar" src="assets/images/retro-mlp/{{hero.avatar}}" alt="{{hero.name}}">
     <p>Occupation: {{hero.occupation | json}}</p>
-    <p>{{hero | json}}</p>
+    <!-- <p>{{hero | json}}</p> -->
     <ul class="pony-images">
       <li *ngFor="let img of hero.image">
         <img src="{{img}}" alt="hero.name">
       </li>
     </ul>
-  </kendo-expansionpanel> -->
+  </kendo-expansionpanel>
 
   <!-- expansion panel with custom icons -->
   <!-- expandIcon="mouth-closed" collapseIcon="mouth-open" -->
@@ -30,7 +30,7 @@
   <hr>
 
   <div><span>id: </span>{{hero.id}}</div>
-  <div><span>info: </span>{{hero | json}}</div>
+  <!-- <div><span>info: </span>{{hero | json}}</div> -->
   
   <div>
     <h3>Edit the hero</h3>

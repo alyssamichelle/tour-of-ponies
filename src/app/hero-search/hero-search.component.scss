@@ -1,10 +1,11 @@
 .search-component {
   display: flex;
   align-items: center;
+}
 
-  label {
-    margin-right: 20px;
-  }
+// clean it up, yo
+label {
+  margin-right: 20px;
 }
 
 kendo-multicolumncombobox {
