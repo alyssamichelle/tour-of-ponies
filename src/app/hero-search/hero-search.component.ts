@@ -9,6 +9,7 @@ import {
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
 import { Router } from '@angular/router';
+import { Contact, contacts } from './contact';
 
 @Component({
   selector: 'app-hero-search',
@@ -48,5 +49,11 @@ export class HeroSearchComponent implements OnInit {
       // switch to new search observable each time the term changes
       switchMap((term: string) => this.heroService.searchHeroes(term)),
     );
+  }
+
+  public contacts: Contact[] = contacts;
+
+  public getContactImageUrl(contactId: string): string {
+    return `https://www.telerik.com/kendo-angular-ui-develop/components/dropdowns/assets/contacts/${contactId}.jpg`;
   }
 }
