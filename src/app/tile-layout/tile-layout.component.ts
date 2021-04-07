@@ -5,7 +5,7 @@ import { HeroService } from '../hero.service';
 @Component({
   selector: 'tile-layout',
   templateUrl: './tile-layout.component.html',
-  styleUrls: ['./tile-layout.component.scss']
+  styleUrls: ['./tile-layout.component.scss'],
 })
 export class TileLayoutComponent implements OnInit {
   public heroes: Hero[];

@@ -211,17 +211,18 @@ button.delete {
 }
 // override for layout expansion panel styles
 .k-tile-layout-item-body.k-card-body {
-  background-color: rgba(0,0,0,0);
+  // background-color: rgba(0,0,0,0);
 }
 
-.k-tilelayout-item.k-card {
-  background-color: rgba(0,0,0,0);
-  border: none;
+
+.k-tile-layout-item-body.k-card-body {
+  // background-color: rgba(0,0,0,0);
+  // border: none;
   display: flex;
-  align-items: center;
+  justify-content: center;
 }
 
 // override for expansion panel
 .k-expander, .k-expander-header {
-  background-color: rgba(0,0,0,0);
+  // background-color: rgba(0,0,0,0);
 }

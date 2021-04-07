@@ -18,6 +18,7 @@ import { Contact, contacts } from './contact';
 })
 export class HeroSearchComponent implements OnInit {
   heroes$: Observable<Hero[]>;
+  isActive = false;
 
   constructor(private heroService: HeroService, private router: Router) {}
 
@@ -36,5 +37,17 @@ export class HeroSearchComponent implements OnInit {
 
   public getContactImageUrl(contactId: string): string {
     return `https://www.telerik.com/kendo-angular-ui-develop/components/dropdowns/assets/contacts/${contactId}.jpg`;
+  }
+
+    // set up for playing with angular animations
+    //  TODO Alyssa
+  public changeState(): void {
+    this.isActive = !this.isActive;
+  };
+
+  public changeThatState(): void {
+    setInterval(function(){
+      this.changeState();
+    }, 5000);
   }
 }

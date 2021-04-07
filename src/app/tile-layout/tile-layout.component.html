@@ -19,26 +19,34 @@
   </kendo-tilelayout-item>
 </kendo-tilelayout> -->
 
-<!-- a little bit more featured tilelayout -->
-<!-- <kendo-tilelayout [columns]="3" [reorderable]="true" [resizable]="true">
-  <kendo-tilelayout-item title="Title 1" [col]="1">
-    <kendo-tilelayout-item-body>
-      Content 1
-    </kendo-tilelayout-item-body>
-  </kendo-tilelayout-item>
-</kendo-tilelayout> -->
-
-<!-- looping to generate content dynamically -->
-
 
 <!-- populating the tilelayout with pony cards -->
-<kendo-tilelayout [columns]="3" [reorderable]="true">
-  <kendo-tilelayout-item [col]="i % 3 + 1" *ngFor="let hero of heroes; index as i">
+<!-- <kendo-tilelayout [columns]="3">
+  <kendo-tilelayout-item [col]="i % 3 + 1" *ngFor="let hero of heroes; let i = index" [order]="i">
+    <kendo-tilelayout-item-header></kendo-tilelayout-item-header>
     <kendo-tilelayout-item-body>
       <hero-card [hero]="hero"></hero-card>
     </kendo-tilelayout-item-body>
   </kendo-tilelayout-item>
-</kendo-tilelayout>
+</kendo-tilelayout> -->
+
+<!-- the fix -->
+<div class="tilelayout-wrapper">
+  <kendo-tilelayout [columns]="2" [reorderable]="true">
+    <kendo-tilelayout-item *ngFor="let hero of heroes; let i = index" [col]="i % 3 + 1" [order]="i">
+      <kendo-tilelayout-item-header>
+        <!-- figure out if item-header is actually needed, yo -->
+        <p>{{hero.name}}</p>
+        <p>{{hero.id}}</p>
+      </kendo-tilelayout-item-header>
+      <kendo-tilelayout-item-body>
+        <hero-card [hero]="hero"></hero-card>
+      </kendo-tilelayout-item-body>
+    </kendo-tilelayout-item>
+  </kendo-tilelayout>
+</div>
+
+
 
 <!-- get this working -->
 <!-- fix OG pony cards -->
@@ -47,4 +55,3 @@
 <!-- add listview to details page for pony info -->
 <!-- show off inline editing -->
 <!-- OR use text area on pony detail page -->
-
