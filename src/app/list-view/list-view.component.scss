@@ -5,6 +5,21 @@
   display: grid;
   gap: 20px;
   grid-template-columns: 1fr 1fr;
+   grid-template-areas: 
+    "lv1 lv2"
+    "lv3 lv3";
+}
+
+:host *:nth-child(1) {
+  grid-area: lv1;
+}
+
+:host *:nth-child(2) {
+  grid-area: lv2;
+}
+
+:host *:nth-child(3) {
+  grid-area: lv3;
 }
 
 .k-listview {

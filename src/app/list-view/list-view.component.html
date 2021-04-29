@@ -1,141 +1,141 @@
-<!-- Have a plain-Jane ListView  plain-listview-->
-<!-- <kendo-listview [data]="ponies">
-  <ng-template kendoListViewItemTemplate let-pony="dataItem">
-    <div class="pony-info">{{ pony.name }}</div>
-  </ng-template>
-</kendo-listview> -->
+  <!-- Have a plain-Jane ListView  plain-listview-->
+  <!-- <kendo-listview [data]="ponies">
+    <ng-template kendoListViewItemTemplate let-pony="dataItem">
+      <div class="pony-info">{{ pony.name }}</div>
+    </ng-template>
+  </kendo-listview> -->
 
-<!-- Add on more info to ListView fancy-listview-->
-<kendo-listview [data]="ponies">
-  <ng-template kendoListViewItemTemplate let-pony="dataItem" let-index="index" let-isFirst="isFirst" let-isLast="isLast">
-    <div class="pony-info">
-      <strong>[{{ index }}]: {{ pony.name }} ({{ isFirst ? 'first' : isLast ? 'last' : 'mid' }})</strong>
-      <em *ngIf="pony.alias" class="pony-alias">aka "{{ pony.alias }}" </em>
-    </div>
-  </ng-template>
-</kendo-listview>
-
-<!-- Add Header & Footer header-footer-listview-->
-<!-- <kendo-listview [data]="ponies">
-  <ng-template kendoListViewHeaderTemplate>
-    <div class="header">
-      <div class="title">MLP Characters</div>
-    </div>
-  </ng-template>
-
-  <ng-template kendoListViewItemTemplate let-pony="dataItem" let-index="index" let-isFirst="isFirst"
-    let-isLast="isLast">
-    <div class="pony-info">
-      <strong>[{{ index }}]: {{ pony.name }} ({{ isFirst ? 'first' : isLast ? 'last' : 'mid' }})</strong>
-      <em *ngIf="pony.alias" class="pony-alias">aka "{{ pony.alias }}" </em>
-    </div>
-  </ng-template>
-
-  <ng-template kendoListViewFooterTemplate>
-    <div class="title footer">My Little Pony: Friendship Is Magic</div>
-  </ng-template>
-</kendo-listview> -->
-
-<!-- Pageable, you say? pageable-listview-->
-<kendo-listview 
-  [kendoListViewBinding]="ponies"
-  [pageable]="pagerSettings"
-  [pageSize]="pageSize">
-
-  <ng-template kendoListViewHeaderTemplate>
-    <div class="header">
-      <div class="title">MLP Characters</div>
-    </div>
-  </ng-template>
-
-  <ng-template kendoListViewItemTemplate let-pony="dataItem" let-index="index" let-isFirst="isFirst" let-isLast="isLast">
-    <div class="pony-info">
-      <strong>[{{ index }}]: {{ pony.name }} ({{ isFirst ? 'first' : isLast ? 'last' : 'mid' }})</strong>
-      <em *ngIf="pony.alias" class="pony-alias">aka "{{ pony.alias }}" </em>
-    </div>
-  </ng-template>
-
-  <ng-template kendoListViewFooterTemplate>
-    <div class="title footer">My Little Pony: Friendship Is Magic</div>
-  </ng-template>
-</kendo-listview>
-
-<!-- Add a simple Search to ListView simple-search-listview-->
-<kendo-listview [(data)]="ponies">
-
-  <ng-template kendoListViewHeaderTemplate>
-    <div class="header">
-      <div class="title">MLP Characters</div>
-  
-      <kendo-textbox 
-        placeholder="Filter Ponies..." 
-        ngModel   
-        (ngModelChange)="handleFilterChange($event)"
-        [showSuccessIcon]="false">
-      </kendo-textbox>
-    </div>
-  </ng-template>
-
-  <ng-template kendoListViewItemTemplate let-pony="dataItem" let-index="index" let-isFirst="isFirst"
-    let-isLast="isLast">
-    <div class="pony-info">
-      <strong>[{{ index }}]: {{ pony.name }} ({{ isFirst ? 'first' : isLast ? 'last' : 'mid' }})</strong>
-      <em *ngIf="pony.alias" class="pony-alias">aka "{{ pony.alias }}" </em>
-    </div>
-  </ng-template>
-
-  <ng-template kendoListViewFooterTemplate>
-    <div class="title footer">My Little Pony: Friendship Is Magic</div>
-  </ng-template>
-</kendo-listview>
-
-<!-- *** Adnorments for fancy a TextBox adnornments-search.. -->
-<!-- https://www.telerik.com/kendo-angular-ui-develop/components/inputs/textbox/adornments/ -->
-
-<!-- But what about our other ponnies list? Can we put these inside the Kendo ListView?? custom-listview-->
-<!-- 
-<kendo-listview [data]="heroes" containerClass="heroes">
-  <ng-template kendoListViewItemTemplate let-hero="dataItem">
-    <a routerLink="/detail/{{hero.id}}">
-      <kendo-badge-container>
-        <img class="avatar" [src]="getAvatarLink(hero.id)" title="pony avatar img">
-        <kendo-badge 
-          shape="dot"
-          shape="circle"
-          themeColor="light"
-          size="large"
-          cutoutBorder="true"
-          >{{hero.id}}</kendo-badge>
-      </kendo-badge-container>
-      <div class="hero-name">{{hero.name}}</div>
-    </a>
-    <button kendoButton icon="close" class="delete" title="delete hero" (click)="delete(hero)"></button>
-  </ng-template>
-</kendo-listview> -->
-<!-- B B B BADGES! Queue Indicators FTW  -->
-<!-- replace img with badge-container -->
-<!-- https://www.telerik.com/kendo-angular-ui-develop/components/indicators/badge/appearance/ -->
-
-
-<!-- add a loader for slower data ;) -->
-<!-- DELAY SET IN APP.MODULE, YUH -->
-<kendo-listview [data]="heroes" containerClass="heroes with-loader">
-    <ng-template kendoListViewHeaderTemplate *ngIf="loader">
-      <div class="header">
-        <p class="title">Loading more Pony data ...</p>
-        <kendo-loader type="infinite-spinner" size="small"></kendo-loader>
+  <!-- Add on more info to ListView fancy-listview-->
+  <kendo-listview [data]="ponies">
+    <ng-template kendoListViewItemTemplate let-pony="dataItem" let-index="index" let-isFirst="isFirst" let-isLast="isLast">
+      <div class="pony-info">
+        <strong>[{{ index }}]: {{ pony.name }} ({{ isFirst ? 'first' : isLast ? 'last' : 'mid' }})</strong>
+        <em *ngIf="pony.alias" class="pony-alias">aka "{{ pony.alias }}" </em>
       </div>
     </ng-template>
-  <ng-template kendoListViewItemTemplate let-hero="dataItem">
-    <a routerLink="/detail/{{hero.id}}">
-      <kendo-badge-container>
-        <img class="avatar" [src]="getAvatarLink(hero.id)" title="pony avatar img">
-        <kendo-badge shape="circle" themeColor="dark"
-          size="small" cutoutBorder="true">{{hero.id}}</kendo-badge>
-      </kendo-badge-container>
-      <div class="hero-name">{{hero.name}}</div>
-    </a>
-    <button kendoButton icon="close" class="delete" title="delete hero" (click)="delete(hero)"></button>
-  </ng-template>
-</kendo-listview>
-<!-- *** Icons Icons Everywhere -->
+  </kendo-listview>
+
+  <!-- Add Header & Footer header-footer-listview-->
+  <!-- <kendo-listview [data]="ponies">
+    <ng-template kendoListViewHeaderTemplate>
+      <div class="header">
+        <div class="title">MLP Characters</div>
+      </div>
+    </ng-template>
+
+    <ng-template kendoListViewItemTemplate let-pony="dataItem" let-index="index" let-isFirst="isFirst"
+      let-isLast="isLast">
+      <div class="pony-info">
+        <strong>[{{ index }}]: {{ pony.name }} ({{ isFirst ? 'first' : isLast ? 'last' : 'mid' }})</strong>
+        <em *ngIf="pony.alias" class="pony-alias">aka "{{ pony.alias }}" </em>
+      </div>
+    </ng-template>
+
+    <ng-template kendoListViewFooterTemplate>
+      <div class="title footer">My Little Pony: Friendship Is Magic</div>
+    </ng-template>
+  </kendo-listview> -->
+
+  <!-- Pageable, you say? pageable-listview-->
+  <kendo-listview
+    [kendoListViewBinding]="ponies"
+    [pageable]="pagerSettings"
+    [pageSize]="pageSize">
+
+    <ng-template kendoListViewHeaderTemplate>
+      <div class="header">
+        <div class="title">MLP Characters</div>
+      </div>
+    </ng-template>
+
+    <ng-template kendoListViewItemTemplate let-pony="dataItem" let-index="index" let-isFirst="isFirst" let-isLast="isLast">
+      <div class="pony-info">
+        <strong>[{{ index }}]: {{ pony.name }} ({{ isFirst ? 'first' : isLast ? 'last' : 'mid' }})</strong>
+        <em *ngIf="pony.alias" class="pony-alias">aka "{{ pony.alias }}" </em>
+      </div>
+    </ng-template>
+
+    <ng-template kendoListViewFooterTemplate>
+      <div class="title footer">My Little Pony: Friendship Is Magic</div>
+    </ng-template>
+  </kendo-listview>
+
+  <!-- Add a simple Search to ListView simple-search-listview-->
+  <!-- <kendo-listview [(data)]="ponies">
+
+    <ng-template kendoListViewHeaderTemplate>
+      <div class="header">
+        <div class="title">MLP Characters</div>
+    
+        <kendo-textbox 
+          placeholder="Filter Ponies..." 
+          ngModel   
+          (ngModelChange)="handleFilterChange($event)"
+          [showSuccessIcon]="false">
+        </kendo-textbox>
+      </div>
+    </ng-template>
+
+    <ng-template kendoListViewItemTemplate let-pony="dataItem" let-index="index" let-isFirst="isFirst"
+      let-isLast="isLast">
+      <div class="pony-info">
+        <strong>[{{ index }}]: {{ pony.name }} ({{ isFirst ? 'first' : isLast ? 'last' : 'mid' }})</strong>
+        <em *ngIf="pony.alias" class="pony-alias">aka "{{ pony.alias }}" </em>
+      </div>
+    </ng-template>
+
+    <ng-template kendoListViewFooterTemplate>
+      <div class="title footer">My Little Pony: Friendship Is Magic</div>
+    </ng-template>
+  </kendo-listview> -->
+
+  <!-- *** Adnorments for fancy a TextBox adnornments-search.. -->
+  <!-- https://www.telerik.com/kendo-angular-ui-develop/components/inputs/textbox/adornments/ -->
+
+  <!-- But what about our other ponnies list? Can we put these inside the Kendo ListView?? custom-listview-->
+  <!-- 
+  <kendo-listview [data]="heroes" containerClass="heroes">
+    <ng-template kendoListViewItemTemplate let-hero="dataItem">
+      <a routerLink="/detail/{{hero.id}}">
+        <kendo-badge-container>
+          <img class="avatar" [src]="getAvatarLink(hero.id)" title="pony avatar img">
+          <kendo-badge 
+            shape="dot"
+            shape="circle"
+            themeColor="light"
+            size="large"
+            cutoutBorder="true"
+            >{{hero.id}}</kendo-badge>
+        </kendo-badge-container>
+        <div class="hero-name">{{hero.name}}</div>
+      </a>
+      <button kendoButton icon="close" class="delete" title="delete hero" (click)="delete(hero)"></button>
+    </ng-template>
+  </kendo-listview> -->
+  <!-- B B B BADGES! Queue Indicators FTW  -->
+  <!-- replace img with badge-container -->
+  <!-- https://www.telerik.com/kendo-angular-ui-develop/components/indicators/badge/appearance/ -->
+
+
+  <!-- add a loader for slower data ;) -->
+  <!-- DELAY SET IN APP.MODULE, YUH -->
+  <kendo-listview [data]="heroes" containerClass="heroes with-loader">
+      <ng-template kendoListViewHeaderTemplate *ngIf="loader">
+        <div class="header">
+          <p class="title">Loading more Pony data ...</p>
+          <kendo-loader type="infinite-spinner" size="small"></kendo-loader>
+        </div>
+      </ng-template>
+    <ng-template kendoListViewItemTemplate let-hero="dataItem">
+      <a routerLink="/detail/{{hero.id}}">
+        <kendo-badge-container>
+          <img class="avatar" [src]="getAvatarLink(hero.id)" title="pony avatar img">
+          <kendo-badge shape="circle" themeColor="dark"
+            size="small" cutoutBorder="true">{{hero.id}}</kendo-badge>
+        </kendo-badge-container>
+        <div class="hero-name">{{hero.name}}</div>
+      </a>
+      <button kendoButton icon="close" class="delete" title="delete hero" (click)="delete(hero)"></button>
+    </ng-template>
+  </kendo-listview>
+  <!-- *** Icons Icons Everywhere -->
