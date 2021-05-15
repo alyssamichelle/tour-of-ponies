@@ -64,7 +64,7 @@ import { EllipsisPipe }        from './ellipsis.pipe';
     HeroCardComponent,
     TileLayoutComponent,
     HeroCardComponent,
-    EllipsisPipe
+    EllipsisPipe,
   ],
   bootstrap: [ AppComponent ]
 })

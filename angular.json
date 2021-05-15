@@ -5,11 +5,6 @@
   "projects": {
     "angular.io-example": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "styleext": "scss"
-        }
-      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
