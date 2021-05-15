@@ -1,4 +1,9 @@
 /* HeroDetailComponent's private CSS styles */
+:host {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 label {
   display: inline-block;
   width: 3em;
@@ -33,9 +38,20 @@ button:disabled {
   max-width: 80vw;
 }
 
-.pony-avatar {
-  max-width: 200px;
+article.hero-details {
+  display: flex;
+  gap: 20px;
+
+  ul.hero-info {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .hero-avatar {
+    max-width: 200px;
+  }
 }
+
 
 .pony-images {
   display: flex;
@@ -61,3 +77,8 @@ button:disabled {
   content: "🦄";
   font-size: 14px;
 }
+
+// For Skeleton holder customization
+// kendo-skeleton {
+
+// }

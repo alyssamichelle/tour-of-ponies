@@ -19,14 +19,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LabelModule }             from '@progress/kendo-angular-label';
 import { ButtonsModule }           from '@progress/kendo-angular-buttons';
 import { DropDownsModule }         from '@progress/kendo-angular-dropdowns';
+import { IndicatorsModule }        from '@progress/kendo-angular-indicators';
 
 // import { CardModule, TileLayoutModule, ExpansionPanelModule } from '@progress/kendo-angular-layout';
-import { LayoutModule } from '@progress/kendo-angular-layout';
-import { LVM }                          from './list-view/list-view.module';
-import { TileLayoutComponent }          from './tile-layout/tile-layout.component';
-import { HeroCardComponent } from './hero-card/hero-card.component';
-import { EllipsisPipe } from './ellipsis.pipe';
-
+import { LayoutModule }        from '@progress/kendo-angular-layout';
+import { LVM }                 from './list-view/list-view.module';
+import { TileLayoutComponent } from './tile-layout/tile-layout.component';
+import { HeroCardComponent }   from './hero-card/hero-card.component';
+import { EllipsisPipe }        from './ellipsis.pipe';
 
 
 @NgModule({
@@ -52,6 +52,7 @@ import { EllipsisPipe } from './ellipsis.pipe';
     // ExpansionPanelModule,
     DropDownsModule,
     LVM,
+    IndicatorsModule,
   ],
   declarations: [
     AppComponent,
