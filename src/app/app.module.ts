@@ -27,6 +27,7 @@ import { LVM }                 from './list-view/list-view.module';
 import { TileLayoutComponent } from './tile-layout/tile-layout.component';
 import { HeroCardComponent }   from './hero-card/hero-card.component';
 import { EllipsisPipe }        from './ellipsis.pipe';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 
 @NgModule({
@@ -40,7 +41,7 @@ import { EllipsisPipe }        from './ellipsis.pipe';
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
     HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false, delay: 1000 }
+      InMemoryDataService, { dataEncapsulation: false, delay: 2000 }
     ),
     InputsModule,
     BrowserAnimationsModule,
@@ -65,6 +66,7 @@ import { EllipsisPipe }        from './ellipsis.pipe';
     TileLayoutComponent,
     HeroCardComponent,
     EllipsisPipe,
+    SidebarComponent,
   ],
   bootstrap: [ AppComponent ]
 })

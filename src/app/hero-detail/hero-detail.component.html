@@ -1,43 +1,76 @@
-<section>
-  <h2>NO HERO FOR YOU</h2>
-  <h2>Hero Details</h2>
-  <kendo-skeleton shape="rectangle" animation="pulse" [width]="500" [height]="400"></kendo-skeleton>
+<section *ngIf="!hero" class="skeleton-section">
+  <div class="skeleton-header">
+    <kendo-skeleton shape="text" animation="pulse" [width]="250" [height]="70"></kendo-skeleton>
+    <h2 data-text="Details"> Details</h2>
+  </div>
+    <article class="hero-details">
+      <ul class="hero-info">
+        <li>
+          <label class="pony-edit-field inline">Pony Name:
+            <kendo-skeleton shape="text" animation="pulse" [width]="156" [height]="32"></kendo-skeleton>
+          </label>
+        </li>
+        <li>
+          Pony ID: 
+          <kendo-skeleton shape="text" animation="wave" [width]="50" [height]="23"></kendo-skeleton>
+        </li>
+        <li>
+          Residence: 
+          <kendo-skeleton shape="text" animation="wave" [width]="150" [height]="23"></kendo-skeleton>
+        </li>
+        <li>
+          Alias: 
+          <kendo-skeleton shape="text" animation="wave" [width]="200" [height]="23"></kendo-skeleton></li>
+        <li>
+          Sex: 
+          <kendo-skeleton shape="text" animation="wave" [width]="250" [height]="23"></kendo-skeleton></li>
+        <li>
+          <p>
+            Occupation: 
+            <kendo-skeleton shape="text" animation="pulse" [width]="682" [height]="23"></kendo-skeleton>
+            <kendo-skeleton shape="text" animation="pulse" [width]="682" [height]="23"></kendo-skeleton>
+            <kendo-skeleton shape="text" animation="pulse" [width]="682" [height]="23"></kendo-skeleton>
+          </p>
+        </li>
+      </ul>
+      <kendo-skeleton class="hero-avatar" shape="circle" animation="wave"></kendo-skeleton>
+    </article>
+    <ul class="pony-images">
+      <li>
+        <kendo-skeleton shape="rectangle" animation="pulse" [width]="200" [height]="170"></kendo-skeleton>
+      </li>
+      <li>
+        <kendo-skeleton shape="rectangle" animation="pulse" [width]="200" [height]="170"></kendo-skeleton>
+      </li>
+      <li>
+        <kendo-skeleton shape="rectangle" animation="pulse" [width]="200" [height]="170"></kendo-skeleton>
+      </li>
+    </ul>
 </section>
 
 <section *ngIf="hero">
   <h2 [attr.data-text]="hero.name + ' Details'">{{hero.name}} Details</h2>
   <article class="hero-details">
-
     <ul class="hero-info">
-      <li>Residence: {{hero.residence}}</li>
-      <li>Alias: {{hero.alias}}</li>
-      <li>Sex: {{hero.sex}}</li>
+      <li>
+        <label class="pony-edit-field">Pony Name:
+          <input [(ngModel)]="hero.name" placeholder="name" />
+        </label>
+      </li>
+      <li>Pony ID: {{ hero.id }}</li>
+      <li *ngIf="hero.residence">Residence: {{hero.residence}}</li>
+      <li *ngIf="hero.alias">Alias: {{hero.alias}}</li>
+      <li *ngIf="hero.sex">Sex: {{hero.sex}}</li>
+      <li *ngIf="hero.occupation"><p>Occupation: {{hero.occupation | json}}</p></li>
     </ul>
     <img *ngIf="hero.avatar" class="hero-avatar" src="assets/images/retro-mlp/{{hero.avatar}}" alt="{{hero.name}}">
-
   </article>
-
-  <p>Occupation: {{hero.occupation | json}}</p>
-  <!-- <p>{{hero | json}}</p> -->
-  <ul class="pony-images">
-    <li *ngFor="let img of hero.image">
-      <img src="{{img}}" alt="hero.name">
-    </li>
-  </ul>
-</section>
-
-<section *ngIf="hero" class="edit-hero">
-  <hr>
-
-  <div><span>id: </span>{{hero.id}}</div>
-  <!-- <div><span>info: </span>{{hero | json}}</div> -->
-
-  <div>
-    <h3>Edit the hero</h3>
-    <label>Hero Name:
-      <input [(ngModel)]="hero.name" placeholder="name" />
-    </label>
-  </div>
+    <!-- <p>{{hero | json}}</p> -->
+    <ul class="pony-images">
+      <li *ngFor="let img of hero.image">
+        <img src="{{img}}" alt="hero.name">
+      </li>
+    </ul>
 </section>
 
 <!-- super simple expansion panel -->
