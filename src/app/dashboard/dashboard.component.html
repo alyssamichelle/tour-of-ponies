@@ -1,18 +1,9 @@
 <app-hero-search></app-hero-search>
 <!-- PRE FANCY EXPANSION PANELLLLL -->
 <h2 data-text="Top Heroes">Top Heroes</h2>
+
 <div style="display: flex; flex-wrap: wrap; gap: 20px;">
-  <kendo-card [width]="'260px'" *ngFor="let hero of heroes">
-    <a routerLink="/detail/{{hero.id}}">
-      <kendo-card-header class="k-hbox">
-        <div>
-          <h3 kendoCardTitle>{{ hero.name }}</h3>
-          <p kendoCardSubtitle>ID: {{ hero.id }}</p>
-        </div>
-      </kendo-card-header>
-      <img style="max-width: 100%;" src="../assets/images/retro-mlp/{{hero.avatar}}" [alt]="hero.name" />
-    </a>
-  </kendo-card>
+  <hero-card *ngFor="let hero of heroes" [hero]="hero"></hero-card>
 </div>
 
 <!-- expansion panel with tile layout with kendo cards inside -->

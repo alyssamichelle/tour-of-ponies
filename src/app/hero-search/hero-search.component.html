@@ -1,9 +1,13 @@
 <div class="search-component">
     <div>
         <label>Hop to a specific Hero:</label>
-        <kendo-dropdownlist [data]="heroes$ | async" [filterable]="true" textField="name" valueField="id" (filterChange)="search($event)" (valueChange)="onValueChange($event)">
+        <kendo-dropdownlist [data]="heroes$ | async" textField="name" valueField="id"  (valueChange)="onValueChange($event)">
         </kendo-dropdownlist>
     </div>
+
+    <!-- TODO: Add filter option (filtering with observable hero data) -->
+    <!-- [filterable]="true" (filterChange)="search($event)" -->
+
     <!-- TODO: figure out same type error -->
     <!-- [defaultItem]="'Find your Hero ...'" -->
 

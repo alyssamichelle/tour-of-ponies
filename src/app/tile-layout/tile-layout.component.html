@@ -31,12 +31,12 @@
 </kendo-tilelayout> -->
 
 <!-- the fix -->
-<div class="tilelayout-wrapper">
+<!-- <div class="tilelayout-wrapper">
   <kendo-tilelayout [columns]="2" [reorderable]="true">
     <kendo-tilelayout-item *ngFor="let hero of heroes; let i = index" [col]="i % 3 + 1" [order]="i">
-      <kendo-tilelayout-item-header>
+      <kendo-tilelayout-item-header> -->
         <!-- figure out if item-header is actually needed, yo -->
-        <p>{{hero.name}}</p>
+        <!-- <p>{{hero.name}}</p>
         <p>{{hero.id}}</p>
       </kendo-tilelayout-item-header>
       <kendo-tilelayout-item-body>
@@ -44,7 +44,7 @@
       </kendo-tilelayout-item-body>
     </kendo-tilelayout-item>
   </kendo-tilelayout>
-</div>
+</div> -->
 
 
 
@@ -55,3 +55,18 @@
 <!-- add listview to details page for pony info -->
 <!-- show off inline editing -->
 <!-- OR use text area on pony detail page -->
+
+<!-- the fix phase 2.0 -->
+<div class="tilelayout-wrapper">
+  <kendo-tilelayout [columns]="3" [reorderable]="true">
+    <kendo-tilelayout-item *ngFor="let hero of heroes; let i = index" [col]="i % 3 + 1" [order]="i">
+      <kendo-tilelayout-item-header>
+        <h3 kendoCardTitle>{{ hero.name }}</h3>
+        <p kendoCardSubtitle>{{ hero.alias }} from {{ hero.residence | ellipsis:30 }}</p>
+      </kendo-tilelayout-item-header>
+      <kendo-tilelayout-item-body>
+        <img class="hero-avatar" src="../assets/images/retro-mlp/{{hero.avatar}}" [alt]="hero.name" />
+      </kendo-tilelayout-item-body>
+    </kendo-tilelayout-item>
+  </kendo-tilelayout>
+</div>

@@ -37,12 +37,11 @@ button:disabled {
   max-width: 80vw;
 }
 
-
 .hero-avatar {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  border: 2px solid $dark-purple;
+  border: 2px solid $purple;
 }
 
 // skeleton holder styles
@@ -75,6 +74,8 @@ article.hero-details {
   
   .hero-avatar {
     max-width: 200px;
+    min-width: 200px;
+    min-height: 200px;
   }
 }
 
@@ -92,7 +93,7 @@ article.hero-details {
     max-width: 200px;
     max-height: 170px;
     border-radius: 6px;
-    border: 2px solid $dark-purple;
+    border: 2px solid $purple;
   }
 }
 
@@ -106,8 +107,3 @@ article.hero-details {
   content: "🦄";
   font-size: 14px;
 }
-
-// For Skeleton holder customization
-// kendo-skeleton {
-
-// }
