@@ -1,6 +1,10 @@
 /* AppComponent's private CSS styles */
 @import 'src/assets/colors.scss';
 
+// Customizing KUI Base Variables
+$base-bg: $hot-pink !default;
+// @import "~@progress/kendo-theme-default/scss/dist/all.scss";
+
 .content-wrapper {
   margin: 40px;
   display: flex;

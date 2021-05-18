@@ -7,4 +7,9 @@ import { Component, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
+
+  public items: Array<any> = [
+    { text: "Dashboard", icon: "home", selected: true },
+    { text: "Heroes", icon: "person" },
+  ];
 }

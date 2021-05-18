@@ -9,11 +9,6 @@
     <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
     <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
   </nav>
-
-  <!-- add mobile nav -->
-  <!-- <nav *ngIf="!mobileNav">
-    <h1>I'm a mobile nav!</h1>
-  </nav> -->
 </div>
 
 <div class="content-wrapper">
@@ -24,4 +19,7 @@
 </div>
 
 <app-messages></app-messages>
+
+<!-- add mobile nav -->
+<kendo-bottomnavigation [items]="items" positionMode="fixed" [border]="true"></kendo-bottomnavigation>
 
