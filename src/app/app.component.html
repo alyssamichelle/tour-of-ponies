@@ -21,5 +21,18 @@
 <app-messages></app-messages>
 
 <!-- add mobile nav -->
-<kendo-bottomnavigation [items]="items" positionMode="fixed" [border]="true"></kendo-bottomnavigation>
+<!-- <kendo-bottomnavigation [items]="items" positionMode="fixed" fill="solid" themeColor="warning">
+</kendo-bottomnavigation> -->
+
+<!-- themeColor="warning" -->
+<!-- positionMode="sticky" -->
+
+<kendo-bottomnavigation [items]="items" fill="solid" >
+  <ng-template kendoBottomNavigationItemTemplate let-item>
+    <div [routerLink]="item.path" class="k-bottom-nav-link"> 
+      <kendo-icon [name]="item.icon" size="medium"></kendo-icon>
+      <span>{{item.text}}</span>
+    </div>
+  </ng-template>
+</kendo-bottomnavigation>
 

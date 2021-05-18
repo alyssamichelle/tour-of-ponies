@@ -1,8 +1,9 @@
 /* AppComponent's private CSS styles */
 @import 'src/assets/colors.scss';
 
+// TODO Get custom vars working
 // Customizing KUI Base Variables
-$base-bg: $hot-pink !default;
+// $base-bg: $hot-pink !default;
 // @import "~@progress/kendo-theme-default/scss/dist/all.scss";
 
 .content-wrapper {
@@ -20,6 +21,14 @@ $base-bg: $hot-pink !default;
 .main-section {
   flex: 3 0 0;
   display: block;
+}
+
+.main-title {
+  margin-bottom: 20px;
+
+  * {
+    color: $hot-pink;
+  }
 }
 
 sidebar {
@@ -101,16 +110,32 @@ code::after {
   }
 }
 
-.main-title {
-  margin-bottom: 20px;
-
-  * {
-    color: $hot-pink;
-  }
-}
-
 .k-card-body {
   margin: 16px 16px;
   padding: 0;
   overflow: hidden;
+}
+
+// customizing the bottomNav
+kendo-bottomnavigation.k-bottom-nav-solid.k-bottom-nav-primary {
+  display: none;
+}
+
+@media (orientation: portrait)  {
+  kendo-bottomnavigation.k-bottom-nav-solid.k-bottom-nav-primary {
+    display: flex;
+  }
+}
+
+.k-bottom-nav-item > .k-bottom-nav-link {
+  flex-direction: column;
+}
+
+// &:hover, &:active {
+.k-bottom-nav-item.k-state-selected > .k-bottom-nav-link {
+  color: $muted-bg;
+}
+
+.k-bottom-nav-solid.k-bottom-nav-primary {
+  background-color: $hot-pink;
 }

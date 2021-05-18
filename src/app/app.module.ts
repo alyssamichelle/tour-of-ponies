@@ -29,6 +29,7 @@ import { HeroCardComponent }   from './hero-card/hero-card.component';
 import { EllipsisPipe }        from './ellipsis.pipe';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { NavigationModule } from '@progress/kendo-angular-navigation';
+import { IconsModule } from '@progress/kendo-angular-icons';
 
 
 @NgModule({
@@ -56,6 +57,7 @@ import { NavigationModule } from '@progress/kendo-angular-navigation';
     LVM,
     IndicatorsModule,
     NavigationModule,
+    IconsModule,
   ],
   declarations: [
     AppComponent,
