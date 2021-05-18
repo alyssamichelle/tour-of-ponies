@@ -101,8 +101,12 @@ code::after {
   }
 }
 
-.main-title * {
-  color: $hot-pink;
+.main-title {
+  margin-bottom: 20px;
+
+  * {
+    color: $hot-pink;
+  }
 }
 
 .k-card-body {
