@@ -4,12 +4,17 @@ a {
   text-decoration: none;
 }
 
+.top-hero-wrapper {
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
 // .k-expander-header {
 //   display: flex;
 //   justify-content: space-between;
 // }
-
-
 
 // .k-expander-header:hover {
 //   background-color: rgba(138, 180, 248, 0.05);

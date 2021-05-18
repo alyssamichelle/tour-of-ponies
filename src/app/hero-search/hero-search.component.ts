@@ -1,5 +1,5 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-
+import { AfterViewInit, Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
+import { MultiColumnComboBoxComponent } from "@progress/kendo-angular-dropdowns";
 import { Observable, Subject } from 'rxjs';
 
 import {
@@ -17,7 +17,9 @@ import { Contact, contacts } from './contact';
   styleUrls: [ './hero-search.component.scss' ],
   encapsulation: ViewEncapsulation.None
 })
-export class HeroSearchComponent implements OnInit {
+export class HeroSearchComponent implements OnInit, AfterViewInit {
+  @ViewChild("mccbPonies", { static: false })
+  public mccbPonies: MultiColumnComboBoxComponent;
   heroes$: Observable<Hero[]>;
   isActive = false;
 
@@ -32,6 +34,11 @@ export class HeroSearchComponent implements OnInit {
 
   ngOnInit(): void {
     this.heroes$ = this.heroService.getHeroes();
+  }
+
+  public ngAfterViewInit(): void {
+    // For debugging the search box, toggle its state open
+    // this.mccbPonies.toggle();
   }
 
   public contacts: Contact[] = contacts;
@@ -50,5 +57,18 @@ export class HeroSearchComponent implements OnInit {
     setInterval(function(){
       this.changeState();
     }, 5000);
+  }
+
+
+  getAvatarLink(heroId): string {
+    let avatarLink = '../assets/mlp-avatars/pony-' + heroId + '.png';
+
+    // assign a random number between 21 - 53
+    if (heroId > 10) {
+      let randomNumber = Math.floor(Math.random() * 32) + 21;
+      avatarLink = '../assets/mlp-avatars/pony-' + randomNumber + '.png';
+    }
+
+    return avatarLink;
   }
 }

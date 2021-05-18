@@ -31,14 +31,20 @@
             </strong>
         </ng-template>
     </kendo-multicolumncombobox> -->
-    <div>
+    <div class="search-box" *ngIf="heroes$">
         <!-- get MCCB with our heroes$ data workings -->
         <kendo-label class="k-display-block" [for]="mccbPonies" text="My Little Pony...">
         </kendo-label>
-        <kendo-multicolumncombobox #mccbPonies [data]="heroes$ | async" [listHeight]="300" textField="name" valueField="id">
+        <kendo-multicolumncombobox 
+            #mccbPonies
+            [data]="heroes$ | async" 
+            [listHeight]="300"    
+            textField="name" 
+            valueField="id">
             <kendo-combobox-column field="name" title="Pony Name" [width]="200">
                 <ng-template kendoMultiColumnComboBoxColumnCellTemplate let-dataItem>
-                    <img class="contact-image" src="dataItem.img[0]" />
+                    <!-- <img class="contact-image" src="dataItem.img[0]" /> -->
+                    <img class="avatar" [src]="getAvatarLink(dataItem.id)" title="pony avatar img">
                     <span>{{ dataItem.name }}</span>
                 </ng-template>
             </kendo-combobox-column>

@@ -46,7 +46,8 @@ export class ListViewComponent implements OnInit {
     this.heroes = this.heroes.filter(h => h !== hero);
     this.heroService.deleteHero(hero).subscribe();
   }
-  
+
+  // TODO: turn into a reusable sharable service
   getAvatarLink(heroId): string {
     let avatarLink = '../assets/mlp-avatars/pony-' + heroId + '.png';
 
