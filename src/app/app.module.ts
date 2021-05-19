@@ -30,6 +30,8 @@ import { EllipsisPipe }        from './ellipsis.pipe';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { NavigationModule } from '@progress/kendo-angular-navigation';
 import { IconsModule } from '@progress/kendo-angular-icons';
+import { GaugesModule } from '@progress/kendo-angular-gauges';
+
 
 
 @NgModule({
@@ -58,6 +60,7 @@ import { IconsModule } from '@progress/kendo-angular-icons';
     IndicatorsModule,
     NavigationModule,
     IconsModule,
+    GaugesModule,
   ],
   declarations: [
     AppComponent,

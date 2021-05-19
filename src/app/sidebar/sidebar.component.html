@@ -10,7 +10,64 @@
       <code>npm i @progress/kendo-angular-indicators&nbsp;</code>
       <p>The Skeleton component helps developers to speed up the initial page load time by displaying a simplified preview of the content. This preview acts as a placeholder for the content while it loads. At the same time, the user will get a general idea about what will appear on the page.</p>
       <hr kendoCardSeparator />
-      <kendo-skeleton shape="rectangle" [width]="250" [height]="55"></kendo-skeleton>
+      <kendo-skeleton shape="rectangle" [height]="55"></kendo-skeleton>
+    </kendo-card-body>
+  </kendo-card>
+
+  <kendo-card>
+    <kendo-card-header>
+      <h3><a href="https://www.telerik.com/kendo-angular-ui-develop/components/navigation/bottomnavigation">BottomNavigation Component</a></h3>
+      <p class="additional-info">Navigation › BottomNavigation</p>
+    </kendo-card-header>
+    <kendo-card-body>
+      <code>ng add @progress/kendo-angular-navigation&nbsp;</code>
+      <p>The BottomNavigation component allows movement between primary destinations in an application. The component consists of items with text and icons, which offer a navigation element.</p>
+      <hr kendoCardSeparator />
+      <kendo-bottomnavigation [items]="items" [themeColor]="themeColor" [fill]="fill" [border]="border">
+      </kendo-bottomnavigation>
+    </kendo-card-body>
+  </kendo-card>
+
+  <kendo-card>
+    <kendo-card-header>
+      <h3>CircularGauge Component</h3>
+      <p class="additional-info">Gauges › CircularGauge</p>
+    </kendo-card-header>
+    <kendo-card-body>
+      <code>ng add @progress/kendo-angular-gauges&nbsp;</code>
+      <p>The Circular Gauge represents a value using an arc over a fully enclosed circle.</p>
+      <p>This gauge type is very similar to the Arc Gauge and supports a similar set of features.</p>
+      <p>Compared to the Radial Gauge, this gauge uses a colored arc instead of an arrow pointer. This leaves the center free for a user-defined Center Template.</p>
+      <hr kendoCardSeparator />
+      <kendo-circulargauge [value]="value" [scale]="{ max: 100 }">
+        <ng-template kendoCircularGaugeCenterTemplate let-value="value">
+          {{ value }}%
+        </ng-template>
+      </kendo-circulargauge>
+    </kendo-card-body>
+  </kendo-card>
+
+  <kendo-card>
+    <kendo-card-header>
+      <h3>MultiSelectTree Component</h3>
+      <p class="additional-info">DropDowns › MultiSelectTree</p>
+    </kendo-card-header>
+    <kendo-card-body>
+      <code>ng add @progress/kendo-angular-dropdowns&nbsp;</code>
+      <p></p>
+      <hr kendoCardSeparator />
+      <div class="example-wrapper">
+      <p>Select an item:</p>
+        <kendo-multiselecttree
+          kendoMultiSelectTreeExpandable
+          [kendoMultiSelectTreeHierarchyBinding]="data"
+          [textField]="'text'"
+          [valueField]="'id'"
+          childrenField="items"
+          class="furniture"
+        >
+        </kendo-multiselecttree>
+    </div>
     </kendo-card-body>
   </kendo-card>
 </aside>

@@ -1,8 +1,54 @@
+@import 'src/assets/colors.scss';
+
+sidebar {
+  flex: 1 0 0;
+  background-color: deepskyblue;
+  border-radius: 6px;
+  padding: 20px;
+  color: $muted-bg;
+  border: 2px solid $dark-purple;
+  margin: 0 auto;
+
+  aside {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+
+    // why is this needed? where is 285 coming from??
+    .k-card {
+      width: 100% !important;
+    }
+
+    hr.k-card-separator {
+      margin-bottom: 10px;
+    }
+  }
+
+  h1, h2, h3 {
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  h2 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  h3 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
 .additional-info {
   font-size: 12px;
   font-weight: 600;
 }
 
-.k-card {
-  min-height: 400px;
+.k-fixed, .k-pos-fixed {
+  position: static !important;
 }
