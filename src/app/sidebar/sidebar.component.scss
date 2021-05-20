@@ -42,13 +42,14 @@ sidebar {
     font-size: 20px;
     line-height: 24px;
   }
-}
 
-.additional-info {
-  font-size: 12px;
-  font-weight: 600;
-}
 
-.k-fixed, .k-pos-fixed {
-  position: static !important;
+  .additional-info {
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .k-fixed, .k-pos-fixed {
+    position: static !important;
+  }
 }
