@@ -22,7 +22,7 @@ export class AppComponent {
 
   constructor(private router: Router) {
     const routes: any[] = router.config;
-    console.log('routes ', routes);
+    
     routes.forEach((route) => {
       if(route.icon) {
         this.items.push({
