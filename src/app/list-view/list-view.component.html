@@ -129,7 +129,7 @@
     <ng-template kendoListViewItemTemplate let-hero="dataItem">
       <a routerLink="/detail/{{hero.id}}">
         <kendo-badge-container>
-          <img class="avatar" [src]="getAvatarLink(hero.id)" title="pony avatar img">
+          <!-- <img class="avatar" [src]="getAvatarLink(hero.id)" title="pony avatar img"> -->
           <kendo-badge shape="circle" themeColor="dark"
             size="small" cutoutBorder="true">{{hero.id}}</kendo-badge>
         </kendo-badge-container>

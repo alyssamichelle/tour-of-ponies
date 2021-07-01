@@ -1,4 +1,4 @@
-<section class="skeleton-section">
+<section class="skeleton-section" *ngIf="!hero">
   <div class="skeleton-header">
     <kendo-skeleton shape="text" animation="pulse" [width]="250" [height]="70"></kendo-skeleton>
     <h2 data-text="Details"> Details</h2>
@@ -57,11 +57,22 @@
           <input [(ngModel)]="hero.name" placeholder="name" />
         </label>
       </li>
-      <li>Pony ID: {{ hero.id }}</li>
-      <li *ngIf="hero.residence">Residence: {{hero.residence}}</li>
-      <li *ngIf="hero.alias">Alias: {{hero.alias}}</li>
-      <li *ngIf="hero.sex">Sex: {{hero.sex}}</li>
-      <li *ngIf="hero.occupation"><p>Occupation: {{hero.occupation | json}}</p></li>
+      <li>
+        <label>Pony ID:</label> {{ hero.id }}
+      </li>
+      <li *ngIf="hero.residence">
+        <label>Residence:</label> {{hero.residence}}
+      </li>
+      <li *ngIf="hero.alias">
+        <label>Alias:</label> {{hero.alias}}
+      </li>
+      <li *ngIf="hero.sex">
+        <label>Sex:</label> {{hero.sex}}
+      </li>
+      <li *ngIf="hero.occupation" style="white-space: pre-line;">
+        <label>Occupation:</label> 
+        <p>{{hero.occupation}}</p>
+      </li>
     </ul>
     <img *ngIf="hero.avatar" class="hero-avatar" src="assets/images/retro-mlp/{{hero.avatar}}" alt="{{hero.name}}">
   </article>
@@ -96,5 +107,7 @@
 
   <!-- expansion panel with custom icons -->
   <!-- expandIcon="mouth-closed" collapseIcon="mouth-open" -->
-<button (click)="goBack()">Go Back</button>
-<button (click)="save()">Save</button>
+<nav class="bottom-nav">
+  <button (click)="goBack()">Go Back</button>
+  <button (click)="save()">Save</button>
+</nav>

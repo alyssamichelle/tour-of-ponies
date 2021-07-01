@@ -1,6 +1,3 @@
-// Data found in this API
-// https://ponyweb.ml/#character
-
 export interface Pony {
   id: number;
   name: string;
@@ -11,8 +8,23 @@ export interface Pony {
   occupation?: string;
   kind: string[];
   images: string[];
+
+  get avatar(): string {
+    let avatarLink = '../assets/mlp-avatars/pony-' + this.id + '.png';
+
+    // assign a random number between 21 - 53
+    if (this.id > 10) {
+      let randomNumber = Math.floor(Math.random() * 32) + 21;
+      avatarLink = '../assets/mlp-avatars/pony-' + randomNumber + '.png';
+    }
+
+    return avatarLink;
+  }
 }
 
+
+// Data found in this API
+// https://ponyweb.ml/#character
 export const ponies: Pony[] = [
   {
     id: 1,

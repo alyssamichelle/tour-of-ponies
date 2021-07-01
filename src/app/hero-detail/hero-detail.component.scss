@@ -107,3 +107,10 @@ article.hero-details {
   content: "🦄";
   font-size: 14px;
 }
+
+// bottom-nav goods
+.bottom-nav {
+  display: flex;
+  justify-content: left;
+  gap: 20px;
+}
