@@ -20,7 +20,7 @@ export class DashboardComponent implements OnInit {
   getHeroes(): void {
     this.heroService.getHeroes()
       .subscribe(heroes => {
-        this.heroes = heroes.filter((hero) => !!hero.avatar)
+        this.heroes = heroes.filter((hero) => !!hero.largeAvatar)
       });
   }
 }

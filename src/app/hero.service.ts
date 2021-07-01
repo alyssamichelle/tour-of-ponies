@@ -96,6 +96,19 @@ export class HeroService {
     );
   }
 
+  // augment hero data with avatar
+  getAvatar(heroId): string {
+    let avatarLink = 'assets/mlp-avatars/pony-' + heroId + '.png';
+
+    // assign a random number between 21 - 53
+    if (heroId > 10) {
+      let randomNumber = Math.floor(Math.random() * 32) + 21;
+      avatarLink = 'assets/mlp-avatars/pony-' + randomNumber + '.png';
+    }
+
+    return avatarLink;
+  }
+
   /**
    * Handle Http operation that failed.
    * Let the app continue.

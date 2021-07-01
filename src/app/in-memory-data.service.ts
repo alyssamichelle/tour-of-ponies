@@ -14,7 +14,7 @@ export class InMemoryDataService implements InMemoryDbService {
       {
         "id": 1,
         "name": "Twilight Sparkle",
-        "avatar": 'twilight-sparkle.png',
+        "largeAvatar": 'twilight-sparkle.png',
         "alias": "Princess Twilight Sparkle",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Twilight_Sparkle",
         "sex": "Female",
@@ -37,7 +37,7 @@ export class InMemoryDataService implements InMemoryDbService {
       {
         "id": 2,
         "name": "Applejack",
-        "avatar": 'applejack.png',
+        "largeAvatar": 'applejack.png',
         "url": "https:\/\/mlp.fandom.com\/wiki\/Applejack",
         "sex": "Female",
         "residence": "Sweet Apple Acres",
@@ -56,7 +56,7 @@ export class InMemoryDataService implements InMemoryDbService {
       {
         "id": 3,
         "name": "Fluttershy",
-        "avatar": 'fluttershy.png',
+        "largeAvatar": 'fluttershy.png',
         "url": "https:\/\/mlp.fandom.com\/wiki\/Fluttershy",
         "sex": "Female",
         "residence": "Outside of Ponyville, in a cottage near the Everfree Forest\nCloudsdale (formerly)",
@@ -73,7 +73,7 @@ export class InMemoryDataService implements InMemoryDbService {
       {
         "id": 4,
         "name": "Rarity",
-        "avatar": 'rarity.png',
+        "largeAvatar": 'rarity.png',
         "url": "https:\/\/mlp.fandom.com\/wiki\/Rarity",
         "sex": "Female",
         "residence": "Carousel Boutique, Ponyville",
@@ -90,7 +90,7 @@ export class InMemoryDataService implements InMemoryDbService {
       {
         "id": 5,
         "name": "Pinkie Pie",
-        "avatar": 'pinkie-pie.png',
+        "largeAvatar": 'pinkie-pie.png',
         "alias": "Pinkamena Diane Pie",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Pinkie_Pie",
         "sex": "Female",
@@ -110,7 +110,7 @@ export class InMemoryDataService implements InMemoryDbService {
       {
         "id": 6,
         "name": "Rainbow Dash",
-        "avatar": 'rainbow-dash.png',
+        "largeAvatar": 'rainbow-dash.png',
         "url": "https:\/\/mlp.fandom.com\/wiki\/Rainbow_Dash",
         "sex": "Female",
         "residence": "Cloudominium over Ponyville\nCloudsdale (formerly)",
