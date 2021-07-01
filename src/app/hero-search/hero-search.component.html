@@ -44,7 +44,7 @@
             <kendo-combobox-column field="name" title="Pony Name" [width]="200">
                 <ng-template kendoMultiColumnComboBoxColumnCellTemplate let-dataItem>
                     <!-- <img class="contact-image" src="dataItem.img[0]" /> -->
-                    <img class="avatar" [src]="getAvatarLink(dataItem.id)" title="pony avatar img">
+                    <img class="avatar" [src]="dataItem.avatar" title="pony avatar img">
                     <span>{{ dataItem.name }}</span>
                 </ng-template>
             </kendo-combobox-column>

@@ -5,6 +5,9 @@ import { Hero } from './hero';
 @Injectable({
   providedIn: 'root',
 })
+
+// Data found in this API
+// https://ponyweb.ml/#character
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const heroes = [

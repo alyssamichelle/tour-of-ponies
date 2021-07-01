@@ -43,9 +43,9 @@ export class HeroSearchComponent implements OnInit, AfterViewInit {
 
   public contacts: Contact[] = contacts;
 
-  public getContactImageUrl(contactId: string): string {
-    return `https://www.telerik.com/kendo-angular-ui-develop/components/dropdowns/assets/contacts/${contactId}.jpg`;
-  }
+  // public getContactImageUrl(contactId: string): string {
+  //   return `https://www.telerik.com/kendo-angular-ui-develop/components/dropdowns/assets/contacts/${contactId}.jpg`;
+  // }
 
     // set up for playing with angular animations
     //  TODO Alyssa
@@ -57,18 +57,5 @@ export class HeroSearchComponent implements OnInit, AfterViewInit {
     setInterval(function(){
       this.changeState();
     }, 5000);
-  }
-
-
-  getAvatarLink(heroId): string {
-    let avatarLink = '../assets/mlp-avatars/pony-' + heroId + '.png';
-
-    // assign a random number between 21 - 53
-    if (heroId > 10) {
-      let randomNumber = Math.floor(Math.random() * 32) + 21;
-      avatarLink = '../assets/mlp-avatars/pony-' + randomNumber + '.png';
-    }
-
-    return avatarLink;
   }
 }

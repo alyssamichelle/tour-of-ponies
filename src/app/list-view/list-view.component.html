@@ -1,12 +1,12 @@
   <!-- Have a plain-Jane ListView  plain-listview-->
-  <!-- <kendo-listview [data]="ponies">
+  <!-- <kendo-listview [data]="heroes">
     <ng-template kendoListViewItemTemplate let-pony="dataItem">
       <div class="pony-info">{{ pony.name }}</div>
     </ng-template>
   </kendo-listview> -->
 
   <!-- Add on more info to ListView fancy-listview-->
-  <kendo-listview [data]="ponies">
+  <kendo-listview [data]="heroes">
     <ng-template kendoListViewItemTemplate let-pony="dataItem" let-index="index" let-isFirst="isFirst" let-isLast="isLast">
       <div class="pony-info">
         <strong>[{{ index }}]: {{ pony.name }} ({{ isFirst ? 'first' : isLast ? 'last' : 'mid' }})</strong>
@@ -16,7 +16,7 @@
   </kendo-listview>
 
   <!-- Add Header & Footer header-footer-listview-->
-  <!-- <kendo-listview [data]="ponies">
+  <!-- <kendo-listview [data]="heroes">
     <ng-template kendoListViewHeaderTemplate>
       <div class="header">
         <div class="title">MLP Characters</div>
@@ -38,7 +38,7 @@
 
   <!-- Pageable, you say? pageable-listview-->
   <kendo-listview
-    [kendoListViewBinding]="ponies"
+    [kendoListViewBinding]="heroes"
     [pageable]="pagerSettings"
     [pageSize]="pageSize">
 
@@ -61,14 +61,14 @@
   </kendo-listview>
 
   <!-- Add a simple Search to ListView simple-search-listview-->
-  <!-- <kendo-listview [(data)]="ponies">
+  <!-- <kendo-listview [(data)]="heroes">
 
     <ng-template kendoListViewHeaderTemplate>
       <div class="header">
         <div class="title">MLP Characters</div>
     
         <kendo-textbox 
-          placeholder="Filter Ponies..." 
+          placeholder="Filter heroes..." 
           ngModel   
           (ngModelChange)="handleFilterChange($event)"
           [showSuccessIcon]="false">
@@ -130,6 +130,7 @@
       <a routerLink="/detail/{{hero.id}}">
         <kendo-badge-container>
           <!-- <img class="avatar" [src]="getAvatarLink(hero.id)" title="pony avatar img"> -->
+          <img class="avatar" [src]="hero.avatar" title="pony avatar img">
           <kendo-badge shape="circle" themeColor="dark"
             size="small" cutoutBorder="true">{{hero.id}}</kendo-badge>
         </kendo-badge-container>
