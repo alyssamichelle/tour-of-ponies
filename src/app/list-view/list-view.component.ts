@@ -4,7 +4,6 @@ import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
 
 import { PagerSettings, PagerPosition, PagerType } from '@progress/kendo-angular-listview';
-import { CompileTemplateMetadata } from '@angular/compiler';
 import { LoaderComponent } from '@progress/kendo-angular-indicators';
 
 @Component({
@@ -45,18 +44,10 @@ export class ListViewComponent implements OnInit {
     this.heroService.deleteHero(hero).subscribe();
   }
 
-  // TODO: turn into a reusable sharable service
-  // getAvatarLink(heroId): string {
-  //   let avatarLink = '../assets/mlp-avatars/pony-' + heroId + '.png';
-
-  //   // assign a random number between 21 - 53
-  //   if (heroId > 10) {
-  //     let randomNumber = Math.floor(Math.random() * 32) + 21  ;
-  //     avatarLink = '../assets/mlp-avatars/pony-' + randomNumber + '.png';
-  //   }
-    
-  //   return avatarLink;
-  // }
+  getAvatarLink(heroId): string {
+    let avatarLink = '../assets/mlp-avatars/pony-' + heroId + '.png';
+    return avatarLink;
+  }
 
   // paging options for ListView
   public pageSize = 5;
