@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
@@ -11,23 +11,13 @@ import { LoaderComponent } from '@progress/kendo-angular-indicators';
   templateUrl: './list-view.component.html',
   styleUrls: ['./list-view.component.scss']
 })
-export class ListViewComponent implements OnInit {
-  heroes: Hero[];
+
+export class ListViewComponent {
+  @Input() heroes: Hero[];
   avatarLink: string;
   loader:boolean = true;
 
   constructor(private heroService: HeroService) { }
-
-  ngOnInit() {
-    this.getHeroes();
-  }
-
-  getHeroes(): void {
-    this.heroService.getHeroes()
-      .subscribe(heroes => {
-        this.heroes = heroes;
-      });
-  }
 
   name: string;
   add(name: string): void {
@@ -74,3 +64,4 @@ export class ListViewComponent implements OnInit {
     this.heroes = this.heroes.filter(filterExpession);
   }
 }
+
