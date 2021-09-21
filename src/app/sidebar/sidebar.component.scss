@@ -1,10 +1,11 @@
 @import 'src/assets/colors.scss';
+@import 'src/assets/variables.scss';
 
 sidebar {
   flex: 1 0 0;
   background-color: deepskyblue;
   border-radius: 6px;
-  padding: 20px;
+  padding: $pony;
   color: $muted-bg;
   border: 2px solid $dark-purple;
   margin: 0 auto;
@@ -12,11 +13,12 @@ sidebar {
   aside {
     display: flex;
     flex-direction: column;
-    gap: 20px; 
+    gap: $bear; 
 
     // why is this needed? where is 285 coming from??
     .k-card {
       width: 100% !important;
+      margin-bottom: $pony;
     }
 
     hr.k-card-separator {
@@ -25,7 +27,7 @@ sidebar {
   }
 
   h1, h2, h3 {
-    margin-bottom: 20px;
+    margin-bottom: $pony;
   }
 
   h1 {
@@ -39,7 +41,7 @@ sidebar {
   }
 
   h3 {
-    font-size: 20px;
+    font-size: $pony;
     line-height: 24px;
   }
 

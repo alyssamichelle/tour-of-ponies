@@ -1,73 +1,138 @@
 <aside>
   <h1>Latest Kendo UI Version</h1>
-  <h2>R2 2021 Release</h2>
-  <kendo-card>
-    <kendo-card-header>
-      <h3>Skeleton Component</h3>
-      <p class="additional-info">Indicators › Skeleton</p>
-    </kendo-card-header>
-    <kendo-card-body>
-      <code>npm i @progress/kendo-angular-indicators&nbsp;</code>
-      <p>The Skeleton component helps developers to speed up the initial page load time by displaying a simplified preview of the content. This preview acts as a placeholder for the content while it loads. At the same time, the user will get a general idea about what will appear on the page.</p>
-      <hr kendoCardSeparator />
-      <kendo-skeleton shape="rectangle" [height]="55"></kendo-skeleton>
-    </kendo-card-body>
-  </kendo-card>
+  <section aria-labelledby="r3-2021-section-header">
+    <h2 id="r3-2021-section-header">R3 2021 Release</h2>
 
-  <kendo-card>
-    <kendo-card-header>
-      <h3><a href="https://www.telerik.com/kendo-angular-ui-develop/components/navigation/bottomnavigation">BottomNavigation Component</a></h3>
-      <p class="additional-info">Navigation › BottomNavigation</p>
-    </kendo-card-header>
-    <kendo-card-body>
-      <code>ng add @progress/kendo-angular-navigation&nbsp;</code>
-      <p>The BottomNavigation component allows movement between primary destinations in an application. The component consists of items with text and icons, which offer a navigation element.</p>
-      <hr kendoCardSeparator />
-      <kendo-bottomnavigation [items]="items" [themeColor]="themeColor" [fill]="fill" [border]="border">
-      </kendo-bottomnavigation>
-    </kendo-card-body>
-  </kendo-card>
+    <kendo-card>
+      <kendo-card-header>
+        <h3>Heatmap Component</h3>
+        <p class="additional-info">Charts › Series Types › Heatmap</p>
+      </kendo-card-header>
+      <kendo-card-body>
+        <code>ng add @progress/kendo-angular-charts&nbsp;</code>
+        <p>Heatmap charts use colors to indicate the relative value of data points in two dimensions. Heatmap charts, also known as "cluster heat map", are suitable for visualizing the magnitude of a value over two
+        dimensions. The X and Y values are discrete and can be set in any order.</p>
+        <hr kendoCardSeparator />
 
-  <kendo-card>
-    <kendo-card-header>
-      <h3>CircularGauge Component</h3>
-      <p class="additional-info">Gauges › CircularGauge</p>
-    </kendo-card-header>
-    <kendo-card-body>
-      <code>ng add @progress/kendo-angular-gauges&nbsp;</code>
-      <p>The Circular Gauge represents a value using an arc over a fully enclosed circle.</p>
-      <p>This gauge type is very similar to the Arc Gauge and supports a similar set of features.</p>
-      <p>Compared to the Radial Gauge, this gauge uses a colored arc instead of an arrow pointer. This leaves the center free for a user-defined Center Template.</p>
-      <hr kendoCardSeparator />
-      <kendo-circulargauge [value]="value" [scale]="{ max: 100 }">
-        <ng-template kendoCircularGaugeCenterTemplate let-value="value">
-          {{ value }}%
-        </ng-template>
-      </kendo-circulargauge>
-    </kendo-card-body>
-  </kendo-card>
+        <kendo-chart style="width: 400px; height: 240px;">
+          <kendo-chart-series>
+            <kendo-chart-series-item type="heatmap" [data]="dataR2" 
+          [color]="'#f03c97'">
+            </kendo-chart-series-item>
+          </kendo-chart-series>
+        
+          <kendo-chart-x-axis>
+            <kendo-chart-x-axis-item [categories]="categories.x">
+            </kendo-chart-x-axis-item>
+          </kendo-chart-x-axis>
+        
+          <kendo-chart-y-axis>
+            <kendo-chart-y-axis-item [categories]="categories.y">
+            </kendo-chart-y-axis-item>
+          </kendo-chart-y-axis>
+        </kendo-chart>
 
-  <kendo-card>
-    <kendo-card-header>
-      <h3>MultiSelectTree Component</h3>
-      <p class="additional-info">DropDowns › MultiSelectTree</p>
-    </kendo-card-header>
-    <kendo-card-body>
-      <code>ng add @progress/kendo-angular-dropdowns&nbsp;</code>
-      <p></p>
-      <hr kendoCardSeparator />
-      <div class="example-wrapper">
-      <p>Select an item:</p>
-        <kendo-multiselecttree
-          kendoMultiSelectTreeExpandable
-          [kendoMultiSelectTreeHierarchyBinding]="data"
-          [textField]="'text'"
-          [valueField]="'id'"
-          childrenField="items"
-          class="furniture"
-        >
-        </kendo-multiselecttree>
-    </div>
-    </kendo-card-body>
-  </kendo-card>
+      </kendo-card-body>
+    </kendo-card>
+
+    <kendo-card>
+      <kendo-card-header>
+        <h3>Typography Component</h3>
+        <p class="additional-info">Components › Typography</p>
+      </kendo-card-header>
+      <kendo-card-body>
+        <code>ng add @progress/kendo-angular-typography&nbsp;</code>
+        <p>The Kendo UI for Angular Typography directive allows you to improve the appearance of any UI element by using the available Kendo UI theme classes.</p>
+        <hr kendoCardSeparator />
+        <kendo-skeleton shape="rectangle" [height]="55"></kendo-skeleton>
+      </kendo-card-body>
+    </kendo-card>
+
+    <kendo-card>
+      <kendo-card-header>
+        <h3>Gannt Component</h3>
+        <p class="additional-info">Components › Gannt</p>
+      </kendo-card-header>
+      <kendo-card-body>
+        <code>ng add @progress/kendo-angular-gantt&nbsp;</code>
+        <p>The Kendo UI for Angular Gantt displays hierarchical tasks data in tabular and timeline formats and comes with a comprehensive set of ready-to-use features covering everything from data binding directives, sorting, filtering, tasks, dependencies, and intuitive display of task timelines, progression, and styling.</p>
+        <hr kendoCardSeparator />
+        <kendo-skeleton shape="rectangle" [height]="55"></kendo-skeleton>
+      </kendo-card-body>
+    </kendo-card>
+  </section>
+
+  <section aria-labelledby="r2-2021-section-header">
+    <h2 id="r2-2021-section-header">R2 2021 Release</h2>
+    <kendo-card>
+      <kendo-card-header>
+        <h3>Skeleton Component</h3>
+        <p class="additional-info">Indicators › Skeleton</p>
+      </kendo-card-header>
+      <kendo-card-body>
+        <code>ng add @progress/kendo-angular-indicators&nbsp;</code>
+        <p>The Skeleton component helps developers to speed up the initial page load time by displaying a simplified preview
+          of the content. This preview acts as a placeholder for the content while it loads. At the same time, the user will
+          get a general idea about what will appear on the page.</p>
+        <hr kendoCardSeparator />
+        <kendo-skeleton shape="rectangle" [height]="55"></kendo-skeleton>
+      </kendo-card-body>
+    </kendo-card>
+    
+    <kendo-card>
+      <kendo-card-header>
+        <h3><a
+            href="https://www.telerik.com/kendo-angular-ui-develop/components/navigation/bottomnavigation">BottomNavigation
+            Component</a></h3>
+        <p class="additional-info">Navigation › BottomNavigation</p>
+      </kendo-card-header>
+      <kendo-card-body>
+        <code>ng add @progress/kendo-angular-navigation&nbsp;</code>
+        <p>The BottomNavigation component allows movement between primary destinations in an application. The component
+          consists of items with text and icons, which offer a navigation element.</p>
+        <hr kendoCardSeparator />
+        <kendo-bottomnavigation [items]="items" [themeColor]="themeColor" [fill]="fill" [border]="border">
+        </kendo-bottomnavigation>
+      </kendo-card-body>
+    </kendo-card>
+    
+    <kendo-card>
+      <kendo-card-header>
+        <h3>CircularGauge Component</h3>
+        <p class="additional-info">Gauges › CircularGauge</p>
+      </kendo-card-header>
+      <kendo-card-body>
+        <code>ng add @progress/kendo-angular-gauges&nbsp;</code>
+        <p>The Circular Gauge represents a value using an arc over a fully enclosed circle.</p>
+        <p>This gauge type is very similar to the Arc Gauge and supports a similar set of features.</p>
+        <p>Compared to the Radial Gauge, this gauge uses a colored arc instead of an arrow pointer. This leaves the center
+          free for a user-defined Center Template.</p>
+        <hr kendoCardSeparator />
+        <kendo-circulargauge [value]="value" [scale]="{ max: 100 }">
+          <ng-template kendoCircularGaugeCenterTemplate let-value="value">
+            {{ value }}%
+          </ng-template>
+        </kendo-circulargauge>
+      </kendo-card-body>
+    </kendo-card>
+    
+    <kendo-card>
+      <kendo-card-header>
+        <h3>MultiSelectTree Component</h3>
+        <p class="additional-info">DropDowns › MultiSelectTree</p>
+      </kendo-card-header>
+      <kendo-card-body>
+        <code>ng add @progress/kendo-angular-dropdowns&nbsp;</code>
+        <p></p>
+        <hr kendoCardSeparator />
+        <div class="example-wrapper">
+          <p>Select an item:</p>
+          <kendo-multiselecttree kendoMultiSelectTreeExpandable [kendoMultiSelectTreeHierarchyBinding]="data"
+            [textField]="'text'" [valueField]="'id'" childrenField="items" class="furniture">
+          </kendo-multiselecttree>
+        </div>
+      </kendo-card-body>
+    </kendo-card>
+  </section>
+
 </aside>

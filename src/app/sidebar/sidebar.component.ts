@@ -8,6 +8,17 @@ import { Router } from '@angular/router';
   encapsulation: ViewEncapsulation.None
 })
 export class SidebarComponent {
+
+  // r3 2021
+  // heatmap vars
+  public categories = {
+    x: ["A1", "A2", "A3", "A4"],
+    y: ["B1", "B2", "B3", "B4"],
+  };
+
+  public dataR2: any[] = [["A2", "B3", 5], ["A3", "B4", 4], ["A1", "B4", 2], ["A4", "B4", 2], ["A3", "B1", 1]];
+
+  // r2 2021
   public value:number = 42;
   public items: Array<any> = [];
 
