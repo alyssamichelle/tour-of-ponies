@@ -1,22 +1,27 @@
 <app-hero-search></app-hero-search>
-<!-- PRE FANCY EXPANSION PANELLLLL -->
-<h2 data-text="Top Heroes">Top Heroes</h2>
 
-<div class="top-hero-wrapper">
-  <hero-card *ngFor="let hero of heroes" [hero]="hero"></hero-card>
-</div>
+<section aria-labelledby="top-heroes-header">
+  <h2 id="top-heroes-header" data-text="Top Heroes">Top Heroes</h2>
+  <div class="top-hero-wrapper">
+    <hero-card *ngFor="let hero of heroes" [hero]="hero"></hero-card>
+  </div>
+</section>
 
-<!-- expansion panel with tile layout with kendo cards inside -->
-<!-- <kendo-expansionpanel title="The Mane Six" subtitle="Organize your favorites!" [expanded]="true">
-  <tile-layout [heroes]="heroes"></tile-layout>
-</kendo-expansionpanel> -->
+<section aria-labelledby="tile-layout-header">
+  <!-- expansion panel with custom title 💥 -->
+  <!-- <kendo-expansionpanel [expanded]="true" title="The Mane Six" subtitle="Organize your favorites!"> -->
+  <kendo-expansionpanel [expanded]="false" title="The Mane Six" subtitle="Organize your favorites!">
+    <ng-template kendoExpansionPanelTitleDirective>
+       <h2 id="tile-layout-header" class="small-header" data-text="KUI Tile Layout inside Expansion Panel">KUI Tile Layout inside Expansion Panel</h2>
+    </ng-template>
 
-<!-- expansion panel with custom title 💥 -->
-<kendo-expansionpanel [expanded]="true">
-  <ng-template kendoExpansionPanelTitleDirective>
-    <h2 data-text="The Mane Six">The Mane Six</h2>
-  </ng-template>
+    <tile-layout [heroes]="heroes"></tile-layout>
+  </kendo-expansionpanel>
+</section>
 
-  <tile-layout [heroes]="heroes"></tile-layout>
-</kendo-expansionpanel>
+<section aria-labelledby="heatmap-header">
+  <h2 id="heatmap-header" data-text="Pony Heatmap">Pony Heatmap</h2>
+  <app-heatmap></app-heatmap>
+</section>
+
 

@@ -31,8 +31,9 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { NavigationModule } from '@progress/kendo-angular-navigation';
 import { IconsModule } from '@progress/kendo-angular-icons';
 import { GaugesModule } from '@progress/kendo-angular-gauges';
-
-
+import { ChartsModule } from '@progress/kendo-angular-charts';
+import 'hammerjs';
+import { HeatmapComponent } from './heatmap/heatmap.component';
 
 @NgModule({
   imports: [
@@ -61,6 +62,7 @@ import { GaugesModule } from '@progress/kendo-angular-gauges';
     NavigationModule,
     IconsModule,
     GaugesModule,
+    ChartsModule,
   ],
   declarations: [
     AppComponent,
@@ -74,6 +76,7 @@ import { GaugesModule } from '@progress/kendo-angular-gauges';
     HeroCardComponent,
     EllipsisPipe,
     SidebarComponent,
+    HeatmapComponent,
   ],
   bootstrap: [ AppComponent ]
 })
