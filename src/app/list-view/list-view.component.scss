@@ -56,7 +56,8 @@
 
 .pony-info {
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
+  gap: 4px;
   padding: 0.5rem;
 }
 

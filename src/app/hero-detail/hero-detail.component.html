@@ -3,51 +3,52 @@
     <kendo-skeleton shape="text" animation="pulse" [width]="250" [height]="70"></kendo-skeleton>
     <h2 data-text="Details"> Details</h2>
   </div>
-    <article class="hero-details">
-      <ul class="hero-info">
-        <li>
-          <label class="pony-edit-field inline">Pony Name:
-            <kendo-skeleton shape="text" animation="pulse" [width]="156" [height]="32"></kendo-skeleton>
-          </label>
-        </li>
-        <li>
-          Pony ID: 
-          <kendo-skeleton shape="text" animation="wave" [width]="50" [height]="23"></kendo-skeleton>
-        </li>
-        <li>
-          Residence: 
-          <kendo-skeleton shape="text" animation="wave" [width]="150" [height]="23"></kendo-skeleton>
-        </li>
-        <li>
-          Alias: 
-          <kendo-skeleton shape="text" animation="wave" [width]="200" [height]="23"></kendo-skeleton></li>
-        <li>
-          Sex: 
-          <kendo-skeleton shape="text" animation="wave" [width]="250" [height]="23"></kendo-skeleton></li>
-        <li>
-          <p>
-            Occupation: 
-            <kendo-skeleton shape="text" animation="pulse" [width]="682" [height]="23"></kendo-skeleton>
-            <kendo-skeleton shape="text" animation="pulse" [width]="682" [height]="23"></kendo-skeleton>
-            <kendo-skeleton shape="text" animation="pulse" [width]="682" [height]="23"></kendo-skeleton>
-          </p>
-        </li>
-      </ul>
-      <kendo-skeleton class="hero-avatar" shape="circle" animation="wave"></kendo-skeleton>
-    </article>
-    <ul class="pony-images">
+  <article class="hero-details">
+    <ul class="hero-info">
       <li>
-        <kendo-skeleton shape="rectangle" animation="pulse" [width]="200" [height]="170"></kendo-skeleton>
+        <label class="pony-edit-field inline">Pony Name:
+          <kendo-skeleton shape="text" animation="pulse" [width]="156" [height]="32"></kendo-skeleton>
+        </label>
       </li>
       <li>
-        <kendo-skeleton shape="rectangle" animation="pulse" [width]="200" [height]="170"></kendo-skeleton>
+        Pony ID:
+        <kendo-skeleton shape="text" animation="wave" [width]="50" [height]="23"></kendo-skeleton>
       </li>
       <li>
-        <kendo-skeleton shape="rectangle" animation="pulse" [width]="200" [height]="170"></kendo-skeleton>
+        Residence:
+        <kendo-skeleton shape="text" animation="wave" [width]="150" [height]="23"></kendo-skeleton>
+      </li>
+      <li>
+        Alias:
+        <kendo-skeleton shape="text" animation="wave" [width]="200" [height]="23"></kendo-skeleton>
+      </li>
+      <li>
+        Sex:
+        <kendo-skeleton shape="text" animation="wave" [width]="250" [height]="23"></kendo-skeleton>
+      </li>
+      <li>
+        <p>
+          Occupation:
+          <kendo-skeleton shape="text" animation="pulse" [width]="682" [height]="23"></kendo-skeleton>
+          <kendo-skeleton shape="text" animation="pulse" [width]="682" [height]="23"></kendo-skeleton>
+          <kendo-skeleton shape="text" animation="pulse" [width]="682" [height]="23"></kendo-skeleton>
+        </p>
       </li>
     </ul>
+    <kendo-skeleton class="hero-avatar" shape="circle" animation="wave"></kendo-skeleton>
+  </article>
+  <ul class="pony-images">
+    <li>
+      <kendo-skeleton shape="rectangle" animation="pulse" [width]="200" [height]="170"></kendo-skeleton>
+    </li>
+    <li>
+      <kendo-skeleton shape="rectangle" animation="pulse" [width]="200" [height]="170"></kendo-skeleton>
+    </li>
+    <li>
+      <kendo-skeleton shape="rectangle" animation="pulse" [width]="200" [height]="170"></kendo-skeleton>
+    </li>
+  </ul>
 </section>
-
 <section *ngIf="hero">
   <h2 [attr.data-text]="hero.name + ' Details'">{{hero.name}} Details</h2>
   <article class="hero-details">

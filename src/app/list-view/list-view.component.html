@@ -48,9 +48,10 @@
       </div>
     </ng-template>
 
-    <ng-template kendoListViewItemTemplate let-pony="dataItem" let-index="index" let-isFirst="isFirst" let-isLast="isLast">
+    <ng-template kendoListViewItemTemplate let-pony="dataItem" let-isFirst="isFirst" let-isLast="isLast">
       <div class="pony-info">
-        <strong>[{{ index }}]: {{ pony.name }} ({{ isFirst ? 'first' : isLast ? 'last' : 'mid' }})</strong>
+        <p id="pony-id">[{{ pony.id }}]:</p>
+        <strong>{{ pony.name }} ({{ isFirst ? 'first' : isLast ? 'last' : 'mid' }})</strong>
         <em *ngIf="pony.alias" class="pony-alias">aka "{{ pony.alias }}" </em>
       </div>
     </ng-template>
@@ -116,7 +117,7 @@
   <!-- replace img with badge-container -->
   <!-- https://www.telerik.com/kendo-angular-ui-develop/components/indicators/badge/appearance/ -->
 
-
+  
   <!-- add a loader for slower data ;) -->
   <!-- DELAY SET IN APP.MODULE, YUH -->
   <kendo-listview [data]="heroes" containerClass="heroes with-loader">
