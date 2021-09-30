@@ -2,23 +2,28 @@
 @import 'src/assets/variables.scss';
 
 sidebar {
+  // grow priority 1, shrink priority 0 (don't shrink), default 0
   flex: 1 0 0;
   background-color: deepskyblue;
   border-radius: 6px;
-  padding: $pony;
+  padding: $padding;
   color: $muted-bg;
   border: 2px solid $dark-purple;
-  margin: 0 auto;
+  margin: 0;
+  width: 30vw;
 
   aside {
     display: flex;
     flex-direction: column;
-    gap: $bear; 
+    gap: $bear;
 
     // why is this needed? where is 285 coming from??
     .k-card {
       width: 100% !important;
-      margin-bottom: $pony;
+      margin-bottom: $padding;
+      .k-card-body {
+        margin: $padding;
+      }
     }
 
     hr.k-card-separator {
@@ -27,7 +32,7 @@ sidebar {
   }
 
   h1, h2, h3 {
-    margin-bottom: $pony;
+    margin-bottom: $padding;
   }
 
   h1 {
