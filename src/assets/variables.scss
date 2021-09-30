@@ -1,4 +1,17 @@
+$cockroach: 12px;
 $mouse: 14px;
+$hamster: 16px;
 $pony: 20px;
+$horse: 30px;
 $bear: 40px;
 $moose: 100px;
+
+$padding: $pony;
+
+// madness I attempted doing to fix what turtle fixed with one line!!! sidebar width: 30vw; which flex takes over and allows it to go over that when it needs to, but apparantly a default width on the parent sidebar element is needed so that when I add inner KUI components that have their own widths, they don't blow my sidebar away to like 4000px.
+// :root {
+//   --k-card-body-margin: #{$hamster};
+//   --side-bar-padding: #{$pony};
+//   --side-bar-border: 2px;
+//   --side-bar-spacing: (var(--k-card-body-margin) + var(--side-bar-padding) + var(--side-bar-border)) * 2;
+// }
