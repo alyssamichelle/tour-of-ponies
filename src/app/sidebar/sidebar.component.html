@@ -13,24 +13,27 @@
         <p>Heatmap charts use colors to indicate the relative value of data points in two dimensions. Heatmap charts, also known as "cluster heat map", are suitable for visualizing the magnitude of a value over two
         dimensions. The X and Y values are discrete and can be set in any order.</p>
         <hr kendoCardSeparator />
+          <main>
+            <kendo-chart 
+              [style.height.px]="200"
+            >
+              <kendo-chart-series>
+                <kendo-chart-series-item type="heatmap" [data]="dataR2" 
+              [color]="'#f03c97'">
+                </kendo-chart-series-item>
+              </kendo-chart-series>
 
-        <kendo-chart style="width: 400px; height: 240px;">
-          <kendo-chart-series>
-            <kendo-chart-series-item type="heatmap" [data]="dataR2" 
-          [color]="'#f03c97'">
-            </kendo-chart-series-item>
-          </kendo-chart-series>
-        
-          <kendo-chart-x-axis>
-            <kendo-chart-x-axis-item [categories]="categories.x">
-            </kendo-chart-x-axis-item>
-          </kendo-chart-x-axis>
-        
-          <kendo-chart-y-axis>
-            <kendo-chart-y-axis-item [categories]="categories.y">
-            </kendo-chart-y-axis-item>
-          </kendo-chart-y-axis>
-        </kendo-chart>
+              <kendo-chart-x-axis>
+                <kendo-chart-x-axis-item [categories]="categories.x">
+                </kendo-chart-x-axis-item>
+              </kendo-chart-x-axis>
+
+              <kendo-chart-y-axis>
+                <kendo-chart-y-axis-item [categories]="categories.y">
+                </kendo-chart-y-axis-item>
+              </kendo-chart-y-axis>
+            </kendo-chart>
+          </main>
 
       </kendo-card-body>
     </kendo-card>
@@ -44,7 +47,21 @@
         <code>ng add @progress/kendo-angular-typography&nbsp;</code>
         <p>The Kendo UI for Angular Typography directive allows you to improve the appearance of any UI element by using the available Kendo UI theme classes.</p>
         <hr kendoCardSeparator />
-        <kendo-skeleton shape="rectangle" [height]="55"></kendo-skeleton>
+        <main>
+          <h1 kendoTypography fontWeight="light" variant="h6">I don't want to look like an h1.</h1>
+          <h1 kendoTypography variant="h4">BECAUSE I NEED IT TO LOOK LIKE AN H4</h1>
+          <div kendoTypography themeColor="inherit" variant="h1">inherit h1</div>
+          <div kendoTypography themeColor="primary" variant="h2">primary h2</div>
+          <div kendoTypography themeColor="secondary" fontWeight="bold" variant="h3">secondary bold h3</div>
+          <div kendoTypography themeColor="tertiary" fontWeight="light" variant="h4">tertiary light h4</div>
+          <div kendoTypography themeColor="info" variant="h5">info h5</div>
+          <div kendoTypography themeColor="success" variant="h6">success h6</div>
+          <div kendoTypography themeColor="warning">warning</div>
+          <div kendoTypography themeColor="error">error</div>
+          <div kendoTypography themeColor="dark">dark</div>
+          <div kendoTypography themeColor="light">light</div>
+          <div kendoTypography themeColor="inverse">inverse</div>
+        </main>
       </kendo-card-body>
     </kendo-card>
 
@@ -57,7 +74,9 @@
         <code>ng add @progress/kendo-angular-gantt&nbsp;</code>
         <p>The Kendo UI for Angular Gantt displays hierarchical tasks data in tabular and timeline formats and comes with a comprehensive set of ready-to-use features covering everything from data binding directives, sorting, filtering, tasks, dependencies, and intuitive display of task timelines, progression, and styling.</p>
         <hr kendoCardSeparator />
-        <kendo-skeleton shape="rectangle" [height]="55"></kendo-skeleton>
+        <main>
+          <app-gannt></app-gannt>
+        </main>
       </kendo-card-body>
     </kendo-card>
   </section>
