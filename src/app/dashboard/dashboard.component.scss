@@ -1,7 +1,6 @@
 /* DashboardComponent's private CSS styles */
-
-a {
-  text-decoration: none;
+:host {
+  display: block;
 }
 
 .top-hero-wrapper {
