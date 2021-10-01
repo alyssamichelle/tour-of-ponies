@@ -34,6 +34,9 @@ import { GaugesModule } from '@progress/kendo-angular-gauges';
 import { ChartsModule } from '@progress/kendo-angular-charts';
 import 'hammerjs';
 import { HeatmapComponent } from './heatmap/heatmap.component';
+import { TypographyModule } from '@progress/kendo-angular-typography';
+import { GanntComponent } from './gannt/gannt.component';
+import { GanttModule } from '@progress/kendo-angular-gantt';
 
 @NgModule({
   imports: [
@@ -63,6 +66,8 @@ import { HeatmapComponent } from './heatmap/heatmap.component';
     IconsModule,
     GaugesModule,
     ChartsModule,
+    TypographyModule,
+    GanttModule,
   ],
   declarations: [
     AppComponent,
@@ -77,6 +82,7 @@ import { HeatmapComponent } from './heatmap/heatmap.component';
     EllipsisPipe,
     SidebarComponent,
     HeatmapComponent,
+    GanntComponent,
   ],
   bootstrap: [ AppComponent ]
 })

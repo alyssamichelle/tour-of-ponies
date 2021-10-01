@@ -1,0 +1,22 @@
+<kendo-gantt
+  [style.height.px]="500"
+  [kendoGanttHierarchyBinding]="data"
+  childrenField="subtasks"
+  [dependencies]="dependencies"
+  [filterable]="true"
+  [treeListPaneOptions]="{
+    collapsed: 'true',
+    collapsible: 'true'
+  }"
+>
+  <kendo-gantt-column
+    field="title"
+    title="Task"
+    [expandable]="true"
+  >
+  </kendo-gantt-column>
+  
+  <kendo-gantt-timeline-day-view></kendo-gantt-timeline-day-view>
+  <kendo-gantt-timeline-week-view></kendo-gantt-timeline-week-view>
+  <kendo-gantt-timeline-month-view></kendo-gantt-timeline-month-view>
+</kendo-gantt>
