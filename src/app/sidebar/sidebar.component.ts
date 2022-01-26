@@ -1,5 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
+import { FilterExpression } from "@progress/kendo-angular-filter";
+import { CompositeFilterDescriptor } from "@progress/kendo-data-query";
 
 @Component({
   selector: 'sidebar',
@@ -8,6 +10,25 @@ import { Router } from '@angular/router';
   encapsulation: ViewEncapsulation.None
 })
 export class SidebarComponent {
+
+  // r1 2022
+  // filters
+  public filters: FilterExpression[] = [
+    {
+      field: "country",
+      title: "Country",
+      editor: "string",
+    },
+    {
+      field: "discontinued",
+      title: "Discontinued",
+      editor: "boolean",
+    },
+  ];
+
+  onFilterChange(value: CompositeFilterDescriptor) {
+    console.log(value);
+  }
 
   // r3 2021
   // heatmap vars

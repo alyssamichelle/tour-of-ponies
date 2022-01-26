@@ -1,4 +1,4 @@
-# Tour of Heroes — My Little Pony Flavored & Using Kendo UI! 
+# Tour of Heroes — My Little Pony Flavored & Using Kendo UI!
 
 ![kendoka for angular plus mlp](https://p192.p3.n0.cdn.getcloudapp.com/items/rRu7OBlg/Screen%20Shot%202020-08-27%20at%2012.53.56%20PM.png?v=a47c8028358bc533908f0b9545f14087 "kendoka plus my little pony logo")
 
@@ -13,22 +13,16 @@ This is the Angular Tour of Heroes app with Kendo UI for Angular added in. I rep
 
 # The Latest In Kendo UI For Angular
 
-- New component: ListView 💥
-  - https://www.telerik.com/kendo-angular-ui-develop/components/listview/
-- New component: Loader 👈
-  - https://www.telerik.com/kendo-angular-ui-develop/components/indicators/loader/
-- New component: AppBar 👈
-  - https://www.telerik.com/kendo-angular-ui-develop/components/navigation/appbar/
-- New component: TextBox 👈
-  - https://www.telerik.com/kendo-angular-ui-develop/components/inputs/textbox/
-- New component: BreadCrumb 👈
-  - https://www.telerik.com/kendo-angular-ui-develop/components/navigation/breadcrumb/
-- New component: RangeSlider 👈
-  - https://www.telerik.com/kendo-angular-ui-develop/components/inputs/rangeslider/
-- New component: Badge 👈
-  - https://www.telerik.com/kendo-angular-ui-develop/components/indicators/badge/
-- New component: Icon & SVGIcon 👈
-  - https://www.telerik.com/kendo-angular-ui-develop/components/icons/
+- New component: Barcode 👈
+  - https://www.telerik.com/kendo-angular-ui/components/barcodes/barcode/
+- New component: QR Code 👈
+  - https://www.telerik.com/kendo-angular-ui/components/barcodes/qrcode/
+- New component: Filter 👈
+  - https://www.telerik.com/kendo-angular-ui/components/filter/
+- New component: Popover 👈
+  - https://www.telerik.com/kendo-angular-ui/components/tooltips/popover/
+- New component: FlatColorPicker 👈
+  - https://www.telerik.com/kendo-angular-ui/components/inputs/flatcolorpicker/
 
 ---
 

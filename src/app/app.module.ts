@@ -37,6 +37,10 @@ import { HeatmapComponent } from './heatmap/heatmap.component';
 import { TypographyModule } from '@progress/kendo-angular-typography';
 import { GanntComponent } from './gannt/gannt.component';
 import { GanttModule } from '@progress/kendo-angular-gantt';
+import { BarcodesModule } from "@progress/kendo-angular-barcodes";
+import { FilterModule } from "@progress/kendo-angular-filter";
+import { TooltipsModule } from "@progress/kendo-angular-tooltip";
+import { DateInputsModule } from "@progress/kendo-angular-dateinputs";
 
 @NgModule({
   imports: [
@@ -68,6 +72,10 @@ import { GanttModule } from '@progress/kendo-angular-gantt';
     ChartsModule,
     TypographyModule,
     GanttModule,
+    BarcodesModule,
+    FilterModule,
+    TooltipsModule,
+    DateInputsModule
   ],
   declarations: [
     AppComponent,
@@ -82,7 +90,7 @@ import { GanttModule } from '@progress/kendo-angular-gantt';
     EllipsisPipe,
     SidebarComponent,
     HeatmapComponent,
-    GanntComponent,
+    GanntComponent
   ],
   bootstrap: [ AppComponent ]
 })

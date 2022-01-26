@@ -1,7 +1,104 @@
 <aside>
   <h1>Latest Kendo UI Version</h1>
+  <section aria-labelledby="r1-2022-section-header">
+    <h2 id="r1-2022-section-header">R1 2022 Release</h2>
+
+    <kendo-card>
+      <kendo-card-header>
+        <h3>Barcode Component</h3>
+        <p class="additional-info">Components › Barcodes</p>
+      </kendo-card-header>
+      <kendo-card-body>
+        <code>ng add @progress/kendo-angular-barcodes</code>
+        <p>The Angular Barcode comes with support for several 1D barcode types - all available through built-in configuration options. Each Angular Barcode can be rendered as an SVG or a Canvas element by setting a single property appropriately. the barcodes can be rendered either as a SVG or Canvas element. Additionally, each Barcode can be exported in PDF or PNG formats.</p>
+        <hr kendoCardSeparator />
+          <main>
+            <kendo-barcode type="EAN13" value="123456789012"> </kendo-barcode>
+          </main>
+      </kendo-card-body>
+    </kendo-card>
+
+    <kendo-card>
+      <kendo-card-header>
+        <h3>QR Code Component</h3>
+        <p class="additional-info">Components › Barcodes › QR Code</p>
+      </kendo-card-header>
+      <kendo-card-body>
+        <code>ng add @progress/kendo-angular-barcodes</code>
+        <p>This new component comes with built-in support for encoding and error correction, something very important for those familiar with QR Codes, and you can add a custom overlay to the Angular QR Code to add items like a company logo to the QR Code. This opens up the opportunity to support specific types like the Swiss QR Code. These Angular QR Codes can be rendered both as SVG or Canvas elements and can be exported to various formats like PDF or PNG.</p>
+        <hr kendoCardSeparator />
+        <main>
+          <kendo-qrcode
+            value="https://www.telerik.com/kendo-angular-ui/"
+            errorCorrection="M"
+          >
+          </kendo-qrcode>
+        </main>
+      </kendo-card-body>
+    </kendo-card>
+
+    <kendo-card>
+      <kendo-card-header>
+        <h3>Filter Component</h3>
+        <p class="additional-info">Components › Filter</p>
+      </kendo-card-header>
+      <kendo-card-body>
+        <code>ng add @progress/kendo-angular-filter</code>
+        <p>The Angular Filter component lets users create more complex filter expressions using an intuitive user interface. The filter expressions can be tied to any existing data collection within your Angular application and can connected to existing data-bound UI components like the Kendo UI for Angular data grid.</p>
+        <hr kendoCardSeparator />
+        <main>
+          <kendo-filter [filters]="filters" (valueChange)="onFilterChange($event)">
+          </kendo-filter>
+        </main>
+      </kendo-card-body>
+    </kendo-card>
+
+    <kendo-card>
+      <kendo-card-header>
+        <h3>Popover Component</h3>
+        <p class="additional-info">Components › Tooltips › Popover</p>
+      </kendo-card-header>
+      <kendo-card-body>
+        <code>ng add @progress/kendo-angular-tooltip</code>
+        <p>The new Kendo UI for Angular Popover component gives developers an easy way to display additional information about an element on focus, click, or hover. While there is a connection to other similar components like the Tooltip, the Angular Popover is designed to display more advanced content. Common scenarios include the element which gets displayed when hovering over calendar elements within Google Calendar or Outlook where information like attendees, meeting notes, and additional event-related information can be displayed.</p>
+        <hr kendoCardSeparator />
+        <main>
+          <!-- TODO: This does not work I do not know why. -->
+          <button
+            kendoPopoverAnchor
+            [popover]="myPopover"
+            kendoButton
+          >
+            Click to Show Popover
+          </button>
+
+          <kendo-popover #myPopover title="Popover Title" body="Popover Body">
+          </kendo-popover>
+        </main>
+      </kendo-card-body>
+    </kendo-card>
+
+    <kendo-card>
+      <kendo-card-header>
+        <h3>FlatColorPicker Component</h3>
+        <p class="additional-info">Components › Inputs › FlatColorPicker</p>
+      </kendo-card-header>
+      <kendo-card-body>
+        <code>ng add @progress/kendo-angular-inputs</code>
+        <p>The Kendo UI for Angular FlatColorPicker component expands the number of ways users can select a color within any Angular application. The component renders the entire color picking interface without being hidden behind a dropdown or any other element. The FlatColorPicker component can easily integrate into both template-driven and reactive forms.</p>
+        <hr kendoCardSeparator />
+        <main>
+          <kendo-flatcolorpicker
+            [value]="value"
+            [preview]="false"
+          ></kendo-flatcolorpicker>
+        </main>
+      </kendo-card-body>
+    </kendo-card>
+  </section>
+
   <section aria-labelledby="r3-2021-section-header">
-    <h2 id="r3-2021-section-header">R3 2021 Release</h2>
+  <h2 id="r3-2021-section-header">R3 2021 Release</h2>
 
     <kendo-card>
       <kendo-card-header>
@@ -14,11 +111,11 @@
         dimensions. The X and Y values are discrete and can be set in any order.</p>
         <hr kendoCardSeparator />
           <main>
-            <kendo-chart 
+            <kendo-chart
               [style.height.px]="200"
             >
               <kendo-chart-series>
-                <kendo-chart-series-item type="heatmap" [data]="dataR2" 
+                <kendo-chart-series-item type="heatmap" [data]="dataR2"
               [color]="'#f03c97'">
                 </kendo-chart-series-item>
               </kendo-chart-series>
@@ -77,79 +174,6 @@
         <main>
           <app-gannt></app-gannt>
         </main>
-      </kendo-card-body>
-    </kendo-card>
-  </section>
-
-  <section aria-labelledby="r2-2021-section-header">
-    <h2 id="r2-2021-section-header">R2 2021 Release</h2>
-    <kendo-card>
-      <kendo-card-header>
-        <h3>Skeleton Component</h3>
-        <p class="additional-info">Indicators › Skeleton</p>
-      </kendo-card-header>
-      <kendo-card-body>
-        <code>ng add @progress/kendo-angular-indicators&nbsp;</code>
-        <p>The Skeleton component helps developers to speed up the initial page load time by displaying a simplified preview
-          of the content. This preview acts as a placeholder for the content while it loads. At the same time, the user will
-          get a general idea about what will appear on the page.</p>
-        <hr kendoCardSeparator />
-        <kendo-skeleton shape="rectangle" [height]="55"></kendo-skeleton>
-      </kendo-card-body>
-    </kendo-card>
-    
-    <kendo-card>
-      <kendo-card-header>
-        <h3><a
-            href="https://www.telerik.com/kendo-angular-ui-develop/components/navigation/bottomnavigation">BottomNavigation
-            Component</a></h3>
-        <p class="additional-info">Navigation › BottomNavigation</p>
-      </kendo-card-header>
-      <kendo-card-body>
-        <code>ng add @progress/kendo-angular-navigation&nbsp;</code>
-        <p>The BottomNavigation component allows movement between primary destinations in an application. The component
-          consists of items with text and icons, which offer a navigation element.</p>
-        <hr kendoCardSeparator />
-        <kendo-bottomnavigation [items]="items" [themeColor]="themeColor" [fill]="fill" [border]="border">
-        </kendo-bottomnavigation>
-      </kendo-card-body>
-    </kendo-card>
-    
-    <kendo-card>
-      <kendo-card-header>
-        <h3>CircularGauge Component</h3>
-        <p class="additional-info">Gauges › CircularGauge</p>
-      </kendo-card-header>
-      <kendo-card-body>
-        <code>ng add @progress/kendo-angular-gauges&nbsp;</code>
-        <p>The Circular Gauge represents a value using an arc over a fully enclosed circle.</p>
-        <p>This gauge type is very similar to the Arc Gauge and supports a similar set of features.</p>
-        <p>Compared to the Radial Gauge, this gauge uses a colored arc instead of an arrow pointer. This leaves the center
-          free for a user-defined Center Template.</p>
-        <hr kendoCardSeparator />
-        <kendo-circulargauge [value]="value" [scale]="{ max: 100 }">
-          <ng-template kendoCircularGaugeCenterTemplate let-value="value">
-            {{ value }}%
-          </ng-template>
-        </kendo-circulargauge>
-      </kendo-card-body>
-    </kendo-card>
-    
-    <kendo-card>
-      <kendo-card-header>
-        <h3>MultiSelectTree Component</h3>
-        <p class="additional-info">DropDowns › MultiSelectTree</p>
-      </kendo-card-header>
-      <kendo-card-body>
-        <code>ng add @progress/kendo-angular-dropdowns&nbsp;</code>
-        <p></p>
-        <hr kendoCardSeparator />
-        <div class="example-wrapper">
-          <p>Select an item:</p>
-          <kendo-multiselecttree kendoMultiSelectTreeExpandable [kendoMultiSelectTreeHierarchyBinding]="data"
-            [textField]="'text'" [valueField]="'id'" childrenField="items" class="furniture">
-          </kendo-multiselecttree>
-        </div>
       </kendo-card-body>
     </kendo-card>
   </section>
