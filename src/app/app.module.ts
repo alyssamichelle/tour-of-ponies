@@ -41,6 +41,8 @@ import { BarcodesModule } from "@progress/kendo-angular-barcodes";
 import { FilterModule } from "@progress/kendo-angular-filter";
 import { TooltipsModule } from "@progress/kendo-angular-tooltip";
 import { DateInputsModule } from "@progress/kendo-angular-dateinputs";
+import { EditorModule } from '@progress/kendo-angular-editor';
+
 
 @NgModule({
   imports: [
@@ -75,7 +77,8 @@ import { DateInputsModule } from "@progress/kendo-angular-dateinputs";
     BarcodesModule,
     FilterModule,
     TooltipsModule,
-    DateInputsModule
+    DateInputsModule,
+    EditorModule
   ],
   declarations: [
     AppComponent,

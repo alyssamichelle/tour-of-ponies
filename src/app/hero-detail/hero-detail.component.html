@@ -85,6 +85,11 @@
     </ul>
 </section>
 
+<!-- Todo - build out this editor for hero edits -->
+<section *ngIf="hero">
+  <kendo-editor [value]="hero.name" [applyToWord]="true" style="height: 200px;">
+  </kendo-editor>
+</section>
 <!-- super simple expansion panel -->
 <!-- <kendo-expansionpanel [title]="hero.name" [subtitle]="hero.kind" [expanded]="true">
   <p>content..</p>
