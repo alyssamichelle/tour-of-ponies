@@ -25,7 +25,7 @@ export class InMemoryDataService implements InMemoryDbService {
           "Unicorn",
           "Human"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/b\/bc\/Princess_Twilight_Sparkle_ID_S4E26.png\/revision\/latest?cb=20160207045127",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/6\/6c\/Twilight_S2E25_cropped.png\/revision\/latest?cb=20160315121005",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/9\/97\/Twilight_filly_crop_S2E25.png\/revision\/latest?cb=20140108015837",
@@ -45,7 +45,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "kind": [
           "Earth"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/d\/d8\/Applejack_S01E13_cropped.png\/revision\/latest?cb=20130419182236",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/5\/5e\/Teenage_Applejack_ID_S6E23.png\/revision\/latest?cb=20161009222620",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/0\/07\/Filly_Applejack_S1E23.png\/revision\/latest?cb=20131223181959",
@@ -64,7 +64,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "kind": [
           "Pegasus"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/d\/d6\/Fluttershy_ID_S1E17.png\/revision\/latest?cb=20190410214903",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/7\/7a\/Filly_Fluttershy_ID_S1E23.png\/revision\/latest?cb=20130920035134",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/0\/0c\/Future_Fluttershy_ID_S9E26.png\/revision\/latest?cb=20191013014150"
@@ -81,7 +81,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "kind": [
           "Unicorn"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/d\/d1\/Rarity_standing_S1E19_CROPPED.png\/revision\/latest?cb=20130418142043",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/b\/b5\/Filly_Rarity_S01E23.png\/revision\/latest?cb=20130808215003",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/f\/f2\/Future_Rarity_ID_S9E26.png\/revision\/latest?cb=20191013014704"
@@ -100,7 +100,7 @@ export class InMemoryDataService implements InMemoryDbService {
           "Human",
           "Earth"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/b\/b2\/Pinkie_Pie_ID_S4E11.png\/revision\/latest?cb=20190410214815",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/6\/60\/Pinkie_Pie_as_a_filly_ID_S4E12.png\/revision\/latest?cb=20140204171208",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/e\/e4\/Future_Pinkie_Pie_ID_S9E26.png\/revision\/latest?cb=20191013014325",
@@ -118,7 +118,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "kind": [
           "Pegasus"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/4\/4b\/Rainbow_Dash_Wonderbolt_fantasy_cropped_S1E3.png\/revision\/latest?cb=20190410214837",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/e\/e9\/Filly_Rainbow_Dash_S1E23.png\/revision\/latest?cb=20130913164943",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/2\/25\/Rainbow_Dash_infant_ID_S7E7.png\/revision\/latest?cb=20170813165602",
@@ -137,7 +137,7 @@ export class InMemoryDataService implements InMemoryDbService {
           "Dog",
           "Dragon"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/8\/87\/Spike_ID_S8E11.png\/revision\/latest?cb=20180526160714",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/5\/5c\/Spike_ID_S4E24.png\/revision\/latest?cb=20140709021014",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/7\/70\/Baby_Spike_ID_S9E4.png\/revision\/latest?cb=20190423232953",
@@ -157,7 +157,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "kind": [
           "Earth"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/1\/1c\/Apple_Bloom_ID_S6E4.png\/revision\/latest?cb=20160411140505",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/d\/d3\/Apple_Bloom_infant_ID_S2E23.png\/revision\/latest?cb=20150721214129",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/f\/fb\/Adult_Apple_Bloom_ID_S9E22.png\/revision\/latest?cb=20190928155028"
@@ -173,7 +173,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "kind": [
           "Pegasus"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/5\/5a\/Scootaloo_ID_S6E4.png\/revision\/latest?cb=20160411140522",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/4\/42\/Adult_Scootaloo_ID_S9E22.png\/revision\/latest?cb=20190928155143"
         ]
@@ -187,7 +187,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "kind": [
           "Unicorn"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/f\/f1\/Sweetie_Belle_ID_S6E4.png\/revision\/latest?cb=20160411140540",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/1\/14\/Younger_Sweetie_Belle_ID_S4E19.png\/revision\/latest?cb=20140325035303",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/5\/5b\/Micro-Series_issue_3_baby_Sweetie_Belle.png\/revision\/latest?cb=20150722004545",
@@ -206,7 +206,7 @@ export class InMemoryDataService implements InMemoryDbService {
           "Human",
           "Earth"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/c\/c0\/Babs_Seed_ID_MLP_Facebook.png\/revision\/latest?cb=20190906111222",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/e\/e3\/Babs_Seed_in_a_wolf_costume_S03E04.png\/revision\/latest?cb=20150507143028",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/d\/d8\/Babs_Seed_IDW_Annual_1.png\/revision\/latest?cb=20131102150347"
@@ -223,7 +223,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "kind": [
           "Griffon"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/e\/ec\/Gabby_ID_S6E19.png\/revision\/latest?cb=20160910211625"
         ]
       },
@@ -238,7 +238,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "kind": [
           "Alicorn"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/2\/2a\/Princess_Celestia_ID_S4E01.png\/revision\/latest?cb=20140322224921",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/2\/2d\/Legends_of_Magic_issue_1_Young_Celestia.png\/revision\/latest?cb=20170502170956"
         ]
@@ -254,7 +254,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "kind": [
           "Alicorn"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/1\/18\/Princess_Luna_ID_S5E04.png\/revision\/latest?cb=20150422172452",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/0\/0f\/Princess_Luna_ID_S1E02.png\/revision\/latest?cb=20130810084859",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/9\/9b\/Nightmare_Moon_ID.png\/revision\/latest?cb=20140702174212"
@@ -270,7 +270,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "kind": [
           "Unicorn"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/b\/b9\/Prince_Blueblood_ID_S1E03.png\/revision\/latest?cb=20110510223111",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/2\/2e\/Young_Blueblood_ID_MLP_Deviations.png\/revision\/latest?cb=20170503231718"
         ]
@@ -287,7 +287,7 @@ export class InMemoryDataService implements InMemoryDbService {
           "Unicorn",
           "Human"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/2\/29\/Shining_Armor_ID_S5E19.png\/revision\/latest?cb=20151026075733",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/6\/6a\/Shining_Armor_younger_ID_S2E25.png\/revision\/latest?cb=20130812111537",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/b\/b0\/Shining_Armor_Crystal_Pony_ID_S3E02.png\/revision\/latest?cb=20131010004216",
@@ -310,7 +310,7 @@ export class InMemoryDataService implements InMemoryDbService {
           "Human",
           "Pegasus"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/6\/6f\/Princess_Cadance_ID_S4E11.png\/revision\/latest?cb=20140128163901",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/3\/38\/Younger_Princess_Cadance_ID_S2E25.png\/revision\/latest?cb=20130826005555",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/8\/8c\/Blind_Bag_Princess_Cadance_prototype.jpg\/revision\/latest?cb=20160423023530",
@@ -326,7 +326,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "kind": [
           "Yak"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/3\/3e\/Prince_Rutherford_ID_S5E11.png\/revision\/latest?cb=20150630030726"
         ]
       },
@@ -340,7 +340,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "kind": [
           "Alicorn"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/7\/71\/Flurry_Heart_ID_S6E1.png\/revision\/latest?cb=20160327000953",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/a\/a1\/Flurry_Heart_Crystal_Pony_ID_S6E2.png\/revision\/latest?cb=20160327001545"
         ]
@@ -356,7 +356,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "kind": [
           "Dragon"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/b\/bc\/Princess_Ember_ID_S6E5.png\/revision\/latest?cb=20160418043217"
         ]
       },
@@ -371,7 +371,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "kind": [
           "Changeling"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/c\/c1\/Thorax_new_form_ID_S6E26.png\/revision\/latest?cb=20161024191324",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/8\/85\/Thorax_ID_S6E16.png\/revision\/latest?cb=20160822033001",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/7\/78\/Thorax_shiny_wings_ID_S6E26.png\/revision\/latest?cb=20161025201124",
@@ -391,7 +391,7 @@ export class InMemoryDataService implements InMemoryDbService {
           "Hippogriff",
           "Seapony"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/7\/77\/Princess_Skystar_ID_MLPTM.png\/revision\/latest?cb=20171015024706",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/4\/4a\/Princess_Skystar_Hippogriff_form_ID_MLPTM.png\/revision\/latest?cb=20171015024718"
         ]
@@ -407,7 +407,7 @@ export class InMemoryDataService implements InMemoryDbService {
           "Hippogriff",
           "Seapony"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/f\/f9\/Queen_Novo_ID_MLPTM.png\/revision\/latest?cb=20171016211949",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/4\/42\/Queen_Novo_Hippogriff_form_ID_MLPTM.png\/revision\/latest?cb=20171016211959"
         ]
@@ -423,7 +423,7 @@ export class InMemoryDataService implements InMemoryDbService {
           "Unicorn",
           "Crystal"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/6\/60\/FIENDship_is_Magic_issue_1_Princess_Amore.png\/revision\/latest?cb=20150401230216",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/1\/1b\/FIENDship_is_Magic_issue_1_Statue_Amore.png\/revision\/latest?cb=20150404020224"
         ]
@@ -437,7 +437,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "kind": [
           "Earth"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/3\/38\/Granny_Smith_ID_S2E06.png\/revision\/latest?cb=20111213195959",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/e\/ea\/Granny_Smith_when_she_was_a_younger_mare_ID_S3E8.png\/revision\/latest?cb=20130809204717",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/4\/4c\/Granny_Smith_filly_ID_S3E8.png\/revision\/latest?cb=20140215044652"
@@ -454,7 +454,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "kind": [
           "Earth"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/2\/2b\/Big_McIntosh_id_S2E17.png\/revision\/latest?cb=20150701114631",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/a\/a5\/Young_Big_McIntosh_S1E23.png\/revision\/latest?cb=20130808221410",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/1\/16\/Future_Big_McIntosh_ID_S9E26.png\/revision\/latest?cb=20191013021829"
@@ -470,7 +470,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "kind": [
           "Earth"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/4\/4b\/Braeburn_ID_S1E21.png\/revision\/latest?cb=20120715144759",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/6\/67\/Teen_Braeburn_ID.png\/revision\/latest?cb=20140426220756"
         ]
@@ -484,7 +484,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "kind": [
           "Earth"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/e\/ef\/Aunt_Orange_ID_S1E23.png\/revision\/latest?cb=20110823211431"
         ]
       },
@@ -498,7 +498,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "kind": [
           "Earth"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/c\/c2\/Uncle_Orange_ID_S1E23.png\/revision\/latest?cb=20110823211553"
         ]
       },
@@ -511,7 +511,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "kind": [
           "Earth"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/b\/be\/Hayseed_Turnip_Truck_ID_S2E9.png\/revision\/latest?cb=20140623015735"
         ]
       },
@@ -523,7 +523,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "kind": [
           "Earth"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/c\/c7\/Apple_Strudel_ID_S2E12.png\/revision\/latest?cb=20150803014838",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/5\/5a\/Young_Apple_Strudel_ID_S3E8.png\/revision\/latest?cb=20150803014839"
         ]
@@ -537,7 +537,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "kind": [
           "Earth"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/2\/2a\/Applesauce_ID_S3E08.png\/revision\/latest?cb=20150507195655",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/a\/ab\/Young_Auntie_Applesauce_ID_S3E8.png\/revision\/latest?cb=20150507195742"
         ]
@@ -551,7 +551,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "kind": [
           "Earth"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/1\/10\/Apple_Rose_ID_S3E08.png\/revision\/latest?cb=20150507181548",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/c\/ca\/Young_Apple_Rose_ID_S3E8.png\/revision\/latest?cb=20150507181632"
         ]
@@ -567,7 +567,7 @@ export class InMemoryDataService implements InMemoryDbService {
           "Human",
           "Earth"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/c\/c7\/Goldie_Delicious_ID_S4E09.png\/revision\/latest?cb=20140113191231",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/e\/ec\/Young_Goldie_Delicious_ID_S7E13.png\/revision\/latest?cb=20170808004907",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/c\/c4\/Goldie_Delicious_ID_EGDS.png\/revision\/latest?cb=20171223024458"
@@ -583,7 +583,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "kind": [
           "Earth"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/8\/8e\/Bright_Mac_ID_S7E13.png\/revision\/latest?cb=20170808004854",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/7\/7a\/Bright_Mac_infant_ID_S7E13.png\/revision\/latest?cb=20170808004855"
         ]
@@ -598,7 +598,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "kind": [
           "Earth"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/e\/e8\/Pear_Butter_ID_S7E13.png\/revision\/latest?cb=20170808004903",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/6\/6d\/Pear_Butter_younger_ID_S7E13.png\/revision\/latest?cb=20170808004905",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/b\/b3\/Pear_Butter_infant_ID_S7E13.png\/revision\/latest?cb=20170808004904"
@@ -613,7 +613,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "kind": [
           "Earth"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/a\/a2\/Limestone_Pie_ID_S5E20.png\/revision\/latest?cb=20151024190324",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/9\/96\/Limestone_Pie_id_S1E23.png\/revision\/latest?cb=20110825215431"
         ]
@@ -627,7 +627,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "kind": [
           "Earth"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/2\/25\/Marble_Pie_ID_S5E20.png\/revision\/latest?cb=20151024190340",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/f\/f2\/Marble_Pie_id_S1E23.png\/revision\/latest?cb=20110825221549"
         ]
@@ -643,7 +643,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "kind": [
           "Earth"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/4\/4d\/Igneous_Rock_ID_S5E20.png\/revision\/latest?cb=20151110214811"
         ]
       },
@@ -657,7 +657,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "kind": [
           "Earth"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/0\/09\/Cloudy_Quartz_ID_S5E20.png\/revision\/latest?cb=20151110214848"
         ]
       },
@@ -672,7 +672,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "kind": [
           "Earth"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/1\/10\/Maud_Pie_ID_S4E18.png\/revision\/latest?cb=20140317163136",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/5\/57\/Maud_Pie_filly_ID_S4E12.png\/revision\/latest?cb=20140204033601",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/b\/b6\/Maud_Pie_Sombra_timeline_ID_S5E25.png\/revision\/latest?cb=20151202050814"
@@ -688,7 +688,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "kind": [
           "Pegasus"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/2\/2d\/Mr._Shy_ID_S6E11.png\/revision\/latest?cb=20160605103050"
         ]
       },
@@ -701,7 +701,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "kind": [
           "Pegasus"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/1\/1a\/Mrs._Shy_ID_S6E11.png\/revision\/latest?cb=20160605103103"
         ]
       },
@@ -715,7 +715,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "kind": [
           "Pegasus"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/1\/14\/Zephyr_Breeze_ID_S6E11.png\/revision\/latest?cb=20160605103015"
         ]
       },
@@ -730,7 +730,7 @@ export class InMemoryDataService implements InMemoryDbService {
           "Human",
           "Earth"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/e\/ea\/Mr._Cake_ID_S2E10.png\/revision\/latest?cb=20131029203445",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/8\/8f\/Mr._Cake_in_costume_ID_S2E4.png\/revision\/latest?cb=20150708195255",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/c\/ce\/Mr._Carrot_Cake_ID_EG.png\/revision\/latest?cb=20130727071253"
@@ -748,7 +748,7 @@ export class InMemoryDataService implements InMemoryDbService {
           "Human",
           "Earth"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/7\/78\/Mrs._Cake_greeting_ID_S1E25.png\/revision\/latest?cb=20111201194348",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/1\/14\/Young_Chiffon_Swirl_ID_S7E13.png\/revision\/latest?cb=20170808010420",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/5\/56\/Mrs._Cake_in_costume_ID_S2E4.png\/revision\/latest?cb=20150708195308",
@@ -764,7 +764,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "kind": [
           "Pegasus"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/7\/73\/Pound_Cake_smiling_ID_S2E13.png\/revision\/latest?cb=20120117144123",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/c\/c0\/Future_Pound_Cake_ID_S9E26.png\/revision\/latest?cb=20191013042043"
         ]
@@ -778,7 +778,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "kind": [
           "Unicorn"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/9\/94\/Pumpkin_Cake_smiling_ID_S2E13.png\/revision\/latest?cb=20120117144426",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/e\/e6\/Pumpkin_Cake_Alicorn_ID_S7E3.png\/revision\/latest?cb=20170426023504",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/4\/40\/Future_Pumpkin_Cake_ID_S9E26.png\/revision\/latest?cb=20191013042146"
@@ -794,7 +794,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "kind": [
           "Griffon"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/b\/bc\/Gallus_ID_S8E1.png\/revision\/latest?cb=20180328224846",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/c\/cc\/Future_Gallus_ID_S9E26.png\/revision\/latest?cb=20191013032321"
         ]
@@ -811,7 +811,7 @@ export class InMemoryDataService implements InMemoryDbService {
           "Hippogriff",
           "Seapony"
         ],
-        "image": [
+        "images": [
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/4\/45\/Silverstream_ID_S8E1.png\/revision\/latest?cb=20180329021441",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/e\/e3\/Silverstream_seapony_ID_S8E2.png\/revision\/latest?cb=20180329021515",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/6\/67\/Future_Silverstream_ID_S9E26.png\/revision\/latest?cb=20191013044024"

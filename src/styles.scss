@@ -12,6 +12,7 @@ $font-size-sm: $mouse !default;
 $font-size-md: $pony  !default;
 $font-size-lg: $bear !default;
 $font-size-xl: $moose !default;
+$font-size-xxl: $dino !default;
 @import "~@progress/kendo-theme-default/scss/typography/_index.scss";
 // @import "~@progress/kendo-theme-default/scss/all.scss";
 
@@ -79,18 +80,15 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 4.2rem;
-  // line-height: 8.4rem;
+  font-size: $font-size-xl;
 }
 
 h2 {
-  font-size: 4rem;
-  // line-height: 8rem;
+  font-size: $font-size-xl;
 }
 
 h3 {
-  font-size: 2.4rem;
-  // line-height: 4.8rem;
+  font-size: $font-size;
   color: #444;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: lighter;
@@ -233,23 +231,11 @@ button.delete {
     max-width: 21rem;
   }
 }
-// override for layout expansion panel styles
-// .k-tile-layout-item-body.k-card-body {
-  // background-color: rgba(0,0,0,0);
-// }
-
 
 .k-tile-layout-item-body.k-card-body {
-  // background-color: rgba(0,0,0,0);
-  // border: none;
   display: flex;
   justify-content: center;
 }
-
-// override for expansion panel
-// .k-expander, .k-expander-header {
-  // background-color: rgba(0,0,0,0);
-// }
 
 .visually-hidden {
   clip: rect(0 0 0 0);
@@ -259,4 +245,23 @@ button.delete {
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+
+@media (max-width: 900px) {
+
+  // fix this for real
+  .top-hero-wrapper,
+  .search-component,
+  sidebar,
+  .k-expander {
+    max-width: 90vw;
+  }
+  
+  h1, h1.mane-title {
+    font-size: 54px;
+  }
+  
+  h2 {
+    font-size: 44px;
+  }
 }

@@ -9,16 +9,12 @@
   /* Grid styles */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-columns: repeat(auto-fit, minmax(900px, 1fr));
-}
-
-.mane-section {
-  flex: 3 0 0;
-  display: block;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
 }
 
 .mane-title {
-  margin-bottom: 20px;
+  font-size: 90px;
+  padding-bottom: 20px;
 
   * {
     color: $hot-pink;
@@ -63,7 +59,7 @@ header {
   background: linear-gradient(0deg, $light-blue 0%, #e7f9fd 49%, #f7f7f7 100%);
   border-bottom: 2px solid $light-blue;
   text-align: center;
-  padding: 70px;
+  padding: 100px 0 30px 0;
   position: relative;
 
   img {
@@ -104,29 +100,4 @@ kendo-bottomnavigation.k-bottom-nav-solid.k-bottom-nav-primary {
 
 .k-bottom-nav-solid.k-bottom-nav-primary {
   background-color: $hot-pink;
-}
-
-@media (orientation: portrait or landscape) {
-  // .content-wrapper {
-  //   flex-wrap: wrap;
-  // }
-
-  h1 {
-    font-size: 2.8rem;
-  }
-
-  h2 {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width: 900px) {
-
-  // fix this for real
-  .top-hero-wrapper,
-  .search-component,
-  sidebar,
-  .k-expander {
-    max-width: 90vw;
-  }
 }
