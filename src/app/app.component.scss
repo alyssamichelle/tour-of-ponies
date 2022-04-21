@@ -4,22 +4,20 @@
 
 .content-wrapper {
   margin: 40px;
-  display: flex;
   gap: 20px;
+  
+  /* Grid styles */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(900px, 1fr));
 }
 
-@media (orientation: portrait or landscape) {
-  .content-wrapper {
-    flex-wrap: wrap;
-  }
-}
-
-.main-section {
+.mane-section {
   flex: 3 0 0;
   display: block;
 }
 
-.main-title {
+.mane-title {
   margin-bottom: 20px;
 
   * {
@@ -60,12 +58,13 @@ code::after {
 
 /* Our Styles as we add Kendo UI */
 
-.header {
+header {
   background: $light-blue;
   background: linear-gradient(0deg, $light-blue 0%, #e7f9fd 49%, #f7f7f7 100%);
   border-bottom: 2px solid $light-blue;
   text-align: center;
   padding: 70px;
+  position: relative;
 
   img {
     $img-width: 335px;
@@ -105,4 +104,29 @@ kendo-bottomnavigation.k-bottom-nav-solid.k-bottom-nav-primary {
 
 .k-bottom-nav-solid.k-bottom-nav-primary {
   background-color: $hot-pink;
+}
+
+@media (orientation: portrait or landscape) {
+  // .content-wrapper {
+  //   flex-wrap: wrap;
+  // }
+
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 900px) {
+
+  // fix this for real
+  .top-hero-wrapper,
+  .search-component,
+  sidebar,
+  .k-expander {
+    max-width: 90vw;
+  }
 }

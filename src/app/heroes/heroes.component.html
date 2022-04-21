@@ -2,15 +2,14 @@
 
 <kendo-formfield class="new-hero-form form-group">
   <kendo-label [for]="heroName">Hero Name</kendo-label>
-  <input kendoTextBox id="heroName" #heroName [(ngModel)]="name" required />
-
+  <span>
+    <input kendoTextBox id="heroName" #heroName [(ngModel)]="name" required />
+    <button kendoButton (click)="add(heroName.value); heroName.value=''">Add</button>
+  </span>
   <kendo-formhint>The name of our new hero!</kendo-formhint>
   <kendo-formerror>A name is required to create a new hero.</kendo-formerror>
 
   <!-- (click) passes input value to add() and then clears the input -->
-
-  <button kendoButton (click)="add(heroName.value); heroName.value=''">Add</button>
-
 </kendo-formfield>
 
 <h3 data-text="Kendo UI ListView">Kendo UI ListView</h3>

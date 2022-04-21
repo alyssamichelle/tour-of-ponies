@@ -42,6 +42,8 @@ body {
   display: inline-block;
   color: $dark-blue;
   font-family: 'pony';
+  word-break: break-word;
+  white-space: break-spaces;
   
   &.salty {
     -moz-font-feature-settings: "salt";

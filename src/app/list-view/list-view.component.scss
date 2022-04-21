@@ -4,10 +4,12 @@
   margin-bottom: 50px;
   display: grid;
   gap: 20px;
-  grid-template-columns: 1fr 1fr;
-   grid-template-areas: 
-    "lv1 lv2"
-    "lv3 lv3";
+  grid-template-areas: 
+  "lv1 lv2"
+  "lv3 lv3";
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(520px, 1fr));
+  max-width: 90vw;
 }
 
 :host *:nth-child(1) {
