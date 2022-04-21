@@ -6,10 +6,15 @@
   margin: 40px;
   gap: 20px;
   
-  /* Grid styles */
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  display: flex;
+  /* Could NOT get these Grid styles working */
+  // grid-template-columns: repeat(auto-fill, minmax(70vw, 1fr));
+}
+
+@media (max-width: 1700px) {
+  .content-wrapper {
+    flex-wrap: wrap;
+  }
 }
 
 .mane-title {
