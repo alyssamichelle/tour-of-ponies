@@ -1,4 +1,4 @@
-/.angular/cache
+.angular/
 node_modules
 /dist/
 
