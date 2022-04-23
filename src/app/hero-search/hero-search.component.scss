@@ -1,7 +1,10 @@
 .search-component {
   display: flex;
-  align-items: flex-end;
-  gap: 50px;
+  gap: 20px;
+  
+  @media (max-width: 670px) {
+    flex-direction: column;
+  }
 }
 
 // clean it up, yo
@@ -20,5 +23,5 @@ kendo-multicolumncombobox {
 }
 
 .search-box {
-  display: flex;
+  flex: 1;
 }

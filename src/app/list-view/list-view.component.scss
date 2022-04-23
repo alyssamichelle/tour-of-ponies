@@ -2,26 +2,25 @@
 
 :host {
   margin-bottom: 50px;
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
-  grid-template-areas: 
-  "lv1 lv2"
-  "lv3 lv3";
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-columns: repeat(auto-fit, minmax(520px, 1fr));
-  max-width: 90vw;
 }
 
-:host *:nth-child(1) {
-  grid-area: lv1;
+@media all and (max-width: 767px) {
+  :host {
+    flex-direction: column;
+  }
 }
 
-:host *:nth-child(2) {
-  grid-area: lv2;
+:host > *:nth-child(1),
+:host > *:nth-child(2) {
+  flex: 1;
 }
 
-:host *:nth-child(3) {
-  grid-area: lv3;
+:host > *:nth-child(3) {
+  flex-basis: 100%;
+  max-width: 100%;
 }
 
 .k-listview {

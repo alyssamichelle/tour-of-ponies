@@ -75,10 +75,6 @@ body {
   }
 }
 
-h1, h2, h3 {
-  white-space: nowrap;
-}
-
 h1 {
   font-size: $font-size-xl;
 }
@@ -141,6 +137,11 @@ button, button.k-button, nav a {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
+  
+  @media all and (max-width: 810px) {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
 }
 
 .heroes > * {
@@ -155,6 +156,11 @@ button, button.k-button, nav a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
+  @media all and (max-width: 810px) {
+    margin: 1.2em;
+    min-width: 0;
+  }
 }
 
 .heroes > *:hover {
@@ -170,6 +176,7 @@ button, button.k-button, nav a {
   display: flex;
   width: 100%;
   height: 100%;
+  max-width: calc(100% - 35px);
 }
 
 .heroes .hero-name {
@@ -185,7 +192,7 @@ button, button.k-button, nav a {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  max-width: 11rem;
+  flex: 1;
 }
 
 .heroes a:hover {
@@ -222,16 +229,6 @@ button.delete {
   line-height: 0;
 }
 
-@media all and (max-width: 699px) {
-  .heroes > * { 
-    margin: 1.2em;
-    width: 100vw;
-  }
-  .heroes .hero-name {
-    max-width: 21rem;
-  }
-}
-
 .k-tile-layout-item-body.k-card-body {
   display: flex;
   justify-content: center;
@@ -248,14 +245,6 @@ button.delete {
 }
 
 @media (max-width: 900px) {
-
-  // fix this for real
-  .top-hero-wrapper,
-  .search-component,
-  .k-expander {
-    max-width: 90vw;
-  }
-  
   h1, h1.mane-title {
     font-size: 54px;
   }

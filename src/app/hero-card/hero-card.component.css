@@ -1,3 +1,15 @@
+:host {
+  max-width: 285px;
+  min-width: 225px;
+  flex: 1;
+}
+
+@media (max-width: 420px) {
+  :host {
+    max-width: none;
+  }
+}
+
 a {
   text-decoration: none;
 }
@@ -7,7 +19,7 @@ a {
 }
 
 kendo-card {
-  width: 100%;
+  width: 100% !important;
   min-height: 285px;
   transition: background-color 0.4s ease;
 }

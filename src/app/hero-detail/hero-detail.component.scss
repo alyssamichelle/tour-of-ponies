@@ -67,9 +67,17 @@ article.hero-details {
   gap: 20px;
   margin-bottom: 20px;
 
+  @media (max-width: 670px) {
+    flex-direction: column-reverse;
+  }
+
   ul.hero-info {
     list-style: none;
     padding-left: 0;
+
+    li {
+      margin-bottom: 10px;
+    }
   }
   
   .hero-avatar {
@@ -81,9 +89,15 @@ article.hero-details {
 
 .pony-images {
   display: flex;
+  gap: 20px;
   justify-content: space-between;
   padding: 0;
   margin-bottom: 20px;
+  
+  @media (max-width: 670px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
   li {
     list-style-type: none;

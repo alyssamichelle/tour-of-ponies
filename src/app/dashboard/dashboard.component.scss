@@ -5,10 +5,13 @@
 
 .top-hero-wrapper {
   display: flex; 
-  flex: 3 0 0;
   flex-wrap: wrap; 
   gap: 20px;
   margin-bottom: 40px;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 }
 
 // .k-expander-header {
