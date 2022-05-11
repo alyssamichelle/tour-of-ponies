@@ -42,6 +42,8 @@ import { FilterModule } from "@progress/kendo-angular-filter";
 import { TooltipsModule } from "@progress/kendo-angular-tooltip";
 import { DateInputsModule } from "@progress/kendo-angular-dateinputs";
 import { EditorModule } from '@progress/kendo-angular-editor';
+import { ListBoxModule } from '@progress/kendo-angular-listbox';
+
 
 
 @NgModule({
@@ -78,7 +80,8 @@ import { EditorModule } from '@progress/kendo-angular-editor';
     FilterModule,
     TooltipsModule,
     DateInputsModule,
-    EditorModule
+    EditorModule,
+    ListBoxModule
   ],
   declarations: [
     AppComponent,
