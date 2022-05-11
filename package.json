@@ -1,6 +1,6 @@
 {
-  "name": "armvmgrgaav.angular",
-  "version": "0.0.0",
+  "name": "tour-of-ponies",
+  "version": "1.0",
   "private": true,
   "dependencies": {
     "@angular/animations": "13.2.0",
