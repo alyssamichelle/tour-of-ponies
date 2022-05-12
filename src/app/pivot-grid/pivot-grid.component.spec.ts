@@ -1,21 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SidebarComponent } from './sidebar.component';
+import { PivotGridComponent } from './pivot-grid.component';
 
-describe('SidebarComponent', () => {
-  let component: SidebarComponent;
-  let fixture: ComponentFixture<SidebarComponent>;
+describe('PivotGridComponent', () => {
+  let component: PivotGridComponent;
+  let fixture: ComponentFixture<PivotGridComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-    declarations: [SidebarComponent],
-    teardown: { destroyAfterEach: false }
-})
+      declarations: [ PivotGridComponent ]
+    })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SidebarComponent);
+    fixture = TestBed.createComponent(PivotGridComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

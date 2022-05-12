@@ -43,6 +43,9 @@ import { TooltipsModule } from "@progress/kendo-angular-tooltip";
 import { DateInputsModule } from "@progress/kendo-angular-dateinputs";
 import { EditorModule } from '@progress/kendo-angular-editor';
 import { ListBoxModule } from '@progress/kendo-angular-listbox';
+import { PivotGridModule } from '@progress/kendo-angular-pivotgrid';
+import { PivotGridComponent } from './pivot-grid/pivot-grid.component';
+
 
 
 
@@ -81,7 +84,8 @@ import { ListBoxModule } from '@progress/kendo-angular-listbox';
     TooltipsModule,
     DateInputsModule,
     EditorModule,
-    ListBoxModule
+    ListBoxModule,
+    PivotGridModule
   ],
   declarations: [
     AppComponent,
@@ -96,7 +100,8 @@ import { ListBoxModule } from '@progress/kendo-angular-listbox';
     EllipsisPipe,
     SidebarComponent,
     HeatmapComponent,
-    GanntComponent
+    GanntComponent,
+    PivotGridComponent
   ],
   bootstrap: [ AppComponent ]
 })

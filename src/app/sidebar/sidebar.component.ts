@@ -11,6 +11,26 @@ import { CompositeFilterDescriptor } from "@progress/kendo-data-query";
 })
 export class SidebarComponent {
 
+  // r2 2022
+  //PivotGrid in pivot-grid comp
+  // ListBox
+  public europeanCountries: string[] = [
+    "Germany",
+    "France",
+    "Austria",
+    "Belgium",
+    "Denmark",
+    "Netherlands",
+  ];
+  public asianCountries: string[] = [
+    "China",
+    "India",
+    "Indonesia",
+    "Nepal",
+    "Thailand",
+    "Yemen",
+  ];
+
   // r1 2022
   // filters
   public filters: FilterExpression[] = [
