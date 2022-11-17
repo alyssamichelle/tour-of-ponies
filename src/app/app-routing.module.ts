@@ -8,8 +8,8 @@ import { HeroDetailComponent }  from './hero-detail/hero-detail.component';
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'detail/:id', component: HeroDetailComponent },
-  { path: "dashboard", component: DashboardComponent, text: "Dashboard", icon: "home" },
-  { path: "heroes", component: HeroesComponent, text: "Heroes", icon: "star" },
+  { path: "dashboard", component: DashboardComponent, title: "Dashboard" },
+  { path: "heroes", component: HeroesComponent, title: "Heroes" },
 ];
 
 @NgModule({
