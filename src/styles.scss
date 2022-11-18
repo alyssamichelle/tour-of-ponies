@@ -13,7 +13,8 @@ $font-size-md: $pony  !default;
 $font-size-lg: $bear !default;
 $font-size-xl: $moose !default;
 $font-size-xxl: $dino !default;
-@import "~@progress/kendo-theme-default/scss/typography/_index.scss";
+// ALYSSA TODO as of v15, the kui theme path for individual things changed?
+// @import "~@progress/kendo-theme-default/scss/typography/_index.scss";
 // @import "~@progress/kendo-theme-default/scss/all.scss";
 
 // end of customizing

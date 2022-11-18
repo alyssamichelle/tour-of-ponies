@@ -67,12 +67,10 @@ export class SidebarComponent {
     const routes: any[] = router.config;
     console.log('routes ', routes);
     routes.forEach((route) => {
-      if (route.icon) {
-        this.items.push({
-          icon: route.icon,
-          text: route.text,
-        });
-      }
+      this.items.push({
+        icon: route.icon,
+        title: route.text,
+      });
     });
 
     this.items[0].selected = true;
