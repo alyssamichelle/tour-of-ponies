@@ -1,0 +1,45 @@
+:host {
+    max-width: 285px;
+    min-width: 225px;
+    flex: 1;
+  }
+  
+  @media (max-width: 420px) {
+    :host {
+      max-width: none;
+    }
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .k-card {
+    overflow: hidden;
+  }
+  
+  kendo-card {
+    width: 100% !important;
+    min-height: 285px;
+    transition: background-color 0.4s ease;
+  }
+  
+  kendo-card img {
+    max-width: 100%;
+    position: absolute;
+    top: 110px;
+    transition: top 0.4s ease;
+  }
+  
+  kendo-card img:hover {
+    top: 90px;
+  }
+  
+  kendo-card:hover {
+    background-color: #f9f9f9;
+  }
+  
+  
+  kendo-card, kendo-card-header {
+    border-color: rgba(0, 0, 0, 0.2);
+  }

@@ -45,6 +45,7 @@ import { EditorModule } from '@progress/kendo-angular-editor';
 import { ListBoxModule } from '@progress/kendo-angular-listbox';
 import { PivotGridModule } from '@progress/kendo-angular-pivotgrid';
 import { PivotGridComponent } from './pivot-grid/pivot-grid.component';
+import { StandaloneCardComponent } from './standalone-card/standalone-card.component';
 
 
 
@@ -85,7 +86,8 @@ import { PivotGridComponent } from './pivot-grid/pivot-grid.component';
     DateInputsModule,
     EditorModule,
     ListBoxModule,
-    PivotGridModule
+    PivotGridModule,
+    StandaloneCardComponent,
   ],
   declarations: [
     AppComponent,
