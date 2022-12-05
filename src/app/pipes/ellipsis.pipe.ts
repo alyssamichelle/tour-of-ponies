@@ -1,7 +1,8 @@
 import { Pipe } from '@angular/core';
 
 @Pipe({
-  name: 'ellipsis'
+  name: 'ellipsis',
+  standalone: true
 })
 export class EllipsisPipe {
   transform(val, args) {

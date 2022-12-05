@@ -26,7 +26,6 @@ import { LayoutModule }        from '@progress/kendo-angular-layout';
 import { LVM }                 from './list-view/list-view.module';
 import { TileLayoutComponent } from './tile-layout/tile-layout.component';
 import { HeroCardComponent }   from './hero-card/hero-card.component';
-import { EllipsisPipe }        from './ellipsis.pipe';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { NavigationModule } from '@progress/kendo-angular-navigation';
 import { IconsModule } from '@progress/kendo-angular-icons';
@@ -46,12 +45,13 @@ import { ListBoxModule } from '@progress/kendo-angular-listbox';
 import { PivotGridModule } from '@progress/kendo-angular-pivotgrid';
 import { PivotGridComponent } from './pivot-grid/pivot-grid.component';
 import { StandaloneCardComponent } from './standalone-card/standalone-card.component';
-
-
+import { EllipsisPipe } from './pipes/ellipsis.pipe';
+import { NgOptimizedImage } from '@angular/common';
 
 
 @NgModule({
   imports: [
+    NgOptimizedImage,
     BrowserModule,
     FormsModule,
     AppRoutingModule,
@@ -88,6 +88,8 @@ import { StandaloneCardComponent } from './standalone-card/standalone-card.compo
     ListBoxModule,
     PivotGridModule,
     StandaloneCardComponent,
+    EllipsisPipe,
+    NgOptimizedImage
   ],
   declarations: [
     AppComponent,
@@ -99,7 +101,6 @@ import { StandaloneCardComponent } from './standalone-card/standalone-card.compo
     HeroCardComponent,
     TileLayoutComponent,
     HeroCardComponent,
-    EllipsisPipe,
     SidebarComponent,
     HeatmapComponent,
     GanntComponent,
