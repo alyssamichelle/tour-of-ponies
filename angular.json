@@ -23,7 +23,7 @@
               {
                 "glob": "_redirects",
                 "input": "src",
-                "output": "/"
+                "output": "/dashboard"
               }
             ],
             "styles": [
