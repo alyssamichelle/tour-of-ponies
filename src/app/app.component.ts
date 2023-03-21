@@ -1,13 +1,17 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { NgOptimizedImage } from '@angular/common';
+import { MessagesComponent } from './messages/messages.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  encapsulation: ViewEncapsulation.None
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    standalone: true,
+    imports: [NgOptimizedImage, RouterLink, RouterLinkActive, RouterOutlet, SidebarComponent, MessagesComponent]
 })
 
 // export class AppComponent {
@@ -20,20 +24,4 @@ import { NgOptimizedImage } from '@angular/common';
 
 // But what about hooking in actual routes???
 export class AppComponent {
-  public items: Array<any> = [];
-
-  constructor(private router: Router) {
-    const routes: any[] = router.config;
-    console.log('routes ', routes);
-    
-    routes.forEach((route) => {
-      this.items.push({
-        icon: route.icon,
-        title: route.text,
-        path: route.path ? route.path : "",
-      });
-    });
-
-    this.items[0].selected = true;
-  }
 }

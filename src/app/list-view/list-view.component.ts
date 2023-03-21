@@ -3,13 +3,18 @@ import { Component, Input } from '@angular/core';
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
 
-import { PagerSettings, PagerPosition, PagerType } from '@progress/kendo-angular-listview';
-import { LoaderComponent } from '@progress/kendo-angular-indicators';
+import { PagerSettings, PagerPosition, PagerType, ListViewModule } from '@progress/kendo-angular-listview';
+import { LoaderComponent, LoaderModule, BadgeModule } from '@progress/kendo-angular-indicators';
+import { ButtonModule } from '@progress/kendo-angular-buttons';
+import { RouterLink } from '@angular/router';
+import { NgIf } from '@angular/common';
 
 @Component({
-  selector: 'app-list-view',
-  templateUrl: './list-view.component.html',
-  styleUrls: ['./list-view.component.scss']
+    selector: 'app-list-view',
+    templateUrl: './list-view.component.html',
+    styleUrls: ['./list-view.component.scss'],
+    standalone: true,
+    imports: [ListViewModule, NgIf, LoaderModule, RouterLink, BadgeModule, ButtonModule]
 })
 
 export class ListViewComponent {

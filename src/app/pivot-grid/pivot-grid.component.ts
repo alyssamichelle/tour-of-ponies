@@ -1,20 +1,14 @@
 import { Component, ViewEncapsulation } from "@angular/core";
-import {
-  Dimension,
-  Measure,
-  PivotGridAxis,
-  averageAggregate,
-  maxAggregate,
-  minAggregate,
-  sumAggregate,
-} from "@progress/kendo-angular-pivotgrid";
+import { Dimension, Measure, PivotGridAxis, averageAggregate, maxAggregate, minAggregate, sumAggregate, PivotGridModule } from "@progress/kendo-angular-pivotgrid";
 import { DataItem, createData } from "./data";
 
 @Component({
-  selector: 'pivot-grid',
-  templateUrl: './pivot-grid.component.html',
-  styleUrls: ['./pivot-grid.component.css'],
-  encapsulation: ViewEncapsulation.None
+    selector: 'pivot-grid',
+    templateUrl: './pivot-grid.component.html',
+    styleUrls: ['./pivot-grid.component.css'],
+    encapsulation: ViewEncapsulation.None,
+    standalone: true,
+    imports: [PivotGridModule]
 })
 export class PivotGridComponent {
 

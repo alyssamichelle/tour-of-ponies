@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
-import { MultiColumnComboBoxComponent } from "@progress/kendo-angular-dropdowns";
+import { MultiColumnComboBoxComponent, DropDownListModule, ComboBoxModule, SharedDirectivesModule } from "@progress/kendo-angular-dropdowns";
 import { Observable, Subject } from 'rxjs';
 
 import {
@@ -10,12 +10,16 @@ import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
 import { Router } from '@angular/router';
 import { Contact, contacts } from './contact';
+import { LabelModule } from '@progress/kendo-angular-label';
+import { NgIf, AsyncPipe } from '@angular/common';
 
 @Component({
-  selector: 'app-hero-search',
-  templateUrl: './hero-search.component.html',
-  styleUrls: [ './hero-search.component.scss' ],
-  encapsulation: ViewEncapsulation.None
+    selector: 'app-hero-search',
+    templateUrl: './hero-search.component.html',
+    styleUrls: ['./hero-search.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    standalone: true,
+    imports: [DropDownListModule, NgIf, LabelModule, ComboBoxModule, SharedDirectivesModule, AsyncPipe]
 })
 export class HeroSearchComponent implements OnInit, AfterViewInit {
   @ViewChild("mccbPonies", { static: false })

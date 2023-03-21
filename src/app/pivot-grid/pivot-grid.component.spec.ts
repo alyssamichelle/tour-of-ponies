@@ -8,8 +8,8 @@ describe('PivotGridComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PivotGridComponent ]
-    })
+    imports: [PivotGridComponent]
+})
     .compileComponents();
   });
 

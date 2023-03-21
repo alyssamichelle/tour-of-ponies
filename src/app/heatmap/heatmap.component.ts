@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ChartModule } from '@progress/kendo-angular-charts';
 
 interface DataObject {
   a: string;
@@ -7,9 +8,11 @@ interface DataObject {
 }
 
 @Component({
-  selector: 'app-heatmap',
-  templateUrl: './heatmap.component.html',
-  styleUrls: ['./heatmap.component.css']
+    selector: 'app-heatmap',
+    templateUrl: './heatmap.component.html',
+    styleUrls: ['./heatmap.component.css'],
+    standalone: true,
+    imports: [ChartModule]
 })
 export class HeatmapComponent implements OnInit {
   public rows = 10;

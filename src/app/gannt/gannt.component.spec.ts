@@ -8,7 +8,7 @@ describe('GanntComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-    declarations: [GanntComponent],
+    imports: [GanntComponent],
     teardown: { destroyAfterEach: false }
 })
     .compileComponents();

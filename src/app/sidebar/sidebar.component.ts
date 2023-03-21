@@ -1,13 +1,24 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
-import { FilterExpression } from "@progress/kendo-angular-filter";
+import { FilterExpression, FilterModule } from "@progress/kendo-angular-filter";
 import { CompositeFilterDescriptor } from "@progress/kendo-data-query";
+import { TypographyModule } from '@progress/kendo-angular-typography';
+import { ChartModule } from '@progress/kendo-angular-charts';
+import { ColorPickerModule } from '@progress/kendo-angular-inputs';
+import { PopoverModule } from '@progress/kendo-angular-tooltip';
+import { ButtonModule } from '@progress/kendo-angular-buttons';
+import { BarcodeModule, QRCodeModule } from '@progress/kendo-angular-barcodes';
+import { PivotGridComponent } from '../pivot-grid/pivot-grid.component';
+import { ListBoxModule } from '@progress/kendo-angular-listbox';
+import { CardModule } from '@progress/kendo-angular-layout';
 
 @Component({
-  selector: 'sidebar',
-  templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.scss'],
-  encapsulation: ViewEncapsulation.None
+    selector: 'sidebar',
+    templateUrl: './sidebar.component.html',
+    styleUrls: ['./sidebar.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    standalone: true,
+    imports: [CardModule, ListBoxModule, PivotGridComponent, BarcodeModule, QRCodeModule, FilterModule, ButtonModule, PopoverModule, ColorPickerModule, ChartModule, TypographyModule]
 })
 export class SidebarComponent {
 

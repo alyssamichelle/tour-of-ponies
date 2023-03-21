@@ -8,7 +8,7 @@ describe('TileLayoutComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-    declarations: [TileLayoutComponent],
+    imports: [TileLayoutComponent],
     teardown: { destroyAfterEach: false }
 })
     .compileComponents();

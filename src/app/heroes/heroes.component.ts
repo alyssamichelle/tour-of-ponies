@@ -2,11 +2,18 @@ import { Component, OnInit } from '@angular/core';
 
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
+import { ListViewComponent } from '../list-view/list-view.component';
+import { ButtonModule } from '@progress/kendo-angular-buttons';
+import { FormsModule } from '@angular/forms';
+import { LabelModule } from '@progress/kendo-angular-label';
+import { FormFieldModule, TextBoxModule } from '@progress/kendo-angular-inputs';
 
 @Component({
-  selector: 'app-heroes',
-  templateUrl: './heroes.component.html',
-  styleUrls: ['./heroes.component.scss']
+    selector: 'app-heroes',
+    templateUrl: './heroes.component.html',
+    styleUrls: ['./heroes.component.scss'],
+    standalone: true,
+    imports: [FormFieldModule, LabelModule, TextBoxModule, FormsModule, ButtonModule, ListViewComponent]
 })
 export class HeroesComponent implements OnInit {
   heroes: Hero[];
