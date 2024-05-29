@@ -60,9 +60,9 @@ import { NgOptimizedImage } from '@angular/common';
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false, delay: 2000 }
-    ),
+    // HttpClientInMemoryWebApiModule.forRoot(
+    //   InMemoryDataService, { dataEncapsulation: false, delay: 2000 }
+    // ),
     InputsModule,
     BrowserAnimationsModule,
     LabelModule,

@@ -1,5 +1,5 @@
 export class Hero {
-  id: number;
+  id: string;
   name: string;
   alias?: string;
   url: string;
@@ -10,6 +10,7 @@ export class Hero {
   images: string[];
   avatar?: string;
   largeAvatar?: string;
+  isHero: boolean;
 
   // augment hero data with avatar
 //   public getAvatar(heroId): string {

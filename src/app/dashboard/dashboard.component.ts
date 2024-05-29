@@ -13,13 +13,15 @@ export class DashboardComponent implements OnInit {
   constructor(private heroService: HeroService) { }
 
   ngOnInit(): void {
-    this.getHeroes();
+    this.heroService.getHeroes();
   }
 
-  getHeroes(): void {
-    this.heroService.getHeroes()
-      .subscribe(heroes => {
-        this.heroes = heroes.filter((hero) => !!hero.largeAvatar)
-      });
-  }
+  // backend sorted out heros from ponies, no longer need to filter on fe
+  // make a second call for heros, 
+  // getHeroes(): void {
+  //   this.heroService.getHeroes()
+  //     .subscribe(heroes => {
+  //       this.heroes = heroes.filter((hero) => !!hero.largeAvatar)
+  //     });
+  // }
 }

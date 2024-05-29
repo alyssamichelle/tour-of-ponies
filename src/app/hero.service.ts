@@ -11,7 +11,9 @@ import { MessageService } from './message.service';
 @Injectable({ providedIn: 'root' })
 export class HeroService {
 
-  private heroesUrl = 'api/heroes';  // URL to web api
+  // private heroesUrl = 'api/heroes';  // URL to web api
+  private heroesUrl = 'http://localhost:5099/ponies/heros';  // URL to web api
+  private allPoniesUrl = 'http://localhost:5099/ponies';  // URL to web api
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -21,11 +23,20 @@ export class HeroService {
     private http: HttpClient,
     private messageService: MessageService) { }
 
-  /** GET heroes from the server */
+  /** GET heroes (special flagged ponies with large avatars) from the server */
   getHeroes(): Observable<Hero[]> {
     return this.http.get<Hero[]>(this.heroesUrl)
       .pipe(
         tap(_ => this.log('fetched heroes')),
+        catchError(this.handleError<Hero[]>('getHeroes', []))
+      );
+  }
+
+    /** GET all ponies from the server */
+  getPonies(): Observable<Hero[]> {
+    return this.http.get<Hero[]>(this.allPoniesUrl)
+      .pipe(
+        tap(_ => this.log('fetched all ponies')),
         catchError(this.handleError<Hero[]>('getHeroes', []))
       );
   }
