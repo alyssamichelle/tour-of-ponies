@@ -3,6 +3,7 @@ import {
   Dimension,
   Measure,
   PivotGridAxis,
+  PivotGridModule,
   averageAggregate,
   maxAggregate,
   minAggregate,
@@ -11,9 +12,11 @@ import {
 import { DataItem, createData } from "./data";
 
 @Component({
+  standalone: true,
   selector: 'pivot-grid',
   templateUrl: './pivot-grid.component.html',
   styleUrls: ['./pivot-grid.component.css'],
+  imports:[PivotGridModule],
   encapsulation: ViewEncapsulation.None
 })
 export class PivotGridComponent {

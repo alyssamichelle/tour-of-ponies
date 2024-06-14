@@ -1,6 +1,83 @@
 <aside>
   <h1>Latest Kendo UI Version</h1>
 
+  <section aria-labelledby="q2-2024-section-header">
+    <h2 id="r2-2022-section-header">Q2 2024 Release</h2>
+
+    <kendo-card>
+      <kendo-card-header>
+        <h3><a href="https://www.telerik.com/kendo-angular-ui/components/charts/sankey">Sankey Chart Component</a></h3>
+        <p class="additional-info">Components › Charts › Sankey</p>
+      </kendo-card-header>
+      <kendo-card-body>
+        <code>ng add &#64;progress/kendo-angular-charts</code>
+        <p>Sankey diagrams enable the depiction of fluctuating flows and their dispersion across different domains. They are versatile and can be used in various scenarios such as illustrating web traffic, detailing budget allocations, demonstrating energy transfer, and more.</p>
+        <hr kendoCardSeparator />
+        <main>
+          <kendo-sankey [data]="sankeyData">
+            <kendo-sankey-links colorType="source"></kendo-sankey-links>
+          </kendo-sankey>
+          <img ngSrc="../assets/images/spank-you.gif" width="200" height="200" alt="spank you very much gif with ace ventura">
+        </main>
+      </kendo-card-body>
+    </kendo-card>
+
+    <kendo-card>
+      <kendo-card-header>
+        <h3><a href="https://www.telerik.com/kendo-angular-ui/components/conversational-ui/aiprompt">AIPrompt Component</a></h3>
+        <p class="additional-info">Components › Conversational UI › AIPrompt</p>
+      </kendo-card-header>
+      <kendo-card-body>
+        <code>ng add &#64;progress/kendo-angular-conversational-ui</code>
+        <p>The Timeline displays a collection of events and their data in a chronological succession for each year.</p>
+        <hr kendoCardSeparator />
+        <main>
+          <kendo-aiprompt
+          [(activeView)]="activeView"
+          [promptOutputs]="promptOutputs"
+          (promptRequest)="onPromptRequest($event)"
+        >
+          <kendo-aiprompt-prompt-view></kendo-aiprompt-prompt-view>
+          <kendo-aiprompt-output-view></kendo-aiprompt-output-view>
+        </kendo-aiprompt>
+   
+        </main>
+      </kendo-card-body>
+    </kendo-card>
+
+    <kendo-card>
+      <kendo-card-header>
+        <h3><a href="https://www.telerik.com/kendo-angular-ui/components/inputs/rating">Rating Component</a></h3>
+        <p class="additional-info">Components › Inputs › Rating</p>
+      </kendo-card-header>
+      <kendo-card-body>
+        <code>ng add &#64;progress/kendo-angular-inputs</code>
+        <p>The Rating component enables the user to increase, decrease, and select predefined values by clicking its icons along or using the arrow keys.</p>
+        <hr kendoCardSeparator />
+        <main>
+          <kendo-rating></kendo-rating>
+        </main>
+      </kendo-card-body>
+    </kendo-card>
+
+    <kendo-card>
+      <kendo-card-header>
+        <h3><a href="https://www.telerik.com/kendo-angular-ui/components/layout/timeline">Timeline Component</a></h3>
+        <p class="additional-info">Components › Layout › Timeline</p>
+      </kendo-card-header>
+      <kendo-card-body>
+        <code>ng add &#64;progress/kendo-angular-layout</code>
+        <p>The Timeline displays a collection of events and their data in a chronological succession for each year.</p>
+        <hr kendoCardSeparator />
+        <main>
+          <kendo-timeline [events]="events" [collapsibleEvents]="true" [alterMode]="true">
+          </kendo-timeline>
+        </main>
+      </kendo-card-body>
+    </kendo-card>
+
+  </section>
+
   <section aria-labelledby="r2-2022-section-header">
     <h2 id="r2-2022-section-header">R2 2022 Release</h2>
 

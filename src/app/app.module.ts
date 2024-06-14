@@ -21,7 +21,6 @@ import { ButtonsModule }           from '@progress/kendo-angular-buttons';
 import { DropDownsModule }         from '@progress/kendo-angular-dropdowns';
 import { IndicatorsModule }        from '@progress/kendo-angular-indicators';
 
-// import { CardModule, TileLayoutModule, ExpansionPanelModule } from '@progress/kendo-angular-layout';
 import { LayoutModule }        from '@progress/kendo-angular-layout';
 import { LVM }                 from './list-view/list-view.module';
 import { TileLayoutComponent } from './tile-layout/tile-layout.component';
@@ -35,18 +34,13 @@ import 'hammerjs';
 import { HeatmapComponent } from './heatmap/heatmap.component';
 import { TypographyModule } from '@progress/kendo-angular-typography';
 import { GanntComponent } from './gannt/gannt.component';
-import { GanttModule } from '@progress/kendo-angular-gantt';
-import { BarcodesModule } from "@progress/kendo-angular-barcodes";
-import { FilterModule } from "@progress/kendo-angular-filter";
-import { TooltipsModule } from "@progress/kendo-angular-tooltip";
 import { DateInputsModule } from "@progress/kendo-angular-dateinputs";
-import { EditorModule } from '@progress/kendo-angular-editor';
 import { ListBoxModule } from '@progress/kendo-angular-listbox';
-import { PivotGridModule } from '@progress/kendo-angular-pivotgrid';
-import { PivotGridComponent } from './pivot-grid/pivot-grid.component';
 import { StandaloneCardComponent } from './standalone-card/standalone-card.component';
 import { EllipsisPipe } from './pipes/ellipsis.pipe';
 import { NgOptimizedImage } from '@angular/common';
+import { ConversationalUIModule } from '@progress/kendo-angular-conversational-ui';
+
 
 
 @NgModule({
@@ -68,9 +62,6 @@ import { NgOptimizedImage } from '@angular/common';
     LabelModule,
     ButtonsModule,
     LayoutModule,
-    // CardModule,
-    // TileLayoutModule,
-    // ExpansionPanelModule,
     DropDownsModule,
     LVM,
     IndicatorsModule,
@@ -79,17 +70,13 @@ import { NgOptimizedImage } from '@angular/common';
     GaugesModule,
     ChartsModule,
     TypographyModule,
-    GanttModule,
-    BarcodesModule,
-    FilterModule,
-    TooltipsModule,
     DateInputsModule,
-    EditorModule,
     ListBoxModule,
-    PivotGridModule,
     StandaloneCardComponent,
     EllipsisPipe,
-    NgOptimizedImage
+    NgOptimizedImage,
+    SidebarComponent,
+    ConversationalUIModule,
   ],
   declarations: [
     AppComponent,
@@ -101,10 +88,8 @@ import { NgOptimizedImage } from '@angular/common';
     HeroCardComponent,
     TileLayoutComponent,
     HeroCardComponent,
-    SidebarComponent,
     HeatmapComponent,
     GanntComponent,
-    PivotGridComponent
   ],
   bootstrap: [ AppComponent ]
 })
