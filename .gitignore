@@ -6,3 +6,5 @@ node_modules
 
 # ignore VS Code Config
 .vscode/
+
+kendo-ui-license.txt
