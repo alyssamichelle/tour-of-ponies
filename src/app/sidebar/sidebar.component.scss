@@ -1,5 +1,7 @@
 @import 'src/assets/colors.scss';
 @import 'src/assets/variables.scss';
+// Load the font icons package
+@import 'https://unpkg.com/@progress/kendo-font-icons/dist/index.css';
 
 sidebar {
   // grow priority 1, shrink priority 0 (don't shrink), default 0
