@@ -1,5 +1,6 @@
-export class Hero {
-  id: number;
+export class Pony {
+  // id: number;
+  id: string;
   name: string;
   alias?: string;
   url: string;

@@ -27,7 +27,7 @@ import { TileLayoutComponent } from './tile-layout/tile-layout.component';
 import { HeroCardComponent }   from './hero-card/hero-card.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { NavigationModule } from '@progress/kendo-angular-navigation';
-import { IconsModule } from '@progress/kendo-angular-icons';
+import { SVGIconModule } from '@progress/kendo-angular-icons';
 import { GaugesModule } from '@progress/kendo-angular-gauges';
 import { ChartsModule } from '@progress/kendo-angular-charts';
 import 'hammerjs';
@@ -40,6 +40,7 @@ import { StandaloneCardComponent } from './standalone-card/standalone-card.compo
 import { EllipsisPipe } from './pipes/ellipsis.pipe';
 import { NgOptimizedImage } from '@angular/common';
 import { ConversationalUIModule } from '@progress/kendo-angular-conversational-ui';
+import { EditorModule } from '@progress/kendo-angular-editor';
 
 
 
@@ -54,10 +55,12 @@ import { ConversationalUIModule } from '@progress/kendo-angular-conversational-u
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false, delay: 2000 }
-    ),
+    // HttpClientInMemoryWebApiModule.forRoot(
+    //   InMemoryDataService, { dataEncapsulation: false, delay: 2000 }
+    // ),
+
     InputsModule,
+    EditorModule,
     BrowserAnimationsModule,
     LabelModule,
     ButtonsModule,
@@ -66,8 +69,7 @@ import { ConversationalUIModule } from '@progress/kendo-angular-conversational-u
     LVM,
     IndicatorsModule,
     NavigationModule,
-    IconsModule,
-    GaugesModule,
+    SVGIconModule,
     ChartsModule,
     TypographyModule,
     DateInputsModule,

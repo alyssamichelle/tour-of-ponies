@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Hero } from '../hero';
+import { Pony } from '../pony';
 
 @Component({
   selector: 'tile-layout',
@@ -7,5 +7,5 @@ import { Hero } from '../hero';
   styleUrls: ['./tile-layout.component.scss'],
 })
 export class TileLayoutComponent {
-  @Input() public heroes: Hero[];
+  @Input() public heroes: Pony[];
 }

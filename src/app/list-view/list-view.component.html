@@ -136,6 +136,8 @@
         </kendo-badge-container>
         <div class="hero-name">{{hero.name}}</div>
       </a>
-      <button kendoButton icon="close" class="delete" title="delete hero" (click)="delete(hero)"></button>
+      <kendo-svgicon [icon]="icons.paperclip"></kendo-svgicon>
+      <button kendoButton [ngClass]="'exclamationCircleIcon'" class="delete" title="delete hero" (click)="delete(hero)"></button>
+      
     </ng-template>
   </kendo-listview>

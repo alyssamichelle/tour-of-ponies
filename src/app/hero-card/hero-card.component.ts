@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Hero } from '../hero';
+import { Pony } from '../pony';
 
 @Component({
   selector: 'hero-card',
@@ -7,6 +7,6 @@ import { Hero } from '../hero';
   styleUrls: ['./hero-card.component.css'],
 })
 export class HeroCardComponent {
-  @Input() hero: Hero;
+  @Input() hero: Pony;
 
 }

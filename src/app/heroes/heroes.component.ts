@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Hero } from '../hero';
+import { Pony } from '../pony';
 import { HeroService } from '../hero.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { HeroService } from '../hero.service';
   styleUrls: ['./heroes.component.scss']
 })
 export class HeroesComponent implements OnInit {
-  heroes: Hero[];
+  heroes: Pony[];
   avatarLink: string;
 
   constructor(private heroService: HeroService) { }
@@ -29,7 +29,7 @@ export class HeroesComponent implements OnInit {
   add(name: string): void {
     name = name.trim();
     if (!name) { return; }
-    this.heroService.addHero({ name } as Hero)
+    this.heroService.addHero({ name } as Pony)
       .subscribe(hero => {
         // this.heroes.push(hero);
         this.heroes.splice(0, 0, hero); // adds the name into the beginning of the array
@@ -40,7 +40,7 @@ export class HeroesComponent implements OnInit {
       });
   }
 
-  delete(hero: Hero): void {
+  delete(hero: Pony): void {
     this.heroes = this.heroes.filter(h => h !== hero);
     this.heroService.deleteHero(hero).subscribe();
   }

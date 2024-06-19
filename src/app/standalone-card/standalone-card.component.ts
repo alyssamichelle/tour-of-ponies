@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Hero } from '../hero';
+import { Pony } from '../pony';
 
 import { LayoutModule } from '@progress/kendo-angular-layout';
 import { AppRoutingModule } from '../app-routing.module';
@@ -14,5 +14,5 @@ import { EllipsisPipe } from '../pipes/ellipsis.pipe';
   styleUrls: ['./standalone-card.component.css']
 })
 export class StandaloneCardComponent {
-  @Input() hero: Hero;
+  @Input() hero: Pony;
 }

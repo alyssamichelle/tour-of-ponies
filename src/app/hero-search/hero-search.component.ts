@@ -6,7 +6,7 @@ import {
    debounceTime, distinctUntilChanged, switchMap
  } from 'rxjs/operators';
 
-import { Hero } from '../hero';
+import { Pony } from '../pony';
 import { HeroService } from '../hero.service';
 import { Router } from '@angular/router';
 import { Contact, contacts } from './contact';
@@ -20,13 +20,13 @@ import { Contact, contacts } from './contact';
 export class HeroSearchComponent implements OnInit, AfterViewInit {
   @ViewChild("mccbPonies", { static: false })
   public mccbPonies: MultiColumnComboBoxComponent;
-  heroes$: Observable<Hero[]>;
+  heroes$: Observable<Pony[]>;
   isActive = false;
 
   constructor(private heroService: HeroService, private router: Router) {}
 
   // on dropdownlist value change, navigate to that hero's detail page
-  public onValueChange(hero: Hero): void {
+  public onValueChange(hero: Pony): void {
     if(hero.id) {
       this.router.navigate(['/detail/' + hero.id]);
     }

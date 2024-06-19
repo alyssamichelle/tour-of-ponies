@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { Hero } from '../hero';
+import { Pony } from '../pony';
 import { HeroService } from '../hero.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { HeroService } from '../hero.service';
   styleUrls: [ './dashboard.component.scss' ]
 })
 export class DashboardComponent implements OnInit {
-  heroes: Hero[] = [];
+  heroes: Pony[] = [];
 
   constructor(private heroService: HeroService) { }
 
