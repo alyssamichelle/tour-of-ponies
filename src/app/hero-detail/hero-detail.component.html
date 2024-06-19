@@ -90,30 +90,32 @@
   <kendo-editor [value]="hero.name" [applyToWord]="true" style="height: 200px;">
   </kendo-editor>
 </section>
-<!-- super simple expansion panel -->
-<!-- <kendo-expansionpanel [title]="hero.name" [subtitle]="hero.kind" [expanded]="true">
-  <p>content..</p>
-</kendo-expansionpanel> -->
 
-<!-- adding in our pony details to our expansion panel -->
-
-<!-- <kendo-expansionpanel [title]="hero.name" [subtitle]="hero.kind" expandIcon="mouth-closed" collapseIcon="mouth-open">
-  <p>Residence: {{hero.residence}}</p>
-  <p>Alias: {{hero.alias}}</p>
-  <p>Sex: {{hero.sex}}</p>
-  <img *ngIf="hero.avatar" class="pony-avatar" src="assets/images/retro-mlp/{{hero.avatar}}" alt="{{hero.name}}">
-  <p>Occupation: {{hero.occupation | json}}</p>
-  <p>{{hero | json}}</p> COMMENT ME OUT, YUH
-  <ul class="pony-images">
-    <li *ngFor="let img of hero.image">
-      <img src="{{img}}" alt="hero.name">
-    </li>
-  </ul>
-</kendo-expansionpanel> -->
-
-  <!-- expansion panel with custom icons -->
-  <!-- expandIcon="mouth-closed" collapseIcon="mouth-open" -->
 <nav class="bottom-nav">
   <button (click)="goBack()">Go Back</button>
   <button (click)="save()">Save</button>
 </nav>
+
+<kendo-expansionpanel title="For debugging!" [subtitle]="hero?.name">
+  <section><h4>Name:</h4> <p>{{hero?.name}}</p></section>
+  <section><h4>Avatar:</h4> 
+    <p>{{hero?.avatar}}</p>
+    <img *ngIf="hero?.largeAvatar" class="hero-avatar" src="assets/images/retro-mlp/{{hero?.largeAvatar}}" alt="{{hero?.name}}">
+  </section>
+  <section><h4>Kind:</h4> <p>{{hero?.kind}}</p></section>
+  <section><h4>Residence:</h4> <p>{{hero?.residence}}</p></section>
+  <section><h4>Alias:</h4> <p>{{hero?.alias}}</p></section>
+  <section><h4>Sex:</h4> <p>{{hero?.sex}}</p></section>
+  <section><h4>Occupation:</h4> <p>{{hero?.occupation}}</p></section>
+  <section><h4>All Data:</h4> <p>{{hero | json}}</p></section>
+  <section><h4>All Images:</h4> 
+    <ul class="pony-images">
+      <li *ngFor="let img of hero?.images">
+        <img src="{{img}}" alt="hero?.name">
+      </li>
+    </ul>
+  </section>
+  <section><h4>All JSON:</h4> 
+    <p>{{hero | json}}</p>
+  </section>
+</kendo-expansionpanel>

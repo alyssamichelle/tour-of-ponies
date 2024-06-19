@@ -111,20 +111,13 @@ article.hero-details {
   }
 }
 
-// FOR EXPANSION PANEL DEMO
-.mouth-closed:before {
-  content: "🐴";
-  font-size: 14px;
-}
-
-.mouth-open:before {
-  content: "🦄";
-  font-size: 14px;
-}
-
 // bottom-nav goods
 .bottom-nav {
   display: flex;
   justify-content: left;
   gap: 20px;
+}
+
+kendo-expansionpanel {
+  margin-top: 20px;
 }
