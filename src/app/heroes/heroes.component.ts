@@ -19,9 +19,10 @@ export class HeroesComponent implements OnInit {
   }
 
   getHeroes(): void {
-    this.heroService.getHeroes()
+    this.heroService.getAllPonies()
     .subscribe(heroes => {
       this.heroes = heroes;
+      console.log(this.heroes);
     });
   }
   
@@ -45,17 +46,17 @@ export class HeroesComponent implements OnInit {
     this.heroService.deleteHero(hero).subscribe();
   }
 
-  getAvatarLink(heroId): string {
-    let avatarLink = '../assets/mlp-avatars/pony-' + heroId + '.png';
+  // getAvatarLink(heroId): string {
+  //   let avatarLink = '../assets/mlp-avatars/pony-' + heroId + '.png';
 
-    // assign a random number between 21 - 53
-    if (heroId > 10) {
-      let randomNumber = Math.floor(Math.random() * 32) + 21;
-      avatarLink = '../assets/mlp-avatars/pony-' + randomNumber + '.png';
-    }
+  //   // assign a random number between 21 - 53
+  //   if (heroId > 10) {
+  //     let randomNumber = Math.floor(Math.random() * 32) + 21;
+  //     avatarLink = '../assets/mlp-avatars/pony-' + randomNumber + '.png';
+  //   }
 
-    return avatarLink;
-  }
+  //   return avatarLink;
+  // }
 
 
 }

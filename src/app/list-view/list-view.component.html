@@ -128,16 +128,18 @@
         </div>
       </ng-template>
     <ng-template kendoListViewItemTemplate let-hero="dataItem">
-      <a routerLink="/detail/{{hero.id}}">
+      <a routerLink="/detail/{{hero?.id}}">
         <kendo-badge-container>
           <img class="avatar" [src]="getAvatarLink(hero.id)" title="pony avatar img">
           <kendo-badge shape="circle" themeColor="dark"
             size="small" cutoutBorder="true">{{hero.id}}</kendo-badge>
         </kendo-badge-container>
-        <div class="hero-name">{{hero.name}}</div>
+        <div class="hero-name">{{hero?.name}}</div>
       </a>
-      <kendo-svgicon [icon]="icons.paperclip"></kendo-svgicon>
-      <button kendoButton [ngClass]="'exclamationCircleIcon'" class="delete" title="delete hero" (click)="delete(hero)"></button>
+      <button kendoButton class="delete" title="delete hero" (click)="delete(hero)">
+        <kendo-svgicon
+          [icon]="icons.x"
+          ></kendo-svgicon></button>
       
     </ng-template>
   </kendo-listview>

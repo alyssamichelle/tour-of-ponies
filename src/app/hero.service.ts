@@ -29,9 +29,18 @@ export class HeroService {
 
     return this.http.get<Pony[]>(ponyUrl)
       .pipe(
-        tap(_ => this.log('fetched heroes')),
+        tap(_ => this.log('fetched just special heroe poinies')),
         catchError(this.handleError<Pony[]>('getHeroes', []))
       );
+  }
+
+  // challenge make this puppy from scratch!
+  getAllPonies(): Observable<Pony[]> {
+    return this.http.get<Pony[]>('http://localhost:5099/ponies')
+    .pipe(
+      tap(_ => this.log('fetched all ponies')),
+      catchError(this.handleError<Pony[]>('getAllPonies', []))
+    );
   }
 
   /** GET hero by id. Return `undefined` when id not found */
@@ -83,8 +92,8 @@ export class HeroService {
 
   /** POST: add a new hero to the server */
   addHero(pony: Pony): Observable<Pony> {
-    const inMemoryUrl = `this.inMemoryBaseUrl`;
-    const ponyUrl = `this.ponyBaseUrl`;
+    const inMemoryUrl = `${this.inMemoryBaseUrl}`;
+    const ponyUrl = `${this.ponyBaseUrl}`;
 
     return this.http.post<Pony>(ponyUrl, pony, this.httpOptions).pipe(
       tap((newHero: Pony) => this.log(`added hero w/ id=${newHero.id}`)),

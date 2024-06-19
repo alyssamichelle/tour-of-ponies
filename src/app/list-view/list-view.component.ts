@@ -5,6 +5,7 @@ import { HeroService } from '../hero.service';
 
 import { PagerSettings, PagerPosition, PagerType } from '@progress/kendo-angular-listview';
 import { LoaderComponent } from '@progress/kendo-angular-indicators';
+import { xIcon } from "@progress/kendo-svg-icons";
 
 @Component({
   selector: 'app-list-view',
@@ -16,6 +17,7 @@ export class ListViewComponent {
   @Input() heroes: Pony[];
   avatarLink: string;
   loader:boolean = true;
+  public icons = { x: xIcon };
 
   constructor(private heroService: HeroService) { }
 
@@ -36,6 +38,8 @@ export class ListViewComponent {
 
   getAvatarLink(heroId): string {
     let avatarLink = '../assets/mlp-avatars/pony-' + heroId + '.png';
+    // let avatarLink = "../assets/mlp-avatars/pony-c3f9c1d1-ccb9-4a56-a62e-c12f8e292a87.png";
+
     return avatarLink;
   }
 
