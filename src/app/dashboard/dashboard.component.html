@@ -1,7 +1,11 @@
 <app-hero-search></app-hero-search>
 
 <section aria-labelledby="top-heroes-header">
-  <h2 id="top-heroes-header" data-text="Top Heroes">Top Heroes</h2>
+  <div class="heading-wrapper">
+    <h2 id="top-heroes-header" data-text="Top Heroes">Top Heroes</h2>
+    <span class="heading-subtext">{{count()}} ponies</span>
+  </div>
+  
   <div class="top-hero-wrapper">
     <!-- <hero-card *ngFor="let hero of heroes" [hero]="hero"></hero-card> -->
     <standalone-card *ngFor="let hero of heroes" [hero]="hero"></standalone-card>

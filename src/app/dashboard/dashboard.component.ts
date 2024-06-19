@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, WritableSignal, signal } from '@angular/core';
 import { Pony } from '../pony';
 import { HeroService } from '../hero.service';
 
@@ -9,6 +9,7 @@ import { HeroService } from '../hero.service';
 })
 export class DashboardComponent implements OnInit {
   heroes: Pony[] = [];
+  count: WritableSignal<number> = signal(0);
 
   constructor(private heroService: HeroService) { }
 
@@ -20,6 +21,7 @@ export class DashboardComponent implements OnInit {
     this.heroService.getHeroes()
       .subscribe(heroes => {
         this.heroes = heroes.filter((hero) => !!hero.largeAvatar)
+        this.count.set(heroes.length)
       });
   }
 }

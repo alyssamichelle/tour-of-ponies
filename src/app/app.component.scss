@@ -78,6 +78,16 @@ header {
   }
 }
 
+.heading-wrapper {
+  display: flex;
+  align-items: baseline;
+
+  .heading-subtext {
+    margin-left: 30px;
+    font-style: italic;
+  }
+}
+
 .k-card-body {
   margin: var(--k-card-body-margin);
   padding: 0;
