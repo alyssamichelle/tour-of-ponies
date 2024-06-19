@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, effect, input } from '@angular/core';
 
 import { Pony } from '../pony';
 import { HeroService } from '../hero.service';
@@ -14,12 +14,17 @@ import { xIcon } from "@progress/kendo-svg-icons";
 })
 
 export class ListViewComponent {
-  @Input() heroes: Pony[];
+  heroes: Pony[];
+  heroesList = input<Pony[]>();
   avatarLink: string;
   loader:boolean = true;
   public icons = { x: xIcon };
 
-  constructor(private heroService: HeroService) { }
+  constructor(private heroService: HeroService) {
+    effect(() => {
+      this.heroes = this.heroesList();
+    })
+  }
 
   name: string;
   add(name: string): void {
