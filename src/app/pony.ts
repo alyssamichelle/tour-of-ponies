@@ -11,6 +11,7 @@ export class Pony {
   images: string[];
   avatar?: string;
   largeAvatar?: string;
+  isHero?: boolean;
 
   // augment hero data with avatar
 //   public getAvatar(heroId): string {

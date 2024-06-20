@@ -41,11 +41,16 @@ export class ListViewComponent {
     this.heroService.deleteHero(hero).subscribe();
   }
 
-  getAvatarLink(heroId): string {
-    let avatarLink = '../assets/mlp-avatars/pony-' + heroId + '.png';
-    // let avatarLink = "../assets/mlp-avatars/pony-c3f9c1d1-ccb9-4a56-a62e-c12f8e292a87.png";
-
-    return avatarLink;
+  // If it's a hero pony, use the named avatar.
+  // Otherwise, let's just cycle through the 60 avatars we do have.
+  getAvatarLink(heroes: Pony[], hero: Pony): string {
+    if (hero.isHero) {
+      const name = hero.name.toLowerCase().replace(' ', '-');
+      return `../assets/mlp-avatars/${name}.png`;
+    } else {
+      const index = heroes.indexOf(hero) % 60 + 1;
+      return `../assets/mlp-avatars/pony-${index}.png`;
+    }
   }
 
   // paging options for ListView
