@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Pony } from '../pony';
 
@@ -13,6 +13,7 @@ import { EllipsisPipe } from '../pipes/ellipsis.pipe';
   templateUrl: './standalone-card.component.html',
   styleUrls: ['./standalone-card.component.css']
 })
+
 export class StandaloneCardComponent {
-  @Input() hero: Pony;
+  hero = input<Pony>();
 }
