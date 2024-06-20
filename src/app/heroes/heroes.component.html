@@ -6,7 +6,7 @@
 <kendo-formfield class="new-hero-form form-group">
   <kendo-label [for]="heroName">Hero Name</kendo-label>
   <form (submit)="add(heroName.value); heroName.value=''">
-    <input kendoTextBox id="heroName" #heroName [(ngModel)]="name" required />
+    <input kendoTextBox id="heroName" #heroName [(ngModel)]="name" name="heroName" required />
     <button kendoButton (click)="add(heroName.value); heroName.value=''">Add</button>
   </form>
   <kendo-formhint>The name of our new hero!</kendo-formhint>
