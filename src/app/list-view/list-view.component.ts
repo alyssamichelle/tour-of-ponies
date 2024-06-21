@@ -1,4 +1,4 @@
-import { Component, Input, effect, input } from '@angular/core';
+import { Component, effect, input, output } from '@angular/core';
 
 import { Pony } from '../pony';
 import { HeroService } from '../hero.service';
@@ -16,6 +16,9 @@ import { xIcon } from "@progress/kendo-svg-icons";
 export class ListViewComponent {
   heroes: Pony[];
   heroesList = input<Pony[]>();
+  onAdd = output<unknown>();
+  onDelete = output<unknown>();
+
   avatarLink: string;
   loader:boolean = true;
   public icons = { x: xIcon };
@@ -27,19 +30,6 @@ export class ListViewComponent {
   }
 
   name: string;
-  add(name: string): void {
-    name = name.trim();
-    if (!name) { return; }
-    this.heroService.addHero({ name } as Pony)
-      .subscribe(hero => {
-        this.heroes.push(hero);
-      });
-  }
-
-  delete(hero: Pony): void {
-    this.heroes = this.heroes.filter(h => h !== hero);
-    this.heroService.deleteHero(hero).subscribe();
-  }
 
   // If it's a hero pony, use the named avatar.
   // Otherwise, let's just cycle through the 60 avatars we do have.

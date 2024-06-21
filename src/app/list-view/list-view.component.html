@@ -134,7 +134,7 @@
         </kendo-badge-container>
         <div class="hero-name">{{hero?.name}}</div>
       </a>
-      <button kendoButton class="delete" title="delete hero" (click)="delete(hero)">
+      <button kendoButton class="delete" title="delete hero" (click)="onDelete.emit(hero)">
         <kendo-svgicon
           [icon]="icons.x"
           ></kendo-svgicon></button>
