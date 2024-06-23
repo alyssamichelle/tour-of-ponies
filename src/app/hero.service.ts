@@ -11,8 +11,8 @@ import { MessageService } from './message.service';
 @Injectable({ providedIn: 'root' })
 export class HeroService {
 
-  private inMemoryBaseUrl = 'api/heroes';  // URL to in memory web api
-  private ponyBaseUrl =  'http://localhost:5099/ponies'; // URL to Layla's lovely .NET-y minimal API
+  // private baseUrl = 'api/ponies';
+  private baseUrl = 'http://localhost:5099/ponies';
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -24,19 +24,16 @@ export class HeroService {
 
   /** GET heroes from the server */
   getHeroes(): Observable<Pony[]> {
-    const inMemoryUrl = `${this.inMemoryBaseUrl}`;
-    const ponyUrl = `${this.ponyBaseUrl}/heroes`;
-
-    return this.http.get<Pony[]>(ponyUrl)
+    return this.http.get<Pony[]>(`${this.baseUrl}?isHero=${true}`)
       .pipe(
-        tap(_ => this.log('fetched just special heroe poinies')),
+        tap(_ => this.log('fetched just special hero poinies')),
         catchError(this.handleError<Pony[]>('getHeroes', []))
       );
   }
 
   // challenge make this puppy from scratch!
   getAllPonies(): Observable<Pony[]> {
-    return this.http.get<Pony[]>('http://localhost:5099/ponies')
+    return this.http.get<Pony[]>(this.baseUrl)
     .pipe(
       tap(_ => this.log('fetched all ponies')),
       catchError(this.handleError<Pony[]>('getAllPonies', []))
@@ -45,10 +42,7 @@ export class HeroService {
 
   /** GET hero by id. Return `undefined` when id not found */
   getHeroNo404<Data>(id: string): Observable<Pony> {
-    const inMemoryUrl = `${this.inMemoryBaseUrl}/?id=${id}`;
-    const ponyUrl = `${this.ponyBaseUrl}/?id=${id}`;
-
-    return this.http.get<Pony[]>(ponyUrl)
+    return this.http.get<Pony[]>(`${this.baseUrl}?id=${id}`)
       .pipe(
         map(heroes => heroes[0]), // returns a {0|1} element array
         tap(h => {
@@ -61,10 +55,7 @@ export class HeroService {
 
   /** GET hero by id. Will 404 if id not found */
   getHero(id: string): Observable<Pony> {
-    const inMemoryUrl = `${this.inMemoryBaseUrl}/${id}`;
-    const ponyUrl = `${this.ponyBaseUrl}/${id}`;
-
-    return this.http.get<Pony>(ponyUrl).pipe(
+    return this.http.get<Pony>(`${this.baseUrl}/${id}`).pipe(
       tap(_ => this.log(`fetched hero id=${id}`)),
       catchError(this.handleError<Pony>(`getHero id=${id}`))
     );
@@ -72,15 +63,12 @@ export class HeroService {
 
   /* GET heroes whose name contains search term */
   searchHeroes(term: string): Observable<Pony[]> {
-    
-    const inMemoryUrl = `${this.inMemoryBaseUrl}/?name=${term}`;
-    const ponyUrl = `${this.ponyBaseUrl}/?name=${term}`;
-
     if (!term.trim()) {
       // if not search term, return all heroes.
       return this.getHeroes();
     }
-    return this.http.get<Pony[]>(ponyUrl).pipe(
+    
+    return this.http.get<Pony[]>(`${this.baseUrl}?name=${term}`).pipe(
       tap(x => x.length ?
          this.log(`found heroes matching "${term}"`) :
          this.log(`no heroes matching "${term}"`)),
@@ -92,10 +80,7 @@ export class HeroService {
 
   /** POST: add a new hero to the server */
   addHero(pony: Pony): Observable<Pony> {
-    const inMemoryUrl = `${this.inMemoryBaseUrl}`;
-    const ponyUrl = `${this.ponyBaseUrl}`;
-
-    return this.http.post<Pony>(ponyUrl, pony, this.httpOptions).pipe(
+    return this.http.post<Pony>(this.baseUrl, pony, this.httpOptions).pipe(
       tap((newHero: Pony) => this.log(`added hero w/ id=${newHero.id}`)),
       catchError(this.handleError<Pony>('addHero'))
     );
@@ -104,18 +89,15 @@ export class HeroService {
   /** DELETE: delete the hero from the server */
   deleteHero(hero: Pony | number): Observable<Pony> {
     const id = typeof hero === 'number' ? hero : hero.id;
-    const inMemoryUrl = `${this.inMemoryBaseUrl}/${id}`;
-    const ponyUrl = `${this.ponyBaseUrl}/${id}`;
-
-    return this.http.delete<Pony>(ponyUrl, this.httpOptions).pipe(
+    return this.http.delete<Pony>(`${this.baseUrl}/${id}`, this.httpOptions).pipe(
       tap(_ => this.log(`deleted hero id=${id}`)),
       catchError(this.handleError<Pony>('deleteHero'))
     );
   }
 
-  /** PUT: update the hero on the server */
+  /** POST: update the hero on the server */
   updateHero(hero: Pony): Observable<any> {
-    return this.http.post(this.ponyBaseUrl, hero, this.httpOptions).pipe(
+    return this.http.post(this.baseUrl, hero, this.httpOptions).pipe(
       tap(_ => this.log(`updated hero id=${hero.id}`)),
       catchError(this.handleError<any>('updateHero'))
     );

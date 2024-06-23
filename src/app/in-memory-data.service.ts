@@ -10,9 +10,9 @@ import { Pony } from './pony';
 // https://ponyweb.ml/#character
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
-    const heroes = [
+    const ponies = [
       {
-        "id": "c3f9c1d1-ccb9-4a56-a62e-c12f8e292a87",
+        "id": 1,
         "name": "Twilight Sparkle",
         "largeAvatar": 'twilight-sparkle.png',
         "alias": "Princess Twilight Sparkle",
@@ -32,10 +32,11 @@ export class InMemoryDataService implements InMemoryDbService {
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/1\/18\/Twilight_Sparkle_infant_ID_MLPS2.png\/revision\/latest?cb=20190823095629",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/e\/ef\/Future_Twilight_Sparkle_ID_S9E26.png\/revision\/latest?cb=20191013013633",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/0\/0c\/Twilight_Sparkle_human_at_lockers_EG.png\/revision\/latest?cb=20141211040145"
-        ]
+        ],
+        isHero: true
       },
       {
-        "id": "1dc7d91a-b84a-4144-924d-d4df879ba33f",
+        "id": 2,
         "name": "Applejack",
         "largeAvatar": 'applejack.png',
         "url": "https:\/\/mlp.fandom.com\/wiki\/Applejack",
@@ -51,10 +52,11 @@ export class InMemoryDataService implements InMemoryDbService {
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/0\/07\/Filly_Applejack_S1E23.png\/revision\/latest?cb=20131223181959",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/0\/07\/Applejack_infant_ID_S3E08.png\/revision\/latest?cb=20130811205001",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/0\/05\/Future_Applejack_ID_S9E26.png\/revision\/latest?cb=20191013013956"
-        ]
+        ],
+        isHero: true
       },
       {
-        "id": "2aa90f08-8a4e-41e5-bb64-45f750ea4a72",
+        "id": 3,
         "name": "Fluttershy",
         "largeAvatar": 'fluttershy.png',
         "url": "https:\/\/mlp.fandom.com\/wiki\/Fluttershy",
@@ -68,10 +70,11 @@ export class InMemoryDataService implements InMemoryDbService {
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/d\/d6\/Fluttershy_ID_S1E17.png\/revision\/latest?cb=20190410214903",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/7\/7a\/Filly_Fluttershy_ID_S1E23.png\/revision\/latest?cb=20130920035134",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/0\/0c\/Future_Fluttershy_ID_S9E26.png\/revision\/latest?cb=20191013014150"
-        ]
+        ],
+        isHero: true
       },
       {
-        "id": "d7cd4495-f95f-4be4-b226-4597fa0265c8",
+        "id": 4,
         "name": "Rarity",
         "largeAvatar": 'rarity.png',
         "url": "https:\/\/mlp.fandom.com\/wiki\/Rarity",
@@ -85,10 +88,11 @@ export class InMemoryDataService implements InMemoryDbService {
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/d\/d1\/Rarity_standing_S1E19_CROPPED.png\/revision\/latest?cb=20130418142043",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/b\/b5\/Filly_Rarity_S01E23.png\/revision\/latest?cb=20130808215003",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/f\/f2\/Future_Rarity_ID_S9E26.png\/revision\/latest?cb=20191013014704"
-        ]
+        ],
+        isHero: true
       },
       {
-        "id": "c3f9c1d1-ccb9-4a56-a62e-c12f8e292a87",
+        "id": 5,
         "name": "Pinkie Pie",
         "largeAvatar": 'pinkie-pie.png',
         "alias": "Pinkamena Diane Pie",
@@ -105,10 +109,11 @@ export class InMemoryDataService implements InMemoryDbService {
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/6\/60\/Pinkie_Pie_as_a_filly_ID_S4E12.png\/revision\/latest?cb=20140204171208",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/e\/e4\/Future_Pinkie_Pie_ID_S9E26.png\/revision\/latest?cb=20191013014325",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/1\/1e\/Pinkie_Pie_human_ID_EG3b.png\/revision\/latest?cb=20160505154644"
-        ]
+        ],
+        isHero: true
       },
       {
-        "id": "6daa9d13-8063-4e2d-a609-ec8ef77161d6",
+        "id": 6,
         "name": "Rainbow Dash",
         "largeAvatar": 'rainbow-dash.png',
         "url": "https:\/\/mlp.fandom.com\/wiki\/Rainbow_Dash",
@@ -123,10 +128,11 @@ export class InMemoryDataService implements InMemoryDbService {
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/e\/e9\/Filly_Rainbow_Dash_S1E23.png\/revision\/latest?cb=20130913164943",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/2\/25\/Rainbow_Dash_infant_ID_S7E7.png\/revision\/latest?cb=20170813165602",
           "https:\/\/vignette.wikia.nocookie.net\/mlp\/images\/e\/e2\/Future_Rainbow_Dash_ID_S9E26.png\/revision\/latest?cb=20191013014524"
-        ]
+        ],
+        isHero: true
       },
       {
-        "id": "f8c1ccb7-6766-4e38-935d-d09ec854fe4e",
+        "id": 7,
         "name": "Spike",
         "alias": "Spike the Dragon",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Spike",
@@ -147,7 +153,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       },
       {
-        "id": "2c69e0b3-f759-432f-9ff4-df5e211b1f1f",
+        "id": 8,
         "name": "Apple Bloom",
         "alias": "Apple Blossom",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Apple_Bloom",
@@ -164,7 +170,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       },
       {
-        "id": "a7c3c6ef-3f94-46d6-b5c7-3e1689abf9c4",
+        "id": 9,
         "name": "Scootaloo",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Scootaloo",
         "sex": "Female",
@@ -179,7 +185,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       },
       {
-        "id": "8c397758-688e-4865-aaa2-9dc04b163072",
+        "id": 10,
         "name": "Sweetie Belle",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Sweetie_Belle",
         "sex": "Female",
@@ -195,7 +201,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       },
       {
-        "id": "c5300f3b-12b1-4629-9bfc-31686e5c1c96",
+        "id": 11,
         "name": "Babs Seed",
         "alias": "Sweetie Babs",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Babs_Seed",
@@ -213,7 +219,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       },
       {
-        "id": "5c41d4d5-ff44-4dda-a1b2-8e5d75ff8f1f",
+        "id": 12,
         "name": "Gabby",
         "alias": "Gabriella",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Gabby",
@@ -228,7 +234,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       },
       {
-        "id": "033a2fc6-549f-4ec4-b91f-bcd27f5785a9",
+        "id": 13,
         "name": "Princess Celestia",
         "alias": "Queen Celestia",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Princess_Celestia",
@@ -244,7 +250,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       },
       {
-        "id": "a81dc55d-c41b-4b52-b4e4-d70de1d275ac",
+        "id": 14,
         "name": "Princess Luna",
         "alias": "Nightmare Moon",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Princess_Luna",
@@ -261,7 +267,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       },
       {
-        "id": "c840054e-454a-4196-b554-91293b9cbfb7",
+        "id": 15,
         "name": "Prince Blueblood",
         "alias": "Vlad\u00edmir",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Prince_Blueblood",
@@ -276,7 +282,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       },
       {
-        "id": "0b269c20-9bb8-4583-9805-d87dd69bdf73",
+        "id": 16,
         "name": "Shining Armor",
         "alias": "Prince Shining Armor",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Shining_Armor",
@@ -298,7 +304,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       },
       {
-        "id": "86648870-a662-4c87-8dc3-215038cd89a5",
+        "id": 17,
         "name": "Princess Cadance",
         "alias": "Princess Mi Amore Cadenza",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Princess_Cadance",
@@ -318,7 +324,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       },
       {
-        "id": "ba7c005d-829e-4251-907b-423d40fd41ae",
+        "id": 18,
         "name": "Prince Rutherford",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Prince_Rutherford",
         "sex": "Male",
@@ -331,7 +337,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       },
       {
-        "id": "b8cf246d-399f-47c5-b6bc-039c12bf572b",
+        "id": 19,
         "name": "Flurry Heart",
         "alias": "Baby Flurry Heart",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Flurry_Heart",
@@ -346,7 +352,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       },
       {
-        "id": "9a79f5c8-a4ee-4306-bf4b-090b0ea38464",
+        "id": 20,
         "name": "Ember",
         "alias": "Princess Ember",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Ember",
@@ -361,7 +367,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       },
       {
-        "id": "0dab8689-4216-4372-87b7-2c8f08165af7",
+        "id": 21,
         "name": "Thorax",
         "alias": "King Thorax",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Thorax",
@@ -381,7 +387,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       },
       {
-        "id": "90e34c2b-42ac-4998-8ab7-cd4bad6a269e",
+        "id": 22,
         "name": "Princess Skystar",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Princess_Skystar",
         "sex": "Female",
@@ -397,7 +403,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       },
       {
-        "id": "5dd76394-36c1-4179-bd4a-13ee48cc2f33",
+        "id": 23,
         "name": "Queen Novo",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Queen_Novo",
         "sex": "Female",
@@ -413,7 +419,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       },
       {
-        "id": "cbe90bb6-200a-493e-ab7e-7cc829519669",
+        "id": 24,
         "name": "Princess Amore",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Princess_Amore",
         "sex": "Female",
@@ -429,7 +435,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       },
       {
-        "id": "ee0aa0a9-5e5b-4d25-825a-21bbbc5837d6",
+        "id": 25,
         "name": "Granny Smith",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Granny_Smith",
         "sex": "Female",
@@ -444,7 +450,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       },
       {
-        "id": "bebdabca-6565-45b6-8220-dc6a2aea25ad",
+        "id": 26,
         "name": "Big McIntosh",
         "alias": "Big Mac",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Big_McIntosh",
@@ -461,7 +467,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       },
       {
-        "id": "7994a884-f46c-40e8-a76c-695ead85d7c3",
+        "id": 27,
         "name": "Braeburn",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Braeburn",
         "sex": "Male",
@@ -476,7 +482,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       },
       {
-        "id": "7137a84c-eff6-4137-9700-727d283cb164",
+        "id": 28,
         "name": "Aunt Orange",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Aunt_and_Uncle_Orange",
         "sex": "Female",
@@ -489,7 +495,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       },
       {
-        "id": "369709ba-0d32-4437-aeb2-04276bf19dd3",
+        "id": 29,
         "name": "Uncle Orange",
         "alias": "Mosely Orange",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Aunt_and_Uncle_Orange",
@@ -503,7 +509,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       },
       {
-        "id": "0a5b9089-0bc1-4e6a-bc3b-1ac96425019c",
+        "id": 30,
         "name": "Hayseed Turnip Truck",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Hayseed_Turnip_Truck",
         "sex": "Male",
@@ -516,7 +522,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       },
       {
-        "id": "ccd06b7f-9194-4d7c-9061-88100403a6b8",
+        "id": 31,
         "name": "Apple Strudel",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Apple_Strudel",
         "sex": "Male",
@@ -529,7 +535,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       },
       {
-        "id": "e2625075-7947-47b9-b3e0-1c49ff71c22c",
+        "id": 32,
         "name": "Auntie Applesauce",
         "alias": "Aunt Applesauce",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Auntie_Applesauce",
@@ -543,7 +549,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       },
       {
-        "id": "fe8759f6-2772-4581-8738-5c39d6e414b7",
+        "id": 33,
         "name": "Apple Rose",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Apple_Rose",
         "sex": "Female",
@@ -557,7 +563,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       },
       {
-        "id": "ec1e3312-f5d4-4b93-acb0-cf62712640a3",
+        "id": 34,
         "name": "Goldie Delicious",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Goldie_Delicious",
         "sex": "Female",
@@ -574,7 +580,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       },
       {
-        "id": "1c47b4d2-b4ff-4fbe-9c19-08770e530314",
+        "id": 35,
         "name": "Bright Mac",
         "alias": "Bright Macintosh",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Bright_Mac_and_Pear_Butter",
@@ -589,7 +595,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       },
       {
-        "id": "59feb621-92ad-40ee-8c3a-df077f9c141b",
+        "id": 36,
         "name": "Pear Butter",
         "alias": "Buttercup",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Bright_Mac_and_Pear_Butter",
@@ -605,7 +611,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       },
       {
-        "id": "6c9975f8-e61e-4a21-93aa-158e65d2f49e",
+        "id": 37,
         "name": "Limestone Pie",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Limestone_Pie_and_Marble_Pie",
         "sex": "Female",
@@ -619,7 +625,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       },
       {
-        "id": "85c545ea-9722-4322-803a-e6e010cf5c03",
+        "id": 38,
         "name": "Marble Pie",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Limestone_Pie_and_Marble_Pie",
         "sex": "Female",
@@ -633,7 +639,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       },
       {
-        "id": "86a33d6b-1107-475e-bcc8-dad2b8e34fe0",
+        "id": 39,
         "name": "Igneous Rock Pie",
         "alias": "Igneous Rock",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Igneous_Rock_Pie_and_Cloudy_Quartz",
@@ -648,7 +654,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       },
       {
-        "id": "8eeb06a0-76de-4ef4-bf90-01aeedf12800",
+        "id": 40,
         "name": "Cloudy Quartz",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Igneous_Rock_Pie_and_Cloudy_Quartz",
         "sex": "Female",
@@ -662,7 +668,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       },
       {
-        "id": "29cccc4b-30a4-42c6-a6ee-fe1d2b71c184",
+        "id": 41,
         "name": "Maud Pie",
         "alias": "Maudileena Daisy Pie",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Maud_Pie",
@@ -679,7 +685,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       },
       {
-        "id": "70810003-6517-4b49-b5e4-39b64909f979",
+        "id": 42,
         "name": "Mr. Shy",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Mr._and_Mrs._Shy",
         "sex": "Male",
@@ -693,7 +699,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       },
       {
-        "id": "77363637-6e6c-4b23-a0b8-f17fb379d0ae",
+        "id": 43,
         "name": "Mrs. Shy",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Mr._and_Mrs._Shy",
         "sex": "Female",
@@ -706,7 +712,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       },
       {
-        "id": "bfbb960a-e253-4e1f-8bd3-d5ab6a38bdf7",
+        "id": 44,
         "name": "Zephyr Breeze",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Zephyr_Breeze",
         "sex": "Male",
@@ -720,7 +726,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       },
       {
-        "id": "5347291b-5719-4750-93ab-1810deb84fc8",
+        "id": 45,
         "name": "Mr. Carrot Cake",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Mr._and_Mrs._Cake",
         "sex": "Male",
@@ -737,7 +743,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       },
       {
-        "id": "b3657362-01d6-4070-8745-07a5f9e1c39c",
+        "id": 46,
         "name": "Mrs. Cup Cake",
         "alias": "Chiffon Swirl",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Mr._and_Mrs._Cake",
@@ -756,7 +762,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       },
       {
-        "id": "89e0c7c1-baf8-4d6b-8756-b223ab299a6d",
+        "id": 47,
         "name": "Pound Cake",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Pound_Cake_and_Pumpkin_Cake",
         "sex": "Male",
@@ -770,7 +776,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       },
       {
-        "id": "99929ac0-24e9-4486-b4a1-97742822893e",
+        "id": 48,
         "name": "Pumpkin Cake",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Pound_Cake_and_Pumpkin_Cake",
         "sex": "Female",
@@ -785,7 +791,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       },
       {
-        "id": "71de5044-b3e2-4719-9cc9-f6878d08458e",
+        "id": 49,
         "name": "Gallus",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Gallus",
         "sex": "Male",
@@ -800,7 +806,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       },
       {
-        "id": "2028383f-9233-49e5-ad7d-ff28942eaf35",
+        "id": 50,
         "name": "Silverstream",
         "alias": "Silver Stream",
         "url": "https:\/\/mlp.fandom.com\/wiki\/Silverstream",
@@ -818,7 +824,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       }
     ];
-
+    
     // const heroes = [
     //   { id: 11, name: 'Twighlight Sparkle', avatar: 'twilight-sparkle.png' },
     //   { id: 12, name: 'Pinkie Pie', avatar: 'pinkie-pie.png' },
@@ -863,7 +869,7 @@ export class InMemoryDataService implements InMemoryDbService {
     //   { id: 51, name: 'Opalescence', avatar: '' },
     //   { id: 52, name: 'Winona', avatar: '' }
     // ];
-    return {heroes};
+    return { ponies };
   }
 
   // Overrides the genId method to ensure that a hero always has an id.
