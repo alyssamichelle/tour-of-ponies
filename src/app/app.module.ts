@@ -1,7 +1,6 @@
 import { NgModule }            from '@angular/core';
 import { BrowserModule }       from '@angular/platform-browser';
 import { FormsModule }         from '@angular/forms';
-import { HttpClientModule }    from '@angular/common/http';
 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }            from './in-memory-data.service';
@@ -41,6 +40,7 @@ import { EllipsisPipe } from './pipes/ellipsis.pipe';
 import { NgOptimizedImage } from '@angular/common';
 import { ConversationalUIModule } from '@progress/kendo-angular-conversational-ui';
 import { EditorModule } from '@progress/kendo-angular-editor';
+import { provideHttpClient } from '@angular/common/http';
 
 
 
@@ -50,7 +50,6 @@ import { EditorModule } from '@progress/kendo-angular-editor';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule,
 
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
@@ -93,6 +92,9 @@ import { EditorModule } from '@progress/kendo-angular-editor';
     HeatmapComponent,
     GanntComponent,
   ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [ AppComponent ],
+  providers: [
+    provideHttpClient(),
+  ]
 })
 export class AppModule { }
