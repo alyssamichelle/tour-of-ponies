@@ -24,7 +24,10 @@ export class HeroService {
 
   /** GET heroes from the server */
   getHeroes(): Observable<Pony[]> {
-    return this.http.get<Pony[]>(`${this.baseUrl}?isHero=${true}`)
+    const inMemoryUrl = `${this.baseUrl}?isHero=${true}`;
+    const ponyUrl = `${this.baseUrl}/heroes`;
+
+    return this.http.get<Pony[]>(ponyUrl)
       .pipe(
         tap(_ => this.log('fetched just special hero poinies')),
         catchError(this.handleError<Pony[]>('getHeroes', []))
