@@ -1,5 +1,6 @@
-@if (hero) {
-  <section>
+<!-- @if (hero) {
+  <section> -->
+    <section *ngIf="hero">
     <h2 [attr.data-text]="hero.name + ' Details'">{{hero.name}} Details</h2>
     <article class="hero-details">
       <ul class="hero-info">
@@ -44,8 +45,9 @@
         </li>
       </ul>
   </section>
-} @else {
-  <section class="skeleton-section">
+<!-- } @else { -->
+  <!-- <section class="skeleton-section"> -->
+    <section class="skeleton-section" *ngIf="!hero">
     <div class="skeleton-header">
       <kendo-skeleton shape="text" animation="pulse" [width]="250" [height]="70"></kendo-skeleton>
       <h2 data-text="Details">Details</h2>
@@ -96,7 +98,7 @@
       </li>
     </ul>
   </section>
-}
+<!-- } -->
 
 <!-- Todo - build out this editor for hero edits -->
  @if (hero) {
