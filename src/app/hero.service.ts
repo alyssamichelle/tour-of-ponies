@@ -12,7 +12,6 @@ import { MessageService } from './message.service';
 export class HeroService {
 
   private baseUrl = 'api/ponies';
-  // private baseUrl = 'http://localhost:5099/ponies';
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -25,7 +24,7 @@ export class HeroService {
   /** GET heroes from the server */
   getHeroes(): Observable<Pony[]> {
     const inMemoryUrl = `${this.baseUrl}?isHero=${true}`;
-    const ponyUrl = `${this.baseUrl}/heroes`;
+    // const ponyUrl = `${this.baseUrl}/heroes`;
 
     return this.http.get<Pony[]>(inMemoryUrl)
       .pipe(

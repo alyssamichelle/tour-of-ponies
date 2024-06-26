@@ -21,7 +21,6 @@ export class DashboardComponent implements OnInit {
     this.heroService.getHeroes()
       .subscribe(heroes => {
         this.heroes = heroes.filter((hero) => !!hero.largeAvatar)
-        // this.count.set(heroes.length)
       });
   }
 }

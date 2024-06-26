@@ -1,5 +1,3 @@
-<!-- @if (hero) {
-  <section> -->
     <section *ngIf="hero">
     <h2 [attr.data-text]="hero.name + ' Details'">{{hero.name}} Details</h2>
     <article class="hero-details">
@@ -45,8 +43,8 @@
         </li>
       </ul>
   </section>
-<!-- } @else { -->
-  <!-- <section class="skeleton-section"> -->
+
+
     <section class="skeleton-section" *ngIf="!hero">
     <div class="skeleton-header">
       <kendo-skeleton shape="text" animation="pulse" [width]="250" [height]="70"></kendo-skeleton>

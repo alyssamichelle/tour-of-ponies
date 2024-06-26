@@ -94,7 +94,7 @@ import { HttpClientModule, provideHttpClient } from '@angular/common/http';
   ],
   bootstrap: [ AppComponent ],
   providers: [
-    // provideHttpClient(),
+
   ]
 })
 export class AppModule { }
