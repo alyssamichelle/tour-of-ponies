@@ -13,16 +13,28 @@ export class Pony {
   largeAvatar?: string;
   isHero?: boolean;
 
-  // augment hero data with avatar
-//   public getAvatar(heroId): string {
-//     let avatarLink = 'assets/mlp-avatars/pony-' + heroId + '.png';
+  constructor(data) {
+    this.id = data.id;
+    this.name = data.name;
+    this.alias = data.alias;
+    this.url = data.url;
+    this.sex = data.sex;
+    this.residence = data.residence;
+    this.occupation = data.occupation;
+    this.kind = data.kind;
+    this.images = data.images;
+    this.largeAvatar = data.largeAvatar;
+    this.isHero = data.isHero;
+    this.avatar = this.getAvatar();
+  }
 
-//     // assign a random number between 21 - 53
-//     if (heroId > 10) {
-//       let randomNumber = Math.floor(Math.random() * 32) + 21;
-//       avatarLink = 'assets/mlp-avatars/pony-' + randomNumber + '.png';
-//     }
-
-//     return avatarLink;
-//   }
+  getAvatar() {
+    if (this.isHero) {
+      const filename = this.name.toLowerCase().replace(' ', '-');
+      return `../assets/mlp-avatars/${filename}.png`;
+    } else {
+      const x = Math.ceil(Math.random() * 60);
+      return `../assets/mlp-avatars/pony-${x}.png`;
+    }
+  }
 }

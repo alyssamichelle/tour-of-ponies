@@ -40,7 +40,8 @@ import { EllipsisPipe } from './pipes/ellipsis.pipe';
 import { NgOptimizedImage } from '@angular/common';
 import { ConversationalUIModule } from '@progress/kendo-angular-conversational-ui';
 import { EditorModule } from '@progress/kendo-angular-editor';
-import { provideHttpClient } from '@angular/common/http';
+// import { HttpClient, provideHttpClient } from '@angular/common/http';
+import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 
 
 
@@ -50,14 +51,13 @@ import { provideHttpClient } from '@angular/common/http';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-
+    HttpClientModule,
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
-    // HttpClientInMemoryWebApiModule.forRoot(
-    //   InMemoryDataService, { dataEncapsulation: false, delay: 2000 }
-    // ),
-
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false, delay: 2000 }
+    ),
     InputsModule,
     EditorModule,
     BrowserAnimationsModule,
@@ -94,7 +94,7 @@ import { provideHttpClient } from '@angular/common/http';
   ],
   bootstrap: [ AppComponent ],
   providers: [
-    provideHttpClient(),
+    // provideHttpClient(),
   ]
 })
 export class AppModule { }

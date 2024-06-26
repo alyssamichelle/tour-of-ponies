@@ -31,18 +31,6 @@ export class ListViewComponent {
 
   name: string;
 
-  // If it's a hero pony, use the named avatar.
-  // Otherwise, let's just cycle through the 60 avatars we do have.
-  getAvatarLink(heroes: Pony[], hero: Pony): string {
-    if (hero.isHero) {
-      const name = hero.name.toLowerCase().replace(' ', '-');
-      return `../assets/mlp-avatars/${name}.png`;
-    } else {
-      const index = heroes.indexOf(hero) % 60 + 1;
-      return `../assets/mlp-avatars/pony-${index}.png`;
-    }
-  }
-
   // paging options for ListView
   public pageSize = 5;
   public position: PagerPosition = 'bottom';

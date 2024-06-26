@@ -11,8 +11,8 @@ import { MessageService } from './message.service';
 @Injectable({ providedIn: 'root' })
 export class HeroService {
 
-  // private baseUrl = 'api/ponies';
-  private baseUrl = 'http://localhost:5099/ponies';
+  private baseUrl = 'api/ponies';
+  // private baseUrl = 'http://localhost:5099/ponies';
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -27,8 +27,9 @@ export class HeroService {
     const inMemoryUrl = `${this.baseUrl}?isHero=${true}`;
     const ponyUrl = `${this.baseUrl}/heroes`;
 
-    return this.http.get<Pony[]>(ponyUrl)
+    return this.http.get<Pony[]>(inMemoryUrl)
       .pipe(
+        map(ponies => ponies.map((pony) => new Pony(pony))),
         tap(_ => this.log('fetched just special hero poinies')),
         catchError(this.handleError<Pony[]>('getHeroes', []))
       );
@@ -38,6 +39,7 @@ export class HeroService {
   getAllPonies(): Observable<Pony[]> {
     return this.http.get<Pony[]>(this.baseUrl)
     .pipe(
+      map(ponies => ponies.map((pony) => new Pony(pony))),
       tap(_ => this.log('fetched all ponies')),
       catchError(this.handleError<Pony[]>('getAllPonies', []))
     );
